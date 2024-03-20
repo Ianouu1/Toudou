@@ -1,0 +1,23 @@
+[project]
+name = "Toudou"
+version = "0.1"
+description = "A simple task manager."
+readme = "README.md"
+dependencies = [
+    "click>=8.1.7",
+]
+requires-python = ">=3.10"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+toudou = "toudou:cli"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool]
