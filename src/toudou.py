@@ -30,7 +30,8 @@ def cli():
 def newTask(task: str, description: str, date: str, status: bool):
     todo = Todo(uuid.uuid4(), task, description, date, status)
     click.echo(todo)
-    dbInteraction.registerTask(todo.id, todo.task, todo.description, todo.date, todo.status)
+    dbInteraction.registerTaskTest()
+    #dbInteraction.registerTask(todo.id, todo.task, todo.description, todo.date, todo.status)
 
 
 
