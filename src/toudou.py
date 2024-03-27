@@ -32,12 +32,12 @@ def cli():
 def createTask(task: str, description: str, date: str, status: bool):
     todo = Todo(uuid.uuid4(), task, description, date, status)
     click.echo(todo)
-    dbInteraction.registerTask(todo.id, todo.task, todo.description, todo.date, todo.status)
+    dbInteraction.createTask(todo.id, todo.task, todo.description, todo.date, todo.status)
 
 
 @cli.command()
 def createTaskTest():
-    dbInteraction.registerTaskTest()
+    dbInteraction.createTaskTest()
 
 
 @cli.command()
@@ -65,3 +65,9 @@ def deleteTask(id: str):
 def readAllTasks():
     click.echo("Lecture de toutes les taches sous le format : 'id', 'tache', 'description', 'date de fin', 'status'")
     dbInteraction.readAllTasks()
+
+@cli.command()
+@click.option("-i", "--id", prompt="l'identifiant de votre tache", help="The id of a task")
+def readOneTask(id: str):
+    click.echo("Id de la tache qui va être lue : {}".format(id))
+    dbInteraction.readOneTask(id)
