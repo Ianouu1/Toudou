@@ -184,3 +184,29 @@ def exportcsv():
     finally:
         if con:
             con.close()
+
+def importcsv(data: str):
+    pass
+    try:
+        # ----- DB Connexion ----- #
+        con = sqlite3.connect("data/mydata.db")
+        cur = con.cursor()
+
+        cur.execute(
+            "CREATE TABLE IF NOT EXISTS toudou(id TEXT PRIMARY KEY, task TEXT, description TEXT, enddate TEXT, status INTEGER)"
+        )
+        # Pour le status, un booléen est stocké avec 0 ou 1
+        # ----- ------------ ----- #
+
+        with open(csv_file, 'r', newline='') as file:
+        csv_reader = csv.reader(file)
+        header = next(csv_reader)
+        for column in header:
+            create_table_query += f"{column} TEXT,"
+        create_table_query = create_table_query[:-1] + ")"
+        cur.execute(create_table_query)
+    except sqlite3.Error as e:
+        print("Erreur lors de l'importation du CSV dans la BD :", e)
+    finally:
+        if con:
+            con.close()

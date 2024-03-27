@@ -78,3 +78,21 @@ def readOneTask(id: str):
 def exportCSV():
     click.echo("Export du CSV..")
     dbInteraction.exportcsv()
+@cli.command()
+@click.option("-file", "--file", prompt="Si on veut utiliser un fichier", help="if we want to use a file located in "
+                                                                               "data/, (yes, no)")
+@click.option("-d", "--data", prompt="Data en brut (Si on utilise un fichier ecrit n'importe quoi)", help="Raw of your data (example : "
+                                                          "fb0f8c39-4554-4d37-a4b1-1f34092a3af9,task,desc,2024-03-21 "
+                                                          "08:30:00,1")
+def importCSV(data: str, file: str):
+    if file.lower() == "yes":
+        if not data:
+            click.echo("You have chosen to use a file but did not provide data. Please provide data.")
+            return
+        click.echo("Import du CSV avec les données...")
+        dbInteraction.importcsv(data, file)
+    elif file.lower() == "no":
+        click.echo("Import du CSV sans fichier...")
+        dbInteraction.importcsv(data, None)
+    else:
+        click.echo("Invalid choice for file. Please choose 'yes' or 'no'.")
