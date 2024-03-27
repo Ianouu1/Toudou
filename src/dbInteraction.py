@@ -14,16 +14,15 @@ def registerTask(id: str, task: str, description: str, date: str, status: bool):
         print("co")
 
         cur.execute(
-            "CREATE TABLE IF NOT EXISTS toudou(id TEXT PRIMARY KEY, task TEXT, description TEXT, date TEXT, status INTEGER)"
+            "CREATE TABLE IF NOT EXISTS toudou(id TEXT PRIMARY KEY, task TEXT, description TEXT, enddate TEXT, status INTEGER)"
         )
-        # Comment je dois enregistrer une date : YYYY-MM-DD HH:MM:SS.SSS
         # Pour le status c'est avec des 0 ou des 1 je crois
         print("create table")
 
         task_data = (str(id), task, description, date, status)
         task_data2 = ("OUAIS", "task", "description", convert_string_to_date('2024-03-21 08:30:00'), int(0))
 
-        cur.execute("INSERT INTO toudou (id, task, description, date, status) VALUES (?, ?, ?, ?, ?)", task_data)
+        cur.execute("INSERT INTO toudou (id, task, description, enddate, status) VALUES (?, ?, ?, ?, ?)", task_data)
         con.commit()
         print("Tâche enregistrée avec succès dans la base de données.")
     except sqlite3.Error as e:
@@ -44,5 +43,5 @@ def registerTaskTest():
     test_date = convert_string_to_date('2024-03-21 08:30:00')
 
     registerTask(test_id, test_task, test_desc, test_date, True)
-    test_id = str(uuid.uuid4())
+    test_id = "ouais"
     registerTask(test_id, test_task, test_desc, test_date, False)
