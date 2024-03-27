@@ -96,3 +96,25 @@ def deleteTask(id: str):
     finally:
         if con:
             con.close()
+
+def readAllTasks():
+    try:
+        # ----- DB Connexion ----- #
+        con = sqlite3.connect("data/mydata.db")
+        cur = con.cursor()
+
+        cur.execute(
+            "CREATE TABLE IF NOT EXISTS toudou(id TEXT PRIMARY KEY, task TEXT, description TEXT, enddate TEXT, status INTEGER)"
+        )
+        # Pour le status, un booléen est stocké avec 0 ou 1
+        # ----- ------------ ----- #
+        cur.execute("SELECT * FROM toudou")
+        allLines = cur.fetchall()
+        for i in range(len(allLines)):
+            print(allLines[i])
+
+    except sqlite3.Error as e:
+        print("Erreur lors de la supression de la tâche :", e)
+    finally:
+        if con:
+            con.close()
