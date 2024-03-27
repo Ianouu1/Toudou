@@ -1,5 +1,6 @@
 import sqlite3
 import uuid
+import csv
 
 
 def createTask(id: str, task: str, description: str, date: str, status: bool):
@@ -153,6 +154,33 @@ def readOneTask(id: str):
 
     except sqlite3.Error as e:
         print("Erreur lors de l'affichage de la tâche :", e)
+    finally:
+        if con:
+            con.close()
+
+def exportcsv():
+    try:
+        # ----- DB Connexion ----- #
+        con = sqlite3.connect("data/mydata.db")
+        cur = con.cursor()
+
+        cur.execute(
+            "CREATE TABLE IF NOT EXISTS toudou(id TEXT PRIMARY KEY, task TEXT, description TEXT, enddate TEXT, status INTEGER)"
+        )
+        # Pour le status, un booléen est stocké avec 0 ou 1
+        # ----- ------------ ----- #
+
+        cur.execute('SELECT * FROM toudou')
+
+        data = cur.fetchall()
+        csv_file = 'data/exported_data.csv'
+        with open(csv_file, 'w', newline='') as file:
+            csv_writer = csv.writer(file)
+            csv_writer.writerow([i[0] for i in cur.description])
+            # Write the data rows
+            csv_writer.writerows(data)
+    except sqlite3.Error as e:
+        print("Erreur lors de l'exportation en CSV de la BD :", e)
     finally:
         if con:
             con.close()

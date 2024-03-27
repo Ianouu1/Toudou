@@ -66,8 +66,15 @@ def readAllTasks():
     click.echo("Lecture de toutes les taches sous le format : 'id', 'tache', 'description', 'date de fin', 'status'")
     dbInteraction.readAllTasks()
 
+
 @cli.command()
 @click.option("-i", "--id", prompt="l'identifiant de votre tache", help="The id of a task")
 def readOneTask(id: str):
     click.echo("Id de la tache qui va être lue : {}".format(id))
     dbInteraction.readOneTask(id)
+
+
+@cli.command()
+def exportCSV():
+    click.echo("Export du CSV..")
+    dbInteraction.exportcsv()
