@@ -47,3 +47,8 @@ def updateTask(id:str, task: str, description: str, date: str, status: bool):
     click.echo(todo)
     dbInteraction.updateTask(todo.id, todo.task, todo.description, todo.date, todo.status)
 
+@cli.command()
+@click.option("-i", "--id", prompt="l'identifiant de votre tache", help="The id of a task")
+def deleteTask(id:str):
+    click.echo("Id de la tache qui va être supprimée : {}".format(id))
+    dbInteraction.deleteTask(id)

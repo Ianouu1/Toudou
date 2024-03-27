@@ -14,7 +14,6 @@ def registerTask(id: str, task: str, description: str, date: str, status: bool):
         # Pour le status, un booléen est stocké avec 0 ou 1
         # ----- ------------ ----- #
 
-
         task_data = (str(id), task, description, date, status)
         cur.execute("INSERT INTO toudou (id, task, description, enddate, status) VALUES (?, ?, ?, ?, ?)", task_data)
         con.commit()
@@ -40,6 +39,7 @@ def registerTaskTest():
     test_id = "ouais"
     registerTask(test_id, test_task, test_desc, test_date, False)
 
+
 def updateTask(id: str, task: str, description: str, date: str, status: bool):
     try:
         # ----- DB Connexion ----- #
@@ -64,6 +64,35 @@ def updateTask(id: str, task: str, description: str, date: str, status: bool):
 
     except sqlite3.Error as e:
         print("Erreur lors de la modification de la tâche :", e)
+    finally:
+        if con:
+            con.close()
+
+
+def deleteTask(id: str):
+    try:
+        # ----- DB Connexion ----- #
+        con = sqlite3.connect("data/mydata.db")
+        cur = con.cursor()
+
+        cur.execute(
+            "CREATE TABLE IF NOT EXISTS toudou(id TEXT PRIMARY KEY, task TEXT, description TEXT, enddate TEXT, status INTEGER)"
+        )
+        # Pour le status, un booléen est stocké avec 0 ou 1
+        # ----- ------------ ----- #
+        cur.execute("SELECT id FROM toudou WHERE id = ?", (str(id),))
+        existing_id = cur.fetchone()
+
+        if existing_id:
+            task_data = (str(id))
+            cur.execute("DELETE FROM toudou WHERE id = ?", (task_data,))
+            con.commit()
+            print("Tâche supprimée avec succès dans la base de données.")
+        else:
+            print("L'ID est mauvais")
+
+    except sqlite3.Error as e:
+        print("Erreur lors de la supression de la tâche :", e)
     finally:
         if con:
             con.close()
