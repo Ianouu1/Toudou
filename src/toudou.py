@@ -4,10 +4,10 @@ import calendar
 import click
 import uuid
 import models
+import services
 
 from dataclasses import dataclass
 
-from src import services
 
 
 @dataclass
@@ -23,6 +23,9 @@ class Todo:
 def cli():
     pass
 
+@cli.command()
+def init_db():
+    models.init_db()
 
 @cli.command()
 @click.option("-t", "--task", prompt="Votre tache", help="The task to remember.")
