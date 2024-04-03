@@ -5,10 +5,22 @@ import csv
 from dataclasses import dataclass
 from datetime import datetime
 
+from sqlalchemy import create_engine, MetaData, Table, Column, String, Boolean, DateTime
 
 db_url = "data/mydata.db"
 db = None
 
+engine = create_engine(f"sqlite:///{db_url}", echo=True)
+metadata = MetaData()
+
+todos_table = Table(
+    "toudou", metadata,
+    Column("id", String, primary_key=True, default=str(uuid.uuid4)),
+    Column("task", String, nullable=False),
+    Column("description", String, nullable=False),
+    Column("enddate", DateTime, nullable=False),
+    Column("status", Boolean, nullable=False)
+)
 def get_db():
     global db
     if db is None:
