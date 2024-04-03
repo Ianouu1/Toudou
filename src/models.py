@@ -40,7 +40,7 @@ class Todo:
     @classmethod
     def from_db(cls, id: str, task: str, description: str, enddate: str, status: int):
         return cls(
-            uuid.UUID(id),
+            id, # TODO : uuid.UUID(id) @ the end
             task,
             description,
             enddate,
