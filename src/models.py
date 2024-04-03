@@ -43,11 +43,11 @@ class Todo:
             uuid.UUID(id),
             task,
             description,
-            datetime.fromisoformat(enddate),
+            enddate,
             status
         )
 
-def createTask(id: str, task: str, description: str, date: str, status: bool):
+def createTask(id: str, task: str, description: str, date: str, status: bool) -> object:
     task_data = (str(id), task, description, date, status)
     with get_db() as db:
         db.execute("INSERT INTO toudou (id, task, description, enddate, status) VALUES (?, ?, ?, ?, ?)", task_data)
@@ -85,9 +85,9 @@ def readAllTasks():
 
 def readOneTask(id: str):
     with get_db() as db:
-        r = db.execute("SELECT id FROM toudou WHERE id = ?", (str(id),)).fetchone()
-        if r:
-            return Todo.from_db(r["id"], r["task"], r["description"], r["enddate"], r["status"])
+        task = db.execute("SELECT * FROM toudou WHERE id = ?", ((id),)).fetchone()
+        if task:
+            return Todo.from_db(task["id"], task["task"], task["description"], task["enddate"], task["status"])
         else:
             raise Exception("Todo not found")
 

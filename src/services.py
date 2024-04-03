@@ -18,12 +18,11 @@ def export_to_csv() -> io.StringIO:
 
 
 def import_from_csv(csv_file: io.StringIO) -> None:
-    csv_reader = csv.DictReader(
-        csv_file, fieldnames=[f.name for f in dataclasses.fields(Todo)]
-    )
+    csv_reader = csv.DictReader(csv_file)
     for row in csv_reader:
         createTask(
             task=row["task"],
-            due=datetime.fromisoformat(row["due"]) if row["due"] else None,
-            complete=row["complete"] == "True",
+            description=row["description"],
+            date=row["enddate"],
+            status=row["status"] == "True",
         )
