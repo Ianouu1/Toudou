@@ -52,14 +52,14 @@ def readOneTask(id: str):
 
 
 @cli.command()
-@click.option("--as-csv", is_flag=True, help="Ouput a CSV string.")
-def get_all(as_csv: bool):
-    if as_csv:
-        click.echo(services.export_to_csv().getvalue())
-    else:
-        click.echo(models.readAllTasks())
+def get_all():
+    click.echo(models.readAllTasks())
 
 @cli.command()
 @click.argument("csv_file", type=click.File("r"))
 def import_csv(csv_file):
     services.import_from_csv(csv_file)
+
+@cli.command()
+def export_csv():
+    services.export_to_csv()

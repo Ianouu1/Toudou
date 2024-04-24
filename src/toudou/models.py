@@ -1,24 +1,13 @@
 import sqlite3
 import uuid
-import csv
 
 from dataclasses import dataclass
 from datetime import datetime
 
 from sqlalchemy import create_engine, MetaData, Table, Column, String, Boolean, DateTime
 
-@dataclass
-class Todo:
-    id: uuid.UUID
-    task: str
-    description: str
-    date: str  # temporary string
-    status: str  # temporary string
-
-
-db_url = "data/mydata.db"
 db = None
-
+db_url = "data/mydata.db"
 engine = create_engine(f"sqlite:///{db_url}", echo=True)
 metadata = MetaData()
 
