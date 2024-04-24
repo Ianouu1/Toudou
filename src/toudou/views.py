@@ -1,14 +1,7 @@
-import argparse
-import calendar
-
 import click
 import uuid
-import models
-import services
-
-from dataclasses import dataclass
-
-
+from toudou import models
+from toudou import services
 
 
 @click.group()
