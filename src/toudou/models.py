@@ -7,7 +7,7 @@ from datetime import datetime
 from sqlalchemy import create_engine, MetaData, Table, Column, String, Boolean, DateTime
 
 db = None
-db_url = "data/mydata.db"
+db_url = 'data/mydata.db'
 engine = create_engine(f"sqlite:///{db_url}", echo=True)
 metadata = MetaData()
 
@@ -29,7 +29,7 @@ def get_db():
 def init_db():
     with get_db() as db:
         db.execute("""
-            create table toudou
+            CREATE TABLE IF NOT EXISTS toudou
             (
                 id TEXT PRIMARY KEY not null,
                 task TEXT not null,

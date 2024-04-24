@@ -62,4 +62,4 @@ def import_csv(csv_file):
 
 @cli.command()
 def export_csv():
-    services.export_to_csv()
+    click.echo(services.export_to_csv())
