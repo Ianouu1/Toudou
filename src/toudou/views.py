@@ -20,7 +20,7 @@ def init_db():
 @click.option("-s", "--status", prompt="Status de la tache (True, False)",
               help="Add the curent status of a task (True: if finished, False: if not finished)")
 def createTask(task: str, description: str, date: str, status: bool):
-    models.createTask(uuid.uuid4(), task, description, date, status)
+    models.createTask(uuid.uuid4(), task, description, date, bool(status))
 
 
 @cli.command()

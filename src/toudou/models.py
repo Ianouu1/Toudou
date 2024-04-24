@@ -57,7 +57,7 @@ class Todo:
             status
         )
 
-def createTask(id: str, task: str, description: str, date: str, status: bool) -> None:
+def createTask(id: str, task: str, description: str, date: str, status: str) -> None:
     with engine.connect() as conn:
         conn.execute(todos_table.insert().values(id=str(id), task=task, description=description, enddate=datetime.strptime(date, "%Y-%m-%d %H:%M:%S"), status=status))
         conn.commit()
