@@ -1,3 +1,4 @@
+import os
 import sqlite3
 import uuid
 
@@ -13,10 +14,10 @@ metadata = MetaData()
 
 todos_table = Table(
     "toudou", metadata,
-    Column("id", Uuid, primary_key=True, default=uuid.uuid4),
+    Column("id", Uuid, primary_key=True, default=uuid.uuid4, nullable=False),
     Column("task", String, nullable=False),
-    Column("description", String, nullable=False),
-    Column("enddate", DateTime, nullable=False),
+    Column("description", String, nullable=True),
+    Column("enddate", DateTime, nullable=True),
     Column("status", Boolean, nullable=False)
 )
 
@@ -30,18 +31,24 @@ def get_db():
 
 
 def init_db() -> None:
-    metadata.create_all(engine)
+    if not db_exists():
+        metadata.create_all(engine)
+
+
+def db_exists():
+    return os.path.exists(db_url)
+
 
 @dataclass
 class Todo:
     id: uuid.UUID
     task: str
     description: str
-    date: str
+    date: datetime
     status: bool  # temporary string
 
     @classmethod
-    def from_db(cls, id: str, task: str, description: str, enddate: str, status: int):
+    def from_db(cls, id: uuid.uuid4(), task: str, description: str, enddate: datetime, status: int):
         return cls(
             id,  # TODO : uuid.UUID(id) @ the end
             task,
@@ -52,78 +59,108 @@ class Todo:
 
 
 def createTask(
+        id: uuid.UUID | None,
         task: str,
-        description: str,
-        date: str | None,
-        status: bool) -> None:
+        description: str | None,
+        date: datetime | None,
+        status: bool
+) -> None:
     init_db()
-    stmt = todos_table.insert().values(task=task,
-                                       description=description,
-                                       enddate=datetime.strptime(date, "%Y-%m-%d %H:%M:%S"),
-                                       status=status);
     with engine.begin() as conn:
+        if id:
+            stmt = todos_table.insert().values(id=id,
+                                               task=task,
+                                               description=description,
+                                               enddate=date,
+                                               status=status);
+        else:
+            stmt = todos_table.insert().values(task=task,
+                                               description=description,
+                                               enddate=date,
+                                               status=status);
         result = conn.execute(stmt)
+        conn.commit()
 
 
-def updateTask(id: uuid.UUID,
-               task: str,
-               description: str,
-               date: str | None, #Todo : Le mettre en dateTime et pas en str
-               status: bool):
+
+def updateTask(
+        id: uuid.UUID,
+        task: str,
+        description: str | None,
+        date: datetime | None,
+        status: bool
+) -> None:
     init_db()
-    stmt = todos_table.update().where(todos_table.c.id == id).values(
-        task=task,
-        description=description,
-        enddate=datetime.strptime(date, "%Y-%m-%d %H:%M:%S"),
-        status=status
-    )
     with engine.connect() as conn:
+        stmt = todos_table.update().where(todos_table.c.id == id).values(
+            task=task,
+            description=description,
+            enddate=date,
+            status=status
+        )
         result = conn.execute(stmt)
         if result.rowcount == 0:
             print("L'ID est mauvais")
         else:
             print("Tâche modifiée avec succès dans la base de données.")
+        conn.commit()
 
 
-def deleteTask(id: str):
+def deleteTask(id: uuid.UUID) -> None:
     init_db()
-    with get_db() as db:
-        existing_id = db.execute("SELECT id FROM toudou WHERE id = ?", (str(id),)).fetchone()
-        if existing_id:
-            task_data = (str(id))
-            db.execute("DELETE FROM toudou WHERE id = ?", (task_data,))
-            print("Tâche supprimée avec succès dans la base de données.")
-        else:
+    with engine.begin() as conn:
+        stmt = todos_table.delete().where(todos_table.c.id == id)
+        result = conn.execute(stmt)
+        if result.rowcount == 0:
             print("L'ID est mauvais")
-
-
-def readAllTasks():
-    init_db()
-    with get_db() as db:
-        result = db.execute("SELECT * FROM toudou").fetchall()
-        return [
-            Todo.from_db(r["id"], r["task"], r["description"], r["enddate"], r["status"]) for r in result
-        ]
-
-
-def readOneTask(id: str):
-    init_db()
-    with get_db() as db:
-        task = db.execute("SELECT * FROM toudou WHERE id = ?", ((id),)).fetchone()
-        if task:
-            return Todo.from_db(task["id"], task["task"], task["description"], task["enddate"], task["status"])
         else:
-            raise Exception("Todo not found")
+            print("Tâche supprimée avec succès dans la base de données.")
+        conn.commit()
+
+
+def getAllTasks() -> list:
+    init_db()
+    with engine.begin() as conn:
+        stmt = todos_table.select()
+        result = conn.execute(stmt)
+        todos = []
+        for row in result.fetchall():
+            todo = Todo(
+                id=row[0],
+                task=row[1],
+                description=row[2],
+                date=row[3],
+                status=row[4]
+            )
+            todos.append(todo)
+        return todos
+
+
+def getOneTask(id: uuid.UUID):
+    init_db()
+    with engine.begin() as conn:
+        stmt = todos_table.select().where(todos_table.c.id == id)
+        result = conn.execute(stmt).fetchone()
+        todo = None
+        if result:
+            todo = Todo(
+                id=result[0],
+                task=result[1],
+                description=result[2],
+                date=result[3],
+                status=result[4]
+            )
+        return todo
 
 
 def createTaskTest():
     """
-    This function isn't useful.
-    It helped me to know how to insert data in the database.
-    Also add some know data to the database, it's better for testing other functions
+    Cette fonction n'est pas utile dans le cadre de la todolist.
+    Elle m'a aidé à tester les insertions dans la base de données
     """
     test_desc = "Description"
     test_date = "2024-03-21 08:30:00"
+    test_date = datetime.strptime(test_date, "%Y-%m-%d %H:%M:%S")
     for i in range(10):
         taskname = "tache de test numéro " + str(i + 1)
         if i % 2:
