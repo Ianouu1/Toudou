@@ -3,3 +3,12 @@
     <input type="text" id="deleteTaskId" name="deleteTaskId" required><br><br>
     <input type="submit" value="Delete">
 </form>
+{% if message == "success" %}
+<div class="message-box success">
+    <p><strong>Deleted successfully!</strong></p>
+</div>
+{% elif message == "failed" %}
+<div class="message-box error">
+    <p><strong>Deletion failed :(</strong></p>
+</div>
+{% endif %}

@@ -113,8 +113,8 @@ def index():
 @app.route('/create')
 def show_create_form():
     todos = models.getAllTasks()
-    success = request.args.get('success')
-    return render_template('toudou-action.html', todos=todos, action='create', success=success)
+    message = request.args.get('message')
+    return render_template('toudou-action.html', todos=todos, action='create', message=message)
 
 
 @app.route('/create', methods=['POST'])
@@ -126,15 +126,19 @@ def create_task():
     else:
         date = None
     status = request.form['taskStatus'].lower() == "true"
-    success = models.createTask(None, task, description, date, status)
-    return redirect(url_for('show_create_form', success=success))
+    message = models.createTask(None, task, description, date, status)
+    if message:
+        message = "success"
+    else:
+        message = "failed"
+    return redirect(url_for('show_create_form', message=message))
 
 
 @app.route('/update')
 def show_update_form():
     todos = models.getAllTasks()
-    success = request.args.get('success')
-    return render_template('toudou-action.html', todos=todos, action='update', success=success)
+    message = request.args.get('message')
+    return render_template('toudou-action.html', todos=todos, action='update', message=message)
 
 
 @app.route('/update', methods=['POST'])
@@ -147,22 +151,30 @@ def update_task():
     else:
         newDatetime = None
     newStatus = request.form['newStatus'].lower() == "true"
-    success = models.updateTask(taskId, newTaskName, newDescription, newDatetime, newStatus)
-    return redirect(url_for('show_update_form', success=success))
+    message = models.updateTask(taskId, newTaskName, newDescription, newDatetime, newStatus)
+    if message:
+        message = "success"
+    else:
+        message = "failed"
+    return redirect(url_for('show_update_form', message=message))
 
 
 @app.route('/delete')
 def show_delete_form():
     todos = models.getAllTasks()
-    success = request.args.get('success')
-    return render_template('toudou-action.html', todos=todos, action='delete', success=success)
+    message = request.args.get('message')
+    return render_template('toudou-action.html', todos=todos, action='delete', message=message)
 
 
 @app.route('/delete', methods=['POST'])
 def delete_task():
     taskId = uuid.UUID(request.form['deleteTaskId'])
-    success = models.deleteTask(taskId)
-    return redirect(url_for('show_delete_form', success=success))
+    message = models.deleteTask(taskId)
+    if message:
+        message = "success"
+    else:
+        message = "failed"
+    return redirect(url_for('show_delete_form', message=message))
 
 
 @app.route('/id')

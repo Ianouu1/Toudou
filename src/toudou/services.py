@@ -24,11 +24,16 @@ def import_from_csv(csv_file: io.StringIO) -> bool:
     models.init_db()
     csv_reader = csv.DictReader(csv_file)
     for row in csv_reader:
+        date_str = row["date"]
+        if date_str.strip():
+            date_value = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
+        else:
+            date_value = None
         createTask(
             id=uuid.UUID(row["id"]),
             task=row["task"],
             description=row["description"],
-            date=datetime.strptime(row["date"], "%Y-%m-%d %H:%M:%S"),
+            date=date_value,
             status=row["status"].lower() == "true"
         )
     return True

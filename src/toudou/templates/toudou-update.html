@@ -20,3 +20,13 @@
     <br><br>
     <input type="submit" value="Update">
 </form>
+
+{% if message == "success" %}
+<div class="message-box success">
+    <p><strong>Updated successful!</strong></p>
+</div>
+{% elif message == "failed" %}
+<div class="message-box error">
+    <p><strong>Update failed :(</strong></p>
+</div>
+{% endif %}

@@ -17,3 +17,13 @@
     <br><br>
     <input type="submit" value="Add">
 </form>
+
+{% if message == "success" %}
+<div class="message-box success">
+    <p><strong>Created successfully!</strong></p>
+</div>
+{% elif message == "failed" %}
+<div class="message-box error">
+    <p><strong>Creation failed :(</strong></p>
+</div>
+{% endif %}
