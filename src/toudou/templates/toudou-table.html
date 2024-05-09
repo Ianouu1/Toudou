@@ -15,7 +15,12 @@
             <td>{{ todo.task }}</td>
             <td>{{ todo.description }}</td>
             <td>{{ todo.date }}</td>
-            <td>{{ todo.status }}</td>
+            <td class="{% if todo.status == false %} to-finish {% else %} finished {% endif %}">                {% if todo.status == false %}
+                    To Finish
+                {% else %}
+                    Finished
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </tbody>

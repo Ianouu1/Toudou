@@ -1,15 +1,15 @@
-<form id="taskForm" action="/create">
+<form id="taskForm" action="{{ url_for('create_task') }}" method="POST">
     <label for="taskName">Task Name:</label><br>
     <input type="text" id="taskName" name="taskName" required><br>
 
-    <label for="description">Description:</label><br>
-    <textarea id="description" name="description"></textarea><br>
+    <label for="taskDescription">Description:</label><br>
+    <textarea id="taskDescription" name="taskDescription"></textarea><br>
 
-    <label for="datetime">Date:</label><br>
-    <input type="datetime-local" id="datetime" name="datetime"><br>
+    <label for="taskDatetime">Date:</label><br>
+    <input type="datetime-local" id="taskDatetime" name="taskDatetime"><br>
 
-    <label for="status">Status:</label><br>
-    <select id="status" name="status">
+    <label for="taskStatus">Status:</label><br>
+    <select id="taskStatus" name="taskStatus">
         <option value="True">True</option>
         <option value="False">False</option>
     </select>

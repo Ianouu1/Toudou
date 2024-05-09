@@ -1,11 +1,12 @@
 import datetime
 import os
 
+from datetime import datetime
 import click
 import uuid
 from toudou import models
 from toudou import services
-from flask import Flask, render_template
+from flask import Flask, render_template, request, Response, redirect, url_for
 
 
 @click.group()
@@ -109,22 +110,28 @@ def index():
 
 
 @app.route('/create')
-def create():
+def show_create_form():
     todos = models.getAllTasks()
-    # Logique de création ici
-    print("ils ont capté la c bon")
     return render_template('toudou-action.html', todos=todos, action='create')
+@app.route('/create', methods=['POST'])
+def create_task():
+    task = request.form['taskName']
+    description = request.form['taskDescription']
+    date = datetime.strptime(request.form['taskDatetime'], "%Y-%m-%dT%H:%M")
+    status = request.form['taskStatus'].lower() == "true"
+    models.createTask(None, task, description, date, status)
+    return redirect(url_for('show_create_form'))
 
 
 @app.route('/update')
-def update():
+def show_update_form():
     todos = models.getAllTasks()
     # Logique de mise à jour ici
     return render_template('toudou-action.html', todos=todos, action='update')
 
 
 @app.route('/delete')
-def delete():
+def show_delete_form():
     todos = models.getAllTasks()
     # Logique de suppression ici
     return render_template('toudou-action.html', todos=todos, action='delete')

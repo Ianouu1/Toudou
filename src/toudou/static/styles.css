@@ -132,3 +132,11 @@ nav ul li a:hover {
 .taskviewdiv {
     padding: 20px;
 }
+
+.finished {
+    background-color: #9cff9c;
+}
+
+.to-finish {
+    background-color: #fd9b9b;
+}
