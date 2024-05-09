@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #eefffa;
 }
 
 h1 {
     background: #53d0f4;
     padding: 10px 10px 10px 20px;
-    margin: 0px;
+    margin: 0;
 }
 h1 > a {
     text-decoration: none;
@@ -42,6 +43,7 @@ table {
 }
 
 th, td {
+    background: white;
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -139,4 +141,21 @@ nav ul li a:hover {
 
 .to-finish {
     background-color: #fd9b9b;
+}
+.message-box {
+    border: 2px solid green;
+    padding: 10px;
+    margin: 0;
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
 }

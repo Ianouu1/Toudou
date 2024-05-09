@@ -64,7 +64,7 @@ def createTask(
         description: str | None,
         date: datetime | None,
         status: bool
-) -> None:
+) -> bool:
     init_db()
     with engine.begin() as conn:
         if id is None:
@@ -76,8 +76,7 @@ def createTask(
                                            status=status);
         result = conn.execute(stmt)
         conn.commit()
-
-
+        return True
 
 def updateTask(
         id: uuid.UUID,
@@ -85,7 +84,7 @@ def updateTask(
         description: str | None,
         date: datetime | None,
         status: bool
-) -> None:
+) -> bool:
     init_db()
     with engine.connect() as conn:
         stmt = todos_table.update().where(todos_table.c.id == id).values(
@@ -95,23 +94,23 @@ def updateTask(
             status=status
         )
         result = conn.execute(stmt)
-        if result.rowcount == 0:
-            print("Wrong ID")
-        else:
-            print("Task successfully edited from the database")
         conn.commit()
+        if result.rowcount == 0:
+            return False
+        else:
+            return True
 
 
-def deleteTask(id: uuid.UUID) -> None:
+def deleteTask(id: uuid.UUID) -> bool:
     init_db()
     with engine.begin() as conn:
         stmt = todos_table.delete().where(todos_table.c.id == id)
         result = conn.execute(stmt)
-        if result.rowcount == 0:
-            print("Wrong ID")
-        else:
-            print("Task successfully deleted from the database")
         conn.commit()
+        if result.rowcount == 0:
+            return False
+        else:
+            return True
 
 
 def getAllTasks() -> list:

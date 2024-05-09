@@ -6,7 +6,7 @@ import click
 import uuid
 from toudou import models
 from toudou import services
-from flask import Flask, render_template, request, Response, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 
 @click.group()
@@ -112,7 +112,8 @@ def index():
 @app.route('/create')
 def show_create_form():
     todos = models.getAllTasks()
-    return render_template('toudou-action.html', todos=todos, action='create')
+    success = request.args.get('success')
+    return render_template('toudou-action.html', todos=todos, action='create', success=success)
 @app.route('/create', methods=['POST'])
 def create_task():
     task = request.form['taskName']
@@ -122,15 +123,14 @@ def create_task():
     else:
         date = None
     status = request.form['taskStatus'].lower() == "true"
-    models.createTask(None, task, description, date, status)
-    return redirect(url_for('show_create_form'))
-
+    success = models.createTask(None, task, description, date, status)
+    return redirect(url_for('show_create_form', success=success))
 
 @app.route('/update')
 def show_update_form():
     todos = models.getAllTasks()
-    # Logique de mise à jour ici
-    return render_template('toudou-action.html', todos=todos, action='update')
+    success = request.args.get('success')
+    return render_template('toudou-action.html', todos=todos, action='update', success=success)
 @app.route('/update', methods=['POST'])
 def update_task():
     taskId = uuid.UUID(request.form['taskId'])
@@ -141,19 +141,19 @@ def update_task():
     else:
         newDatetime = None
     newStatus = request.form['newStatus'].lower() == "true"
-    models.updateTask(taskId, newTaskName, newDescription, newDatetime, newStatus)
-    return redirect(url_for('show_update_form'))
+    success = models.updateTask(taskId, newTaskName, newDescription, newDatetime, newStatus)
+    return redirect(url_for('show_update_form', success=success))
 
 @app.route('/delete')
 def show_delete_form():
     todos = models.getAllTasks()
-    # Logique de suppression ici
-    return render_template('toudou-action.html', todos=todos, action='delete')
+    success = request.args.get('success')
+    return render_template('toudou-action.html', todos=todos, action='delete', success=success)
 @app.route('/delete', methods=['POST'])
 def delete_task():
     taskId = uuid.UUID(request.form['deleteTaskId'])
-    models.deleteTask(taskId)
-    return redirect(url_for('show_delete_form'))
+    success = models.deleteTask(taskId)
+    return redirect(url_for('show_delete_form', success=success))
 
 @app.route('/id')
 @app.route("/id/<todoid>")
