@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toudou</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>TOUDOULIST</h1>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="create-task-title">Create a task</h2>
+            {% include 'toudou-create.html' %}
+            <h2 class="update-task-title">Update a task</h2>
+            {% include 'toudou-update.html' %}
+            <h2 class="delete-task-title">Delete a task</h2>
+            {% include 'toudou-delete.html' %}
+        </div>
+        <div class="table-container">
+            <h2 class="toudous-table-title">Toudous</h2>
+            {% include 'toudou-table.html' %}
+        </div>
+    </div>
+</body>
+</html>

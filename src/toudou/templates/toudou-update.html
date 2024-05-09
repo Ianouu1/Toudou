@@ -1,0 +1,22 @@
+<form id="updateForm">
+    <label for="taskId">Task ID:</label><br>
+    <input type="text" id="taskId" name="taskId" required><br>
+
+    <label for="newTaskName">New Task Name:</label><br>
+    <input type="text" id="newTaskName" name="newTaskName"><br>
+
+    <label for="newDescription">New Description:</label><br>
+    <textarea id="newDescription" name="newDescription"></textarea><br>
+
+    <label for="newDatetime">New Date:</label><br>
+    <input type="datetime-local" id="newDatetime" name="newDatetime"><br>
+
+    <label for="newStatus">New Status:</label><br>
+    <select id="newStatus" name="newStatus">
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+
+    <br><br>
+    <input type="submit" value="Update">
+</form>

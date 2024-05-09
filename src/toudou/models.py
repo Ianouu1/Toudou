@@ -67,17 +67,13 @@ def createTask(
 ) -> None:
     init_db()
     with engine.begin() as conn:
-        if id:
-            stmt = todos_table.insert().values(id=id,
-                                               task=task,
-                                               description=description,
-                                               enddate=date,
-                                               status=status);
-        else:
-            stmt = todos_table.insert().values(task=task,
-                                               description=description,
-                                               enddate=date,
-                                               status=status);
+        if id is None:
+            id = uuid.uuid4()
+        stmt = todos_table.insert().values(id=id,
+                                           task=task,
+                                           description=description,
+                                           enddate=date,
+                                           status=status);
         result = conn.execute(stmt)
         conn.commit()
 
@@ -164,6 +160,6 @@ def createTaskTest():
     for i in range(10):
         taskname = "Test Task N°" + str(i + 1)
         if i % 2:
-            createTask(taskname, test_desc, test_date, False)
+            createTask(None,taskname, test_desc, test_date, False)
         else:
-            createTask(taskname, test_desc, test_date, True)
+            createTask(None, taskname, test_desc, test_date, True)

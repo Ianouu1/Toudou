@@ -1,0 +1,22 @@
+<table id="taskTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for todo in todos %}
+        <tr>
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.task }}</td>
+            <td>{{ todo.description }}</td>
+            <td>{{ todo.date }}</td>
+            <td>{{ todo.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

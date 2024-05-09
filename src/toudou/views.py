@@ -26,10 +26,8 @@ def init_db():
               help="Add a due to the task (YYYY-MM-DD HH:MM:SS)")
 @click.option("-s", "--status", prompt="Task status (True, False)", type=bool,
               help="Add the curent status of a task (True: if finished, False: if not finished)")
-def createTask(id: None, task: str, description: str, date: datetime, status: bool):
-    models.createTask(id, task, description, date, bool(status))
-
-
+def createTask(task: str, description: str, date: datetime, status: bool):
+    models.createTask(None, task, description, date, bool(status))
 @cli.command()
 def createTaskTest():
     models.createTaskTest()
@@ -102,7 +100,7 @@ def export_csv():
 app = Flask(__name__)
 
 
-@app.route("/hello/")
-@app.route("/hello/<name>")
-def hello(name=None):
-    return render_template("home.html", name=name)
+@app.route('/')
+def index(id=None):
+    todos = models.getAllTasks()
+    return render_template("index.html", todos=todos)

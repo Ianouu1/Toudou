@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background: #53d0f4;
+    padding: 10px 10px 10px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.form-container {
+    flex: 30%; /* Réglage pour 30% */
+    margin-right: 20px;
+}
+
+.table-container {
+    flex: 70%; /* Réglage pour 70% */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+td:first-child{
+    white-space: normal;
+    text-overflow: initial;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="text"], textarea, input, select {
+    width: calc(100% - 16px);
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+h2.toudous-table-title {
+    background: #b76cd0;
+    padding: 10px;
+    text-align: center;
+}
+
+h2.create-task-title {
+    background: #6cd072;
+    padding: 10px;
+    text-align: center;
+}
+h2.update-task-title {
+    background: #6cd0cd;
+    padding: 10px;
+    text-align: center;
+}
+h2.delete-task-title {
+    background: #d06c6c;
+    padding: 10px;
+    text-align: center;
+}
