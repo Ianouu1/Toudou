@@ -1,4 +1,4 @@
-<form id="deleteForm">
+<form id="deleteForm" action="{{ url_for('delete_task') }}" method="POST">
     <label for="deleteTaskId">Task ID:</label><br>
     <input type="text" id="deleteTaskId" name="deleteTaskId" required><br><br>
     <input type="submit" value="Delete">

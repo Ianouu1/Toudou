@@ -149,7 +149,11 @@ def show_delete_form():
     todos = models.getAllTasks()
     # Logique de suppression ici
     return render_template('toudou-action.html', todos=todos, action='delete')
-
+@app.route('/delete', methods=['POST'])
+def delete_task():
+    taskId = uuid.UUID(request.form['deleteTaskId'])
+    models.deleteTask(taskId)
+    return redirect(url_for('show_delete_form'))
 
 @app.route('/id')
 @app.route("/id/<todoid>")
