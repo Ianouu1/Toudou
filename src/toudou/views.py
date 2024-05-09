@@ -117,7 +117,10 @@ def show_create_form():
 def create_task():
     task = request.form['taskName']
     description = request.form['taskDescription']
-    date = datetime.strptime(request.form['taskDatetime'], "%Y-%m-%dT%H:%M")
+    if 'taskDatetime' in request.form and request.form['taskDatetime']:
+        date = datetime.strptime(request.form['taskDatetime'], "%Y-%m-%dT%H:%M")
+    else:
+        date = None
     status = request.form['taskStatus'].lower() == "true"
     models.createTask(None, task, description, date, status)
     return redirect(url_for('show_create_form'))
@@ -128,7 +131,18 @@ def show_update_form():
     todos = models.getAllTasks()
     # Logique de mise à jour ici
     return render_template('toudou-action.html', todos=todos, action='update')
-
+@app.route('/update', methods=['POST'])
+def update_task():
+    taskId = uuid.UUID(request.form['taskId'])
+    newTaskName = request.form['newTaskName']
+    newDescription = request.form['newDescription']
+    if 'newDatetime' in request.form and request.form['newDatetime']:
+        newDatetime = datetime.strptime(request.form['newDatetime'], "%Y-%m-%dT%H:%M")
+    else:
+        newDatetime = None
+    newStatus = request.form['newStatus'].lower() == "true"
+    models.updateTask(taskId, newTaskName, newDescription, newDatetime, newStatus)
+    return redirect(url_for('show_update_form'))
 
 @app.route('/delete')
 def show_delete_form():
