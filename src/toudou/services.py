@@ -20,7 +20,7 @@ def export_to_csv() -> bool:
         return True
 
 
-def import_from_csv(csv_file: io.StringIO) -> None:
+def import_from_csv(csv_file: io.StringIO) -> bool:
     models.init_db()
     csv_reader = csv.DictReader(csv_file)
     for row in csv_reader:
@@ -29,6 +29,6 @@ def import_from_csv(csv_file: io.StringIO) -> None:
             task=row["task"],
             description=row["description"],
             date=datetime.strptime(row["date"], "%Y-%m-%d %H:%M:%S"),
-            status = row["status"].lower() == "true"
+            status=row["status"].lower() == "true"
         )
     return True

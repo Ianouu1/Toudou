@@ -1,4 +1,5 @@
 import datetime
+import io
 import os
 
 from datetime import datetime
@@ -114,6 +115,8 @@ def show_create_form():
     todos = models.getAllTasks()
     success = request.args.get('success')
     return render_template('toudou-action.html', todos=todos, action='create', success=success)
+
+
 @app.route('/create', methods=['POST'])
 def create_task():
     task = request.form['taskName']
@@ -126,11 +129,14 @@ def create_task():
     success = models.createTask(None, task, description, date, status)
     return redirect(url_for('show_create_form', success=success))
 
+
 @app.route('/update')
 def show_update_form():
     todos = models.getAllTasks()
     success = request.args.get('success')
     return render_template('toudou-action.html', todos=todos, action='update', success=success)
+
+
 @app.route('/update', methods=['POST'])
 def update_task():
     taskId = uuid.UUID(request.form['taskId'])
@@ -144,16 +150,20 @@ def update_task():
     success = models.updateTask(taskId, newTaskName, newDescription, newDatetime, newStatus)
     return redirect(url_for('show_update_form', success=success))
 
+
 @app.route('/delete')
 def show_delete_form():
     todos = models.getAllTasks()
     success = request.args.get('success')
     return render_template('toudou-action.html', todos=todos, action='delete', success=success)
+
+
 @app.route('/delete', methods=['POST'])
 def delete_task():
     taskId = uuid.UUID(request.form['deleteTaskId'])
     success = models.deleteTask(taskId)
     return redirect(url_for('show_delete_form', success=success))
+
 
 @app.route('/id')
 @app.route("/id/<todoid>")
@@ -161,11 +171,14 @@ def viewTodo(todoid=None):
     todo = models.getOneTask(uuid.UUID(todoid))
     return render_template('toudou-view.html', todo=todo)
 
+
 @app.route('/csv')
 def viewCSV():
     message = request.args.get('message')
-    return render_template('toudou-csv.html',message=message)
-@app.route('/exportcsv', methods=['POST'])
+    return render_template('toudou-csv.html', message=message)
+
+
+@app.route('/export_csv', methods=['POST'])
 def export_csv():
     models.getAllTasks()
     if services.export_to_csv():
@@ -174,8 +187,20 @@ def export_csv():
         message = "failed_export"
     return redirect(url_for('viewCSV', message=message))
 
-@app.route('/importcsv', methods=['POST'])
-def importcsv():
-    csv_file = request.files['csv_file']
-    services.import_from_csv(csv_file)
-    return redirect(url_for('viewCSV'))
+
+@app.route('/import_csv', methods=['POST'])
+def import_csv():
+    if 'file' not in request.files:
+        return redirect(url_for('viewCSV', message="failed_import"))
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return redirect(url_for('viewCSV', message="failed_import"))
+
+    csv_content = io.StringIO(file.stream.read().decode("utf-8"), newline=None)
+
+    services.import_from_csv(csv_content)
+
+    return redirect(url_for('viewCSV', message="success_import"))
+

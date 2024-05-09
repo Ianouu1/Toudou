@@ -12,21 +12,22 @@
             <h2>Import/Export CSV</h2>
             <p>Note that the exported data will be located in 'data'</p>
 
-             <form method="post" action="/exportcsv">
+             <form method="post" action="/export_csv">
                 <input name="export_csv" type="submit" value="Export to CSV">
             </form>
 
-            <form method="post" action="/importcsv" enctype="multipart/form-data">
-                <input type="file" name="csv_file">
-                <input name="import_csv" type="submit" value="Import from CSV">
+            <form method = "POST" enctype="multipart/form-data" action = "/import_csv">
+                <input type="file" name="file" accept=".csv">
+                <input type = "submit" value="Import from CSV">
             </form>
-            {% if message == "success_export" %}
+
+            {% if message in ["success_export", "success_import"] %}
             <div class="message-box success">
-                <p><strong>Exported successfully!</strong></p>
+                <p><strong>{{ "Exported" if message == "success_export" else "Imported" }} successfully!</strong></p>
             </div>
-            {% elif message == "failed_export" %}
+            {% elif message in ["failed_export", "failed_import"] %}
             <div class="message-box error">
-                <p><strong>Exportation Failed :(</strong></p>
+                <p><strong>{{ "Exportation" if message == "failed_export" else "Importation" }} Failed :(</strong></p>
             </div>
             {% endif %}
         </div>
