@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toudou - {{ todo.id }} Task</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    {% include 'toudou-navbar.html' %}
+        <div class="taskviewdiv">
+        <h2>Task Details</h2>
+        <h3>ID: {{ todo.id }}</h3>
+        <p>Task Name: {{ todo.task }}</p>
+        <p>Description: {{ todo.description }}</p>
+        <p>Date: {{ todo.date }}</p>
+        <p>Status: {{ todo.status }}</p>
+    </div>
+</body>
+</html>

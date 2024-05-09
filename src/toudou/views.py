@@ -28,6 +28,8 @@ def init_db():
               help="Add the curent status of a task (True: if finished, False: if not finished)")
 def createTask(task: str, description: str, date: datetime, status: bool):
     models.createTask(None, task, description, date, bool(status))
+
+
 @cli.command()
 def createTaskTest():
     models.createTaskTest()
@@ -101,6 +103,35 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index(id=None):
+def index():
     todos = models.getAllTasks()
     return render_template("index.html", todos=todos)
+
+
+@app.route('/create')
+def create():
+    todos = models.getAllTasks()
+    # Logique de création ici
+    print("ils ont capté la c bon")
+    return render_template('toudou-action.html', todos=todos, action='create')
+
+
+@app.route('/update')
+def update():
+    todos = models.getAllTasks()
+    # Logique de mise à jour ici
+    return render_template('toudou-action.html', todos=todos, action='update')
+
+
+@app.route('/delete')
+def delete():
+    todos = models.getAllTasks()
+    # Logique de suppression ici
+    return render_template('toudou-action.html', todos=todos, action='delete')
+
+
+@app.route('/id')
+@app.route("/id/<todoid>")
+def viewTodo(todoid=None):
+    todo = models.getOneTask(uuid.UUID(todoid))
+    return render_template('toudou-view.html', todo=todo)

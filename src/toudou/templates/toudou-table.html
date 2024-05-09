@@ -11,7 +11,7 @@
     <tbody>
         {% for todo in todos %}
         <tr>
-            <td>{{ todo.id }}</td>
+            <td><a href="{{ url_for('viewTodo', todoid=todo.id) }}">{{ todo.id }}</a></td>
             <td>{{ todo.task }}</td>
             <td>{{ todo.description }}</td>
             <td>{{ todo.date }}</td>

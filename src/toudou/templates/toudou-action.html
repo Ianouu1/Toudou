@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if action == 'create' %}
+    <title>Create Task - Toudou</title>
+    {% elif action == 'update' %}
+    <title>Update Task - Toudou</title>
+    {% elif action == 'delete' %}
+    <title>Delete Task - Toudou</title>
+    {% endif %}
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    {% include 'toudou-navbar.html' %}
+    <div class="container">
+        <div class="form-container">
+            {% if action == 'create' %}
+                <h2 class="create-task-title">Create a task</h2>
+                {% include 'toudou-create.html' %}
+            {% elif action == 'update' %}
+                <h2 class="update-task-title">Update a task</h2>
+                {% include 'toudou-update.html' %}
+            {% elif action == 'delete' %}
+                <h2 class="delete-task-title">Delete a task</h2>
+                {% include 'toudou-delete.html' %}
+            {% endif %}
+        </div>
+        <div class="table-container">
+            <h2 class="toudous-table-title">Toudous</h2>
+            {% include 'toudou-table.html' %}
+        </div>
+    </div>
+</body>
+</html>
