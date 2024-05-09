@@ -45,12 +45,12 @@ class Todo:
     task: str
     description: str
     date: datetime
-    status: bool  # temporary string
+    status: bool
 
     @classmethod
     def from_db(cls, id: uuid.uuid4(), task: str, description: str, enddate: datetime, status: int):
         return cls(
-            id,  # TODO : uuid.UUID(id) @ the end
+            id,
             task,
             description,
             enddate,
@@ -100,9 +100,9 @@ def updateTask(
         )
         result = conn.execute(stmt)
         if result.rowcount == 0:
-            print("L'ID est mauvais")
+            print("Wrong ID")
         else:
-            print("Tâche modifiée avec succès dans la base de données.")
+            print("Task successfully edited from the database")
         conn.commit()
 
 
@@ -112,9 +112,9 @@ def deleteTask(id: uuid.UUID) -> None:
         stmt = todos_table.delete().where(todos_table.c.id == id)
         result = conn.execute(stmt)
         if result.rowcount == 0:
-            print("L'ID est mauvais")
+            print("Wrong ID")
         else:
-            print("Tâche supprimée avec succès dans la base de données.")
+            print("Task successfully deleted from the database")
         conn.commit()
 
 
@@ -155,14 +155,14 @@ def getOneTask(id: uuid.UUID):
 
 def createTaskTest():
     """
-    Cette fonction n'est pas utile dans le cadre de la todolist.
-    Elle m'a aidé à tester les insertions dans la base de données
+    This function is not useful in the context of the todolist.
+    It helped me to test inserts in the database
     """
     test_desc = "Description"
     test_date = "2024-03-21 08:30:00"
     test_date = datetime.strptime(test_date, "%Y-%m-%d %H:%M:%S")
     for i in range(10):
-        taskname = "tache de test numéro " + str(i + 1)
+        taskname = "Test Task N°" + str(i + 1)
         if i % 2:
             createTask(taskname, test_desc, test_date, False)
         else:

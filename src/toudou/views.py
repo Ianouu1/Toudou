@@ -5,6 +5,7 @@ import click
 import uuid
 from toudou import models
 from toudou import services
+from flask import Flask, render_template
 
 
 @click.group()
@@ -18,12 +19,12 @@ def init_db():
 
 
 @cli.command()
-@click.option("-t", "--task", prompt="Votre tache", help="The task to remember.", )
-@click.option("-d", "--description", prompt="Description de la tache", help="Add a description to a task")
-@click.option("-da", "--date", prompt="Date d'echeance de la tache (YYYY-MM-DD HH:MM:SS)",
+@click.option("-t", "--task", prompt="Your task", help="The task to remember.", )
+@click.option("-d", "--description", prompt="Description of the task", help="Add a description to a task")
+@click.option("-da", "--date", prompt="Task due date (YYYY-MM-DD HH:MM:SS)",
               type=click.DateTime(formats=["%Y-%m-%d %H:%M:%S"]),
-              help="Add an end date to a task (YYYY-MM-DD HH:MM:SS)")
-@click.option("-s", "--status", prompt="Status de la tache (True, False)", type=bool,
+              help="Add a due to the task (YYYY-MM-DD HH:MM:SS)")
+@click.option("-s", "--status", prompt="Task status (True, False)", type=bool,
               help="Add the curent status of a task (True: if finished, False: if not finished)")
 def createTask(id: None, task: str, description: str, date: datetime, status: bool):
     models.createTask(id, task, description, date, bool(status))
@@ -35,64 +36,73 @@ def createTaskTest():
 
 
 @cli.command()
-@click.option("-i", "--id", prompt="L'identifiant de votre tache", type=click.UUID, help="The id of a task")
-@click.option("-t", "--task", prompt="Nom de votre tache", help="The task to remember.")
-@click.option("-d", "--description", prompt="Description de votre tache", help="Add a description to a task")
-@click.option("-da", "--date", prompt="Date d'echeance de la tache (YYYY-MM-DD HH:MM:SS)",
+@click.option("-i", "--id", prompt="Task ID", type=click.UUID, help="The id of a task")
+@click.option("-t", "--task", prompt="Task Name", help="The task to remember")
+@click.option("-d", "--description", prompt="Task Description", help="Add a description to a task")
+@click.option("-da", "--date", prompt="Task Due Date (YYYY-MM-DD HH:MM:SS)",
               type=click.DateTime(formats=["%Y-%m-%d %H:%M:%S"]),
               help="Add an end date to a task (YYYY-MM-DD HH:MM:SS)")
-@click.option("-s", "--status", prompt="Status de la tache (True, False)", type=bool,
+@click.option("-s", "--status", prompt="Task Status (True, False)", type=bool,
               help="Add the curent status of a task (True: if finished, False: if not finished)")
 def updateTask(id: uuid.UUID, task: str, description: str, date: datetime, status: bool):
     models.updateTask(id, task, description, date, status)
 
 
 @cli.command()
-@click.option("-i", "--id", prompt="l'identifiant de votre tache", type=click.UUID, help="The id of a task")
+@click.option("-i", "--id", prompt="Task ID", type=click.UUID, help="The id of a task")
 def deleteTask(id: uuid.UUID):
     models.deleteTask(id)
 
 
 @cli.command()
-@click.option("-i", "--id", prompt="l'identifiant de votre tache", type=click.UUID, help="The id of a task")
+@click.option("-i", "--id", prompt="Task ID", type=click.UUID, help="The id of a task")
 def readOneTask(id: uuid.UUID):
     todo = models.getOneTask(id)
     if todo:
-        print("-------- Voici la tache demandée -------- \n")
+        print("-------- Here is the requested task -------- \n")
         print(f"ID: {todo.id}")
-        print(f"Tache: {todo.task}")
+        print(f"Task: {todo.task}")
         print(f"Description: {todo.description}")
         print(f"Date: {todo.date}")
         print(f"Status: {todo.status} \n")
-        print("------------------------------------------")
+        print("-------------------------------------------- ")
     else:
-        print("Aucune tache n'a pu être trouvé")
-
+        print("No task could be found")
 
 
 @cli.command()
 def readAllTasks():
     todos = models.getAllTasks()
     if todos:
-        print("-------- Voici la liste des taches -------- \n")
+        print("-------- Here is the list of tasks -------- \n")
         for todo in todos:
             print(f"ID: {todo.id}")
-            print(f"Tache: {todo.task}")
+            print(f"Task: {todo.task}")
             print(f"Description: {todo.description}")
             print(f"Date: {todo.date}")
             print(f"Status: {todo.status} \n")
         print("------------------------------------------ ")
     else:
-        print("Aucune tache n'a pu être trouvé")
+        print("No task could be found")
 
 
 @cli.command()
 @click.option("--csv-file", type=click.File("r"), default="data/exportedata.csv",
-              prompt="Nom du fichier (préciser 'data/' avant)",
-              help="Le nom du fichier csv localisé dans 'data'(préciser 'data/' avant)")
+              prompt="Name of the file (precise 'data/' first)",
+              help="The name of the csv file located in 'data'(precise 'data/' first)")
 def import_csv(csv_file):
     services.import_from_csv(csv_file)
+
 
 @cli.command()
 def export_csv():
     click.echo(services.export_to_csv())
+
+
+app = Flask(__name__)
+
+
+@app.route("/hello/")
+@app.route("/hello/<name>")
+def hello(name=None):
+    return render_template("home.html", name=name)
