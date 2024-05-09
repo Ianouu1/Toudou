@@ -25,11 +25,11 @@
                 <h2 class="delete-task-title">Delete a task</h2>
                 {% include 'toudou-delete.html' %}
             {% endif %}
-            {% if success %}
+            {% if success == 1 %}
             <div class="message-box success">
                 <p><strong>Action successful!</strong></p>
             </div>
-            {% else %}
+            {% elif success == 0 %}
             <div class="message-box error">
                 <p><strong>Action failed.</strong></p>
             </div>

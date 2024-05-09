@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - CSV</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    {% include 'toudou-navbar.html' %}
+    <div class="container">
+        <div class="center-div">
+            <h2>Import/Export CSV</h2>
+            <p>Note that the exported data will be located in 'data'</p>
+
+             <form method="post" action="/exportcsv">
+                <input name="export_csv" type="submit" value="Export to CSV">
+            </form>
+
+            <form method="post" action="/importcsv" enctype="multipart/form-data">
+                <input type="file" name="csv_file">
+                <input name="import_csv" type="submit" value="Import from CSV">
+            </form>
+            {% if message == "success_export" %}
+            <div class="message-box success">
+                <p><strong>Exported successfully!</strong></p>
+            </div>
+            {% elif message == "failed_export" %}
+            <div class="message-box error">
+                <p><strong>Exportation Failed :(</strong></p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

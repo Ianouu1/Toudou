@@ -6,7 +6,7 @@ import click
 import uuid
 from toudou import models
 from toudou import services
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_file
 
 
 @click.group()
@@ -160,3 +160,22 @@ def delete_task():
 def viewTodo(todoid=None):
     todo = models.getOneTask(uuid.UUID(todoid))
     return render_template('toudou-view.html', todo=todo)
+
+@app.route('/csv')
+def viewCSV():
+    message = request.args.get('message')
+    return render_template('toudou-csv.html',message=message)
+@app.route('/exportcsv', methods=['POST'])
+def export_csv():
+    models.getAllTasks()
+    if services.export_to_csv():
+        message = "success_export"
+    else:
+        message = "failed_export"
+    return redirect(url_for('viewCSV', message=message))
+
+@app.route('/importcsv', methods=['POST'])
+def importcsv():
+    csv_file = request.files['csv_file']
+    services.import_from_csv(csv_file)
+    return redirect(url_for('viewCSV'))

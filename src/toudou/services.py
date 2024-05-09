@@ -8,7 +8,7 @@ from toudou import models
 from toudou.models import createTask, Todo
 
 
-def export_to_csv():
+def export_to_csv() -> bool:
     csv_file_path = 'data/exportedata.csv'
     with open(csv_file_path, 'w', newline='', encoding='utf-8') as output:
         csv_writer = csv.DictWriter(
@@ -17,6 +17,7 @@ def export_to_csv():
         csv_writer.writeheader()
         for todo in models.getAllTasks():
             csv_writer.writerow(dataclasses.asdict(todo))
+        return True
 
 
 def import_from_csv(csv_file: io.StringIO) -> None:
@@ -30,3 +31,4 @@ def import_from_csv(csv_file: io.StringIO) -> None:
             date=datetime.strptime(row["date"], "%Y-%m-%d %H:%M:%S"),
             status = row["status"].lower() == "true"
         )
+    return True

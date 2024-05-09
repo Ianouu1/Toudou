@@ -159,3 +159,7 @@ nav ul li a:hover {
     border-color: #f5c6cb;
     color: #721c24;
 }
+.center-div {
+    width: 50%;
+    margin: 0 auto;
+}
