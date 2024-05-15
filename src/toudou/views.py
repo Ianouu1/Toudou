@@ -7,7 +7,7 @@ import click
 import uuid
 from toudou import models
 from toudou import services
-from flask import Flask, render_template, request, redirect, url_for, send_file
+from flask import Flask, render_template, request, redirect, url_for, send_file, Blueprint
 
 
 @click.group()
@@ -100,24 +100,24 @@ def import_csv(csv_file):
 def export_csv():
     click.echo(services.export_to_csv())
 
+web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
-app = Flask(__name__)
 
 
-@app.route('/')
+@web_ui.route('/')
 def index():
     todos = models.getAllTasks()
     return render_template("index.html", todos=todos)
 
 
-@app.route('/create')
+@web_ui.route('/create')
 def show_create_form():
     todos = models.getAllTasks()
     message = request.args.get('message')
     return render_template('toudou-action.html', todos=todos, action='create', message=message)
 
 
-@app.route('/create', methods=['POST'])
+@web_ui.route('/create', methods=['POST'])
 def create_task():
     task = request.form['taskName']
     description = request.form['taskDescription']
@@ -134,14 +134,14 @@ def create_task():
     return redirect(url_for('show_create_form', message=message))
 
 
-@app.route('/update')
+@web_ui.route('/update')
 def show_update_form():
     todos = models.getAllTasks()
     message = request.args.get('message')
     return render_template('toudou-action.html', todos=todos, action='update', message=message)
 
 
-@app.route('/update', methods=['POST'])
+@web_ui.route('/update', methods=['POST'])
 def update_task():
     taskId = uuid.UUID(request.form['taskId'])
     newTaskName = request.form['newTaskName']
@@ -159,14 +159,14 @@ def update_task():
     return redirect(url_for('show_update_form', message=message))
 
 
-@app.route('/delete')
+@web_ui.route('/delete')
 def show_delete_form():
     todos = models.getAllTasks()
     message = request.args.get('message')
     return render_template('toudou-action.html', todos=todos, action='delete', message=message)
 
 
-@app.route('/delete', methods=['POST'])
+@web_ui.route('/delete', methods=['POST'])
 def delete_task():
     taskId = uuid.UUID(request.form['deleteTaskId'])
     message = models.deleteTask(taskId)
@@ -177,20 +177,20 @@ def delete_task():
     return redirect(url_for('show_delete_form', message=message))
 
 
-@app.route('/id')
-@app.route("/id/<todoid>")
+@web_ui.route('/id')
+@web_ui.route("/id/<todoid>")
 def viewTodo(todoid=None):
     todo = models.getOneTask(uuid.UUID(todoid))
     return render_template('toudou-view.html', todo=todo)
 
 
-@app.route('/csv')
+@web_ui.route('/csv')
 def viewCSV():
     message = request.args.get('message')
     return render_template('toudou-csv.html', message=message)
 
 
-@app.route('/export_csv', methods=['POST'])
+@web_ui.route('/export_csv', methods=['POST'])
 def export_csv():
     models.getAllTasks()
     if services.export_to_csv():
@@ -200,7 +200,7 @@ def export_csv():
     return redirect(url_for('viewCSV', message=message))
 
 
-@app.route('/import_csv', methods=['POST'])
+@web_ui.route('/import_csv', methods=['POST'])
 def import_csv():
     if 'file' not in request.files:
         return redirect(url_for('viewCSV', message="failed_import"))

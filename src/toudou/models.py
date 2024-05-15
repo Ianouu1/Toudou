@@ -7,9 +7,11 @@ from datetime import datetime
 
 from sqlalchemy import create_engine, MetaData, Table, Column, String, Boolean, DateTime, Uuid
 
+from toudou import config
+
 db = None
 db_url = 'data/mydata.db'
-engine = create_engine(f"sqlite:///{db_url}", echo=True)
+engine = create_engine(config["DATABASE_URL"], echo=config["DEBUG"])
 metadata = MetaData()
 
 todos_table = Table(
