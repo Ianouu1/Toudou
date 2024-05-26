@@ -97,10 +97,7 @@ def updateTask(
         )
         result = conn.execute(stmt)
         conn.commit()
-        if result.rowcount == 0:
-            return False
-        else:
-            return True
+        return result.rowcount != 0
 
 
 def deleteTask(id: uuid.UUID) -> int:
@@ -109,10 +106,7 @@ def deleteTask(id: uuid.UUID) -> int:
         stmt = todos_table.delete().where(todos_table.c.id == id)
         result = conn.execute(stmt)
         conn.commit()
-        if result.rowcount == 0:
-            return False
-        else:
-            return True
+        return result.rowcount != 0
 
 
 def getAllTasks() -> list:
