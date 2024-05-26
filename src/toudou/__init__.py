@@ -9,6 +9,6 @@ def create_app():
     return app
     
 config = dict(
-    DATABASE_URL="sqlite:///data/mydata.db",
+    DATABASE_URL="sqlite:///mydata.db",
     DEBUG=True
 )

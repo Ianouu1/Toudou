@@ -9,7 +9,7 @@ from toudou.models import createTask, Todo
 
 
 def export_to_csv() -> bool:
-    csv_file_path = 'data/exportedata.csv'
+    csv_file_path = 'exportedata.csv'
     with open(csv_file_path, 'w', newline='', encoding='utf-8') as output:
         csv_writer = csv.DictWriter(
             output, fieldnames=[f.name for f in dataclasses.fields(Todo)]

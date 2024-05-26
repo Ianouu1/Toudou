@@ -89,9 +89,9 @@ def readAllTasks():
 
 
 @cli.command()
-@click.option("--csv-file", type=click.File("r"), default="data/exportedata.csv",
-              prompt="Name of the file (precise 'data/' first)",
-              help="The name of the csv file located in 'data'(precise 'data/' first)")
+@click.option("--csv-file", type=click.File("r"), default="exportedata.csv",
+              prompt="Name of the file",
+              help="The name of the csv file")
 def import_csv(csv_file):
     services.import_from_csv(csv_file)
 

@@ -10,7 +10,7 @@ from sqlalchemy import create_engine, MetaData, Table, Column, String, Boolean, 
 from toudou import config
 
 db = None
-db_url = 'data/mydata.db'
+db_url = 'mydata.db'
 engine = create_engine(config["DATABASE_URL"], echo=config["DEBUG"])
 metadata = MetaData()
 
