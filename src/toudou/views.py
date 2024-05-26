@@ -191,7 +191,7 @@ def viewCSV():
 
 
 @web_ui.route('/export_csv', methods=['POST'])
-def export_csv():
+def export_csv_gui():
     models.getAllTasks()
     if services.export_to_csv():
         message = "success_export"
@@ -201,7 +201,7 @@ def export_csv():
 
 
 @web_ui.route('/import_csv', methods=['POST'])
-def import_csv():
+def import_csv_gui():
     if 'file' not in request.files:
         return redirect(url_for('viewCSV', message="failed_import"))
 
