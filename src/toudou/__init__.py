@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, flash, redirect, url_for
 
 
 def create_app():
@@ -9,6 +9,11 @@ def create_app():
     #app.register_blueprint(api)
     app.register_blueprint(web_ui)
     app.config.from_prefixed_env(prefix="TOUDOU_FLASK")
+    @app.errorhandler(500)
+    def handle_internal_error(error):
+        flash("Erreur interne du serveur", "error")
+        return redirect(url_for("web_ui.index"))
+
     return app
 
 
