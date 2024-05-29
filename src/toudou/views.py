@@ -55,6 +55,9 @@ def updateTask(id: uuid.UUID, task: str, description: str, date: datetime, statu
 def deleteTask(id: uuid.UUID):
     models.deleteTask(id)
 
+@cli.command()
+def deleteAllTasks():
+    models.deleteAllTasks()
 
 @cli.command()
 @click.option("-i", "--id", prompt="Task ID", type=click.UUID, help="The id of a task")
