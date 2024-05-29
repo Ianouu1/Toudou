@@ -103,8 +103,8 @@ def import_csv(csv_file):
 def export_csv():
     click.echo(services.export_to_csv())
 
-web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
+web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
 
 @web_ui.route('/')
@@ -134,7 +134,7 @@ def create_task():
         message = "success"
     else:
         message = "failed"
-    return redirect(url_for('show_create_form', message=message))
+    return redirect(url_for('web_ui.show_create_form', message=message))
 
 
 @web_ui.route('/update')
@@ -159,7 +159,7 @@ def update_task():
         message = "success"
     else:
         message = "failed"
-    return redirect(url_for('show_update_form', message=message))
+    return redirect(url_for('web_ui.show_update_form', message=message))
 
 
 @web_ui.route('/delete')
@@ -177,7 +177,7 @@ def delete_task():
         message = "success"
     else:
         message = "failed"
-    return redirect(url_for('show_delete_form', message=message))
+    return redirect(url_for('web_ui.show_delete_form', message=message))
 
 
 @web_ui.route('/id')
@@ -200,22 +200,22 @@ def export_csv_gui():
         message = "success_export"
     else:
         message = "failed_export"
-    return redirect(url_for('viewCSV', message=message))
+    return redirect(url_for('web_ui.viewCSV', message=message))
 
 
 @web_ui.route('/import_csv', methods=['POST'])
 def import_csv_gui():
     if 'file' not in request.files:
-        return redirect(url_for('viewCSV', message="failed_import"))
+        return redirect(url_for('web_ui.viewCSV', message="failed_import"))
 
     file = request.files['file']
 
     if file.filename == '':
-        return redirect(url_for('viewCSV', message="failed_import"))
+        return redirect(url_for('web_ui.viewCSV', message="failed_import"))
 
     csv_content = io.StringIO(file.stream.read().decode("utf-8"), newline=None)
 
     services.import_from_csv(csv_content)
 
-    return redirect(url_for('viewCSV', message="success_import"))
+    return redirect(url_for('web_ui.viewCSV', message="success_import"))
 
