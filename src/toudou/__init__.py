@@ -11,4 +11,6 @@ def create_app():
 config = dict(
     DATABASE_URL="sqlite:///mydata.db",
     DEBUG=True
+    # DATABASE_URL=os.getenv("TOUDOU_DATABASE_URL", ""),
+    # DEBUG=os.getenv("TOUDOU_DEBUG", "False") == "True"
 )

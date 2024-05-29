@@ -16,6 +16,7 @@ text = "MIT"
 [project.scripts]
 toudou = "toudou.views:cli"
 
+
 [build-system]
 requires = [
     "pdm-backend",
@@ -23,3 +24,7 @@ requires = [
 build-backend = "pdm.backend"
 
 [tool.pdm]
+
+[tool.pdm.scripts]
+_.env_file = "config/dev.env"
+start = "flask --app toudou --debug run"

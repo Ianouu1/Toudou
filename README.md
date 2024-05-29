@@ -6,7 +6,7 @@ The best todo application!
 $ pip install pdm       # Python Dependency Manager is recommended
 $ pdm install           # install project dependencies
 $ pdm run toudou        # run the project
-$ pdm run flask --app toudou --debug run # run the GUI
+$ pdm run start # run the GUI
 
 Usage: toudou [OPTIONS] COMMAND [ARGS]...
 
