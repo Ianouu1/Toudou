@@ -23,8 +23,6 @@ requires = [
 ]
 build-backend = "pdm.backend"
 
-[tool.pdm]
-
 [tool.pdm.scripts]
-_.env_file = "config/dev.env"
+_.env_file = "src/toudou/config/dev.env"
 start = "flask --app toudou --debug run"
