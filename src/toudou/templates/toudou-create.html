@@ -1,20 +1,4 @@
 <form id="taskForm" action="{{ url_for('web_ui.create_task') }}" method="POST">
-    <!--<label for="taskName">Task Name:</label><br>
-    <input type="text" id="taskName" name="taskName" required><br>
-
-    <label for="taskDescription">Description:</label><br>
-    <textarea id="taskDescription" name="taskDescription"></textarea><br>
-
-    <label for="taskDatetime">Date:</label><br>
-    <input type="datetime-local" id="taskDatetime" name="taskDatetime"><br>
-
-    <label for="taskStatus">Status:</label><br>
-    <select id="taskStatus" name="taskStatus">
-        <option value="False">False</option>
-        <option value="True">True</option>
-    </select>
-
-    <br><br>-->
     {{ formCreate.csrf_token }}
     {{ formCreate.taskName.label }} {{ formCreate.taskName() }}
     {{ formCreate.taskDescription.label }} {{ formCreate.taskDescription() }}
