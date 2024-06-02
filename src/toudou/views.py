@@ -5,9 +5,17 @@ import os
 from datetime import datetime
 import click
 import uuid
+
+from wtforms.fields.choices import SelectField
+from wtforms.fields.datetime import DateTimeLocalField
+from wtforms.fields.simple import TextAreaField
+
 from toudou import models
 from toudou import services
 from flask import Flask, render_template, request, redirect, url_for, send_file, Blueprint
+from flask_wtf import FlaskForm
+from wtforms import StringField
+from wtforms.validators import DataRequired
 
 
 @click.group()
@@ -55,9 +63,11 @@ def updateTask(id: uuid.UUID, task: str, description: str, date: datetime, statu
 def deleteTask(id: uuid.UUID):
     models.deleteTask(id)
 
+
 @cli.command()
 def deleteAllTasks():
     models.deleteAllTasks()
+
 
 @cli.command()
 @click.option("-i", "--id", prompt="Task ID", type=click.UUID, help="The id of a task")
@@ -116,8 +126,9 @@ def index():
 @web_ui.route('/create')
 def show_create_form():
     todos = models.getAllTasks()
+    formCreate = CreateForm()
     message = request.args.get('message')
-    return render_template('toudou-action.html', todos=todos, action='create', message=message)
+    return render_template('toudou-action.html', todos=todos, action='create', message=message, formCreate=formCreate)
 
 
 @web_ui.route('/create', methods=['POST'])
@@ -218,4 +229,11 @@ def import_csv_gui():
     services.import_from_csv(csv_content)
 
     return redirect(url_for('web_ui.viewCSV', message="success_import"))
+
+
+class CreateForm(FlaskForm):
+    taskName = StringField('Task Name', validators=[DataRequired()])
+    taskDescription = TextAreaField('Description')
+    taskDatetime = DateTimeLocalField('Date', format='%Y-%m-%dT%H:%M')
+    taskStatus = SelectField('Status', choices=[('False', 'False'),('True', 'True')])
 
