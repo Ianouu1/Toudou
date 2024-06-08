@@ -1,4 +1,4 @@
-<form id="taskForm" action="{{ url_for('web_ui.create_task') }}" method="POST">
+<form id="createForm" action="{{ url_for('web_ui.create_task') }}" method="POST">
     {{ formCreate.csrf_token }}
     {{ formCreate.taskName.label }} {{ formCreate.taskName() }}
     {{ formCreate.taskDescription.label }} {{ formCreate.taskDescription() }}

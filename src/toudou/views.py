@@ -6,6 +6,7 @@ from datetime import datetime
 import click
 import uuid
 
+import flask_wtf
 from wtforms.fields.choices import SelectField
 from wtforms.fields.datetime import DateTimeLocalField
 from wtforms.fields.simple import TextAreaField
@@ -126,9 +127,9 @@ def index():
 @web_ui.route('/create')
 def show_create_form():
     todos = models.getAllTasks()
-    formCreate = CreateForm()
+    form_create = createForm()
     message = request.args.get('message')
-    return render_template('toudou-action.html', todos=todos, action='create', message=message, formCreate=formCreate)
+    return render_template('toudou-action.html', todos=todos, action='create', message=message, formCreate=form_create)
 
 
 @web_ui.route('/create', methods=['POST'])
@@ -151,8 +152,9 @@ def create_task():
 @web_ui.route('/update')
 def show_update_form():
     todos = models.getAllTasks()
+    update_form = updateForm()
     message = request.args.get('message')
-    return render_template('toudou-action.html', todos=todos, action='update', message=message)
+    return render_template('toudou-action.html', todos=todos, action='update', message=message, updateForm=update_form)
 
 
 @web_ui.route('/update', methods=['POST'])
@@ -176,8 +178,9 @@ def update_task():
 @web_ui.route('/delete')
 def show_delete_form():
     todos = models.getAllTasks()
+    delete_form = deleteForm()
     message = request.args.get('message')
-    return render_template('toudou-action.html', todos=todos, action='delete', message=message)
+    return render_template('toudou-action.html', todos=todos, action='delete', message=message, deleteForm=delete_form)
 
 
 @web_ui.route('/delete', methods=['POST'])
@@ -231,9 +234,18 @@ def import_csv_gui():
     return redirect(url_for('web_ui.viewCSV', message="success_import"))
 
 
-class CreateForm(FlaskForm):
+class createForm(FlaskForm):
     taskName = StringField('Task Name', validators=[DataRequired()])
     taskDescription = TextAreaField('Description')
     taskDatetime = DateTimeLocalField('Date', format='%Y-%m-%dT%H:%M')
-    taskStatus = SelectField('Status', choices=[('False', 'False'),('True', 'True')])
+    taskStatus = SelectField('Status', choices=[('False', 'False'), ('True', 'True')])
 
+class deleteForm(FlaskForm):
+    deleteTaskId = StringField('Task ID', validators=[DataRequired()])
+
+class updateForm(FlaskForm):
+    taskId = StringField('New Task ID', validators=[DataRequired()])
+    newTaskName = StringField('New Task Name', validators=[DataRequired()])
+    newDescription = TextAreaField('New Description')
+    newDatetime = DateTimeLocalField('New Date', format='%Y-%m-%dT%H:%M')
+    newStatus = SelectField('New Status', choices=[('False', 'False'), ('True', 'True')])

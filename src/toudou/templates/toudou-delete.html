@@ -1,6 +1,6 @@
 <form id="deleteForm" action="{{ url_for('web_ui.delete_task') }}" method="POST">
-    <label for="deleteTaskId">Task ID:</label><br>
-    <input type="text" id="deleteTaskId" name="deleteTaskId" required><br><br>
+    {{ deleteForm.csrf_token }}
+    {{ deleteForm.deleteTaskId.label }} {{ deleteForm.deleteTaskId() }}
     <input type="submit" value="Delete">
 </form>
 {% if message == "success" %}

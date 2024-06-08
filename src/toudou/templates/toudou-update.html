@@ -1,23 +1,10 @@
 <form id="updateForm" action="{{ url_for('web_ui.update_task') }}" method="POST">
-    <label for="taskId">Task ID:</label><br>
-    <input type="text" id="taskId" name="taskId" required><br>
-
-    <label for="newTaskName">New Task Name:</label><br>
-    <input type="text" id="newTaskName" name="newTaskName" required><br>
-
-    <label for="newDescription">New Description:</label><br>
-    <textarea id="newDescription" name="newDescription"></textarea><br>
-
-    <label for="newDatetime">New Date:</label><br>
-    <input type="datetime-local" id="newDatetime" name="newDatetime"><br>
-
-    <label for="newStatus">New Status:</label><br>
-    <select id="newStatus" name="newStatus">
-        <option value="False">False</option>
-        <option value="True">True</option>
-    </select>
-
-    <br><br>
+    {{ updateForm.csrf_token }}
+    {{ updateForm.taskId.label }} {{ updateForm.taskId() }}
+    {{ updateForm.newTaskName.label }} {{ updateForm.newTaskName() }}
+    {{ updateForm.newDescription.label }} {{ updateForm.newDescription() }}
+    {{ updateForm.newDatetime.label }} {{ updateForm.newDatetime() }}
+    {{ updateForm.newStatus.label }} {{ updateForm.newStatus() }}
     <input type="submit" value="Update">
 </form>
 
