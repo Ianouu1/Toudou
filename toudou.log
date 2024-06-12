@@ -1,0 +1,476 @@
+2024-06-12 09:34:51,110 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:34:51,175 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:34:51,190 [INFO] BEGIN (implicit)
+2024-06-12 09:34:51,190 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:34:51,190 [INFO] [cached since 16.55s ago] ()
+2024-06-12 09:34:51,190 [INFO] COMMIT
+2024-06-12 09:34:51,190 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "GET / HTTP/1.1" 200 -
+2024-06-12 09:34:51,232 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:34:51,633 [INFO] BEGIN (implicit)
+2024-06-12 09:34:51,633 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:34:51,633 [INFO] [cached since 17s ago] ()
+2024-06-12 09:34:51,633 [INFO] COMMIT
+2024-06-12 09:34:51,664 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:34:51,711 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:34:52,420 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:34:52,436 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:34:52,451 [INFO] BEGIN (implicit)
+2024-06-12 09:34:52,451 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:34:52,451 [INFO] [cached since 17.81s ago] ()
+2024-06-12 09:34:52,451 [INFO] COMMIT
+2024-06-12 09:34:52,451 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "GET / HTTP/1.1" 200 -
+2024-06-12 09:34:52,498 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:34:52,520 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-06-12 09:34:53,454 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:34:53,469 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:34:53,469 [INFO] BEGIN (implicit)
+2024-06-12 09:34:53,469 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:34:53,485 [INFO] [cached since 18.84s ago] ()
+2024-06-12 09:34:53,485 [INFO] COMMIT
+2024-06-12 09:34:53,485 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "GET / HTTP/1.1" 200 -
+2024-06-12 09:34:53,523 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:34:53,802 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:34:53,817 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:34:53,824 [INFO] BEGIN (implicit)
+2024-06-12 09:34:53,824 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:34:53,824 [INFO] [cached since 19.19s ago] ()
+2024-06-12 09:34:53,824 [INFO] COMMIT
+2024-06-12 09:34:53,824 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "GET / HTTP/1.1" 200 -
+2024-06-12 09:34:53,855 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:34:54,056 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:34:54,071 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:54] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:34:54,071 [INFO] BEGIN (implicit)
+2024-06-12 09:34:54,071 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:34:54,071 [INFO] [cached since 19.44s ago] ()
+2024-06-12 09:34:54,087 [INFO] COMMIT
+2024-06-12 09:34:54,087 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:54] "GET / HTTP/1.1" 200 -
+2024-06-12 09:34:54,118 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:35:16,521 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:35:16,537 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:35:16,537 [INFO] BEGIN (implicit)
+2024-06-12 09:35:16,537 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:35:16,537 [INFO] [cached since 41.91s ago] ()
+2024-06-12 09:35:16,553 [INFO] COMMIT
+2024-06-12 09:35:16,553 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "GET / HTTP/1.1" 200 -
+2024-06-12 09:35:16,606 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:35:16,631 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-06-12 09:35:22,106 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:35:22,106 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:22] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:35:22,122 [INFO] BEGIN (implicit)
+2024-06-12 09:35:22,122 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:35:22,122 [INFO] [cached since 47.49s ago] ()
+2024-06-12 09:35:22,122 [INFO] COMMIT
+2024-06-12 09:35:22,138 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:22] "GET / HTTP/1.1" 200 -
+2024-06-12 09:35:22,169 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:22] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:36:17,736 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:36:17,752 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:17] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:36:17,759 [INFO] BEGIN (implicit)
+2024-06-12 09:36:17,759 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:17,759 [INFO] [cached since 103.1s ago] ()
+2024-06-12 09:36:17,759 [INFO] COMMIT
+2024-06-12 09:36:17,759 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:17] "GET / HTTP/1.1" 200 -
+2024-06-12 09:36:17,805 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:17] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:36:18,222 [INFO] BEGIN (implicit)
+2024-06-12 09:36:18,222 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:18,222 [INFO] [cached since 103.6s ago] ()
+2024-06-12 09:36:18,222 [INFO] COMMIT
+2024-06-12 09:36:18,222 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:36:18,260 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:18,692 [INFO] BEGIN (implicit)
+2024-06-12 09:36:18,692 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:18,692 [INFO] [cached since 104.1s ago] ()
+2024-06-12 09:36:18,692 [INFO] COMMIT
+2024-06-12 09:36:18,708 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "GET /delete HTTP/1.1" 200 -
+2024-06-12 09:36:18,761 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:19,078 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "GET /csv HTTP/1.1" 200 -
+2024-06-12 09:36:19,125 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:19,726 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
+    todos = models.getAllTasks()
+    ^^^^^^^^^^
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-06-12 09:36:19,742 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "[32mGET /create HTTP/1.1[0m" 302 -
+2024-06-12 09:36:19,742 [INFO] BEGIN (implicit)
+2024-06-12 09:36:19,742 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:19,742 [INFO] [cached since 105.1s ago] ()
+2024-06-12 09:36:19,742 [INFO] COMMIT
+2024-06-12 09:36:19,757 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "GET / HTTP/1.1" 200 -
+2024-06-12 09:36:19,795 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:32,882 [INFO] BEGIN (implicit)
+2024-06-12 09:36:32,887 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:32,889 [INFO] [cached since 118.2s ago] ()
+2024-06-12 09:36:32,901 [INFO] COMMIT
+2024-06-12 09:36:32,921 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:32] "GET / HTTP/1.1" 200 -
+2024-06-12 09:36:32,997 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:32] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:36:33,428 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
+2024-06-12 09:36:33,529 [INFO]  * Restarting with stat
+2024-06-12 09:36:35,481 [WARNING]  * Debugger is active!
+2024-06-12 09:36:35,496 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:36:35,665 [INFO] BEGIN (implicit)
+2024-06-12 09:36:35,665 [INFO] BEGIN (implicit)
+2024-06-12 09:36:35,681 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:35,681 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:35,681 [INFO] [generated in 0.00248s] ()
+2024-06-12 09:36:35,681 [INFO] [cached since 0.00328s ago] ()
+2024-06-12 09:36:35,681 [INFO] COMMIT
+2024-06-12 09:36:35,681 [INFO] COMMIT
+2024-06-12 09:36:35,712 [INFO] BEGIN (implicit)
+2024-06-12 09:36:35,712 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:35,728 [INFO] [cached since 0.04504s ago] ()
+2024-06-12 09:36:35,734 [INFO] COMMIT
+2024-06-12 09:36:35,797 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:36:35,797 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:35,813 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:35,882 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:36:35,897 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-06-12 09:36:37,132 [INFO] BEGIN (implicit)
+2024-06-12 09:36:37,132 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:37,138 [INFO] [cached since 1.457s ago] ()
+2024-06-12 09:36:37,138 [INFO] COMMIT
+2024-06-12 09:36:37,138 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:37,170 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:37,771 [INFO] BEGIN (implicit)
+2024-06-12 09:36:37,771 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:37,771 [INFO] [cached since 2.096s ago] ()
+2024-06-12 09:36:37,771 [INFO] COMMIT
+2024-06-12 09:36:37,771 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:36:37,818 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:38,342 [INFO] BEGIN (implicit)
+2024-06-12 09:36:38,342 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:38,342 [INFO] [cached since 2.667s ago] ()
+2024-06-12 09:36:38,342 [INFO] COMMIT
+2024-06-12 09:36:38,357 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "GET /delete HTTP/1.1" 200 -
+2024-06-12 09:36:38,404 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:38,943 [INFO] BEGIN (implicit)
+2024-06-12 09:36:38,943 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:38,943 [INFO] [cached since 3.267s ago] ()
+2024-06-12 09:36:38,943 [INFO] COMMIT
+2024-06-12 09:36:38,943 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:38,990 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:41,411 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
+2024-06-12 09:36:41,495 [INFO]  * Restarting with stat
+2024-06-12 09:36:42,914 [WARNING]  * Debugger is active!
+2024-06-12 09:36:42,930 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:36:43,153 [INFO] BEGIN (implicit)
+2024-06-12 09:36:43,153 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:43,153 [INFO] [generated in 0.00250s] ()
+2024-06-12 09:36:43,153 [INFO] COMMIT
+2024-06-12 09:36:43,184 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:43] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:43,246 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:43] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:36:44,457 [INFO] BEGIN (implicit)
+2024-06-12 09:36:44,457 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:44,457 [INFO] [cached since 1.302s ago] ()
+2024-06-12 09:36:44,457 [INFO] COMMIT
+2024-06-12 09:36:44,472 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:44,503 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:36:44,519 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-06-12 09:36:44,905 [INFO] BEGIN (implicit)
+2024-06-12 09:36:44,905 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:44,905 [INFO] [cached since 1.757s ago] ()
+2024-06-12 09:36:44,905 [INFO] COMMIT
+2024-06-12 09:36:44,920 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:36:44,958 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:45,491 [INFO] BEGIN (implicit)
+2024-06-12 09:36:45,491 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:45,491 [INFO] [cached since 2.341s ago] ()
+2024-06-12 09:36:45,491 [INFO] COMMIT
+2024-06-12 09:36:45,506 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:45] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:45,537 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:46,054 [INFO] BEGIN (implicit)
+2024-06-12 09:36:46,054 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:46,054 [INFO] [cached since 2.902s ago] ()
+2024-06-12 09:36:46,061 [INFO] COMMIT
+2024-06-12 09:36:46,061 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "GET / HTTP/1.1" 200 -
+2024-06-12 09:36:46,108 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:36:46,540 [INFO] BEGIN (implicit)
+2024-06-12 09:36:46,540 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:36:46,540 [INFO] [cached since 3.387s ago] ()
+2024-06-12 09:36:46,540 [INFO] COMMIT
+2024-06-12 09:36:46,555 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:36:46,593 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:39:38,838 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
+2024-06-12 09:39:38,922 [INFO]  * Restarting with stat
+2024-06-12 09:39:40,943 [WARNING]  * Debugger is active!
+2024-06-12 09:39:40,959 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:39:53,933 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
+2024-06-12 09:39:54,055 [INFO]  * Restarting with stat
+2024-06-12 09:39:56,132 [WARNING]  * Debugger is active!
+2024-06-12 09:39:56,132 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:40:02,597 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
+2024-06-12 09:40:02,666 [INFO]  * Restarting with stat
+2024-06-12 09:40:07,962 [INFO]  * Restarting with stat
+2024-06-12 09:40:21,381 [INFO]  * Restarting with stat
+2024-06-12 09:40:23,244 [WARNING]  * Debugger is active!
+2024-06-12 09:40:23,291 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:40:51,852 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
+2024-06-12 09:40:51,941 [INFO]  * Restarting with stat
+2024-06-12 09:40:53,740 [WARNING]  * Debugger is active!
+2024-06-12 09:40:53,762 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:40:55,825 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
+2024-06-12 09:40:55,978 [INFO]  * Restarting with stat
+2024-06-12 09:40:57,313 [WARNING]  * Debugger is active!
+2024-06-12 09:40:57,329 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:41:14,680 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
+2024-06-12 09:41:14,801 [INFO]  * Restarting with stat
+2024-06-12 09:41:17,785 [WARNING]  * Debugger is active!
+2024-06-12 09:41:17,807 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:41:43,975 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
+2024-06-12 09:41:44,042 [INFO]  * Restarting with stat
+2024-06-12 09:41:46,032 [WARNING]  * Debugger is active!
+2024-06-12 09:41:46,032 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:42:05,242 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
+2024-06-12 09:42:05,325 [INFO]  * Restarting with stat
+2024-06-12 09:42:07,177 [WARNING]  * Debugger is active!
+2024-06-12 09:42:07,193 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:43:33,729 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
+2024-06-12 09:43:33,813 [INFO]  * Restarting with stat
+2024-06-12 09:43:35,670 [WARNING]  * Debugger is active!
+2024-06-12 09:43:35,686 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:43:41,867 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
+2024-06-12 09:43:41,935 [INFO]  * Restarting with stat
+2024-06-12 09:43:43,338 [WARNING]  * Debugger is active!
+2024-06-12 09:43:43,353 [INFO]  * Debugger PIN: 883-784-931
+2024-06-12 09:45:55,463 [INFO] BEGIN (implicit)
+2024-06-12 09:45:55,469 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:45:55,469 [INFO] [generated in 0.00161s] ()
+2024-06-12 09:45:55,485 [INFO] COMMIT
+2024-06-12 09:45:55,541 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:45:55,632 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:45:55,647 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-06-12 09:45:55,848 [INFO] BEGIN (implicit)
+2024-06-12 09:45:55,848 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:45:55,864 [INFO] [cached since 0.3901s ago] ()
+2024-06-12 09:45:55,864 [INFO] COMMIT
+2024-06-12 09:45:55,870 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:45:55,933 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:45:56,202 [INFO] BEGIN (implicit)
+2024-06-12 09:45:56,218 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:45:56,218 [INFO] [cached since 0.7493s ago] ()
+2024-06-12 09:45:56,218 [INFO] COMMIT
+2024-06-12 09:45:56,218 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "GET /delete HTTP/1.1" 200 -
+2024-06-12 09:45:56,271 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:45:56,550 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "GET /csv HTTP/1.1" 200 -
+2024-06-12 09:45:56,619 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:45:56,920 [INFO] BEGIN (implicit)
+2024-06-12 09:45:56,920 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:45:56,920 [INFO] [cached since 1.459s ago] ()
+2024-06-12 09:45:56,920 [INFO] COMMIT
+2024-06-12 09:45:56,935 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "GET / HTTP/1.1" 200 -
+2024-06-12 09:45:56,973 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:47:26,014 [INFO] BEGIN (implicit)
+2024-06-12 09:47:26,020 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:47:26,020 [INFO] [cached since 90.55s ago] ()
+2024-06-12 09:47:26,020 [INFO] COMMIT
+2024-06-12 09:47:26,020 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:47:26,098 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /static/styles.css HTTP/1.1" 200 -
+2024-06-12 09:47:26,484 [INFO] BEGIN (implicit)
+2024-06-12 09:47:26,484 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:47:26,484 [INFO] [cached since 91.02s ago] ()
+2024-06-12 09:47:26,499 [INFO] COMMIT
+2024-06-12 09:47:26,499 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:47:26,553 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:47:26,985 [INFO] BEGIN (implicit)
+2024-06-12 09:47:26,985 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:47:26,985 [INFO] [cached since 91.52s ago] ()
+2024-06-12 09:47:26,985 [INFO] COMMIT
+2024-06-12 09:47:26,985 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /delete HTTP/1.1" 200 -
+2024-06-12 09:47:27,039 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:47:27,486 [INFO] BEGIN (implicit)
+2024-06-12 09:47:27,486 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:47:27,486 [INFO] [cached since 92.03s ago] ()
+2024-06-12 09:47:27,502 [INFO] COMMIT
+2024-06-12 09:47:27,502 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:47:27,555 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:47:27,903 [INFO] BEGIN (implicit)
+2024-06-12 09:47:27,919 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:47:27,925 [INFO] [cached since 92.45s ago] ()
+2024-06-12 09:47:27,925 [INFO] COMMIT
+2024-06-12 09:47:27,925 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "GET /update HTTP/1.1" 200 -
+2024-06-12 09:47:27,972 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:47:28,442 [INFO] BEGIN (implicit)
+2024-06-12 09:47:28,442 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:47:28,442 [INFO] [cached since 92.98s ago] ()
+2024-06-12 09:47:28,442 [INFO] COMMIT
+2024-06-12 09:47:28,458 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:28] "GET /delete HTTP/1.1" 200 -
+2024-06-12 09:47:28,505 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:47:32,918 [INFO] BEGIN (implicit)
+2024-06-12 09:47:32,918 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:47:32,918 [INFO] [cached since 97.46s ago] ()
+2024-06-12 09:47:32,933 [INFO] COMMIT
+2024-06-12 09:47:32,933 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:32] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:47:32,971 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-06-12 09:48:10,105 [INFO] BEGIN (implicit)
+2024-06-12 09:48:10,105 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-06-12 09:48:10,111 [INFO] [cached since 134.6s ago] ()
+2024-06-12 09:48:10,111 [INFO] COMMIT
+2024-06-12 09:48:10,126 [INFO] 127.0.0.1 - - [12/Jun/2024 09:48:10] "GET /create HTTP/1.1" 200 -
+2024-06-12 09:48:10,173 [INFO] 127.0.0.1 - - [12/Jun/2024 09:48:10] "GET /static/styles.css HTTP/1.1" 200 -

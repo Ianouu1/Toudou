@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, flash, redirect, url_for
+import logging
 
 
 def create_app():
@@ -9,13 +10,16 @@ def create_app():
     #app.register_blueprint(api)
     app.register_blueprint(web_ui)
     app.config.from_prefixed_env(prefix="TOUDOU_FLASK")
-    @app.errorhandler(500)
-    def handle_internal_error(error):
-        flash("Erreur interne du serveur", "error")
-        return redirect(url_for("web_ui.index"))
-
     return app
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("toudou.log"),
+        logging.StreamHandler()
+    ]
+)
 
 config = dict(
     DATABASE_URL=os.getenv("TOUDOU_DATABASE_URL", ""),
