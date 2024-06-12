@@ -13,6 +13,7 @@ h1 {
 h1 > a {
     text-decoration: none;
     color:initial;
+    margin:10px;
 }
 
 .container {
@@ -34,6 +35,10 @@ h1 > a {
 .table-container-index {
     width: 90%; /* Définition de la largeur à 90% de la page */
     margin: 0 auto; /* Pour centrer la table horizontalement */
+}
+.table-container-login {
+    width: 40%;
+    margin: 0 auto;
 }
 
 table {
@@ -82,26 +87,24 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-h2.toudous-table-title {
-    background: #b76cd0;
+h2 {
     padding: 10px;
     text-align: center;
 }
-
+h2.toudous-table-title {
+    background: #b76cd0;
+}
+h2.login-title {
+    background: #dbd253;
+}
 h2.create-task-title {
     background: #6cd072;
-    padding: 10px;
-    text-align: center;
 }
 h2.update-task-title {
     background: #6cd0cd;
-    padding: 10px;
-    text-align: center;
 }
 h2.delete-task-title {
     background: #d06c6c;
-    padding: 10px;
-    text-align: center;
 }
 
 nav {
@@ -162,4 +165,9 @@ nav ul li a:hover {
 .center-div {
     width: 50%;
     margin: 0 auto;
+}
+.headerdiv {
+    display: flex;
+    background: #53d0f4;
+    gap: 20px;
 }

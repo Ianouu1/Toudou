@@ -6,9 +6,11 @@ from datetime import datetime
 import click
 import uuid
 
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
 from wtforms.fields.choices import SelectField
 from wtforms.fields.datetime import DateTimeLocalField
-from wtforms.fields.simple import TextAreaField
+from wtforms.fields.simple import TextAreaField, PasswordField
 
 from toudou import models
 from toudou import services
@@ -115,12 +117,58 @@ def export_csv():
 
 
 web_ui = Blueprint("web_ui", __name__, url_prefix="/")
+auth = HTTPBasicAuth()
 
 
 @web_ui.route('/')
+@auth.login_required
 def index():
     todos = models.getAllTasks()
     return render_template("index.html", todos=todos)
+    return f"Hello, {auth.current_user()}!"
+
+
+    # ---------------------- Login ---------------------- #
+class loginForm(FlaskForm):
+    username = StringField('User ID', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+
+
+@web_ui.route('/login')
+def show_login_form():
+    form_login = loginForm()
+    return render_template('login.html', action='login', loginForm=form_login)
+
+
+@web_ui.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    user = verify_password(username, password)
+    return redirect(url_for('web_ui.index', user=user))
+
+
+users = {
+    "a": generate_password_hash("a"),
+    "z": generate_password_hash("z"),
+    "admin": generate_password_hash("admin"),
+    "flo": generate_password_hash("flo")
+}
+
+
+@auth.verify_password
+def verify_password(username, password):
+    if username in users and \
+            check_password_hash(users.get(username), password):
+        return username
+
+
+# ---------------------- Create ---------------------- #
+class createForm(FlaskForm):
+    taskName = StringField('Task Name', validators=[DataRequired()])
+    taskDescription = TextAreaField('Description')
+    taskDatetime = DateTimeLocalField('Date', format='%Y-%m-%dT%H:%M')
+    taskStatus = SelectField('Status', choices=[('False', 'False'), ('True', 'True')])
 
 
 @web_ui.route('/create')
@@ -146,6 +194,15 @@ def create_task():
     else:
         message = "failed"
     return redirect(url_for('web_ui.show_create_form', message=message))
+
+
+# ---------------------- Update ---------------------- #
+class updateForm(FlaskForm):
+    taskId = StringField('New Task ID', validators=[DataRequired()])
+    newTaskName = StringField('New Task Name', validators=[DataRequired()])
+    newDescription = TextAreaField('New Description')
+    newDatetime = DateTimeLocalField('New Date', format='%Y-%m-%dT%H:%M')
+    newStatus = SelectField('New Status', choices=[('False', 'False'), ('True', 'True')])
 
 
 @web_ui.route('/update')
@@ -174,6 +231,11 @@ def update_task():
     return redirect(url_for('web_ui.show_update_form', message=message))
 
 
+# ---------------------- Delete ---------------------- #
+class deleteForm(FlaskForm):
+    deleteTaskId = StringField('Task ID', validators=[DataRequired()])
+
+
 @web_ui.route('/delete')
 def show_delete_form():
     todos = models.getAllTasks()
@@ -192,6 +254,8 @@ def delete_task():
         message = "failed"
     return redirect(url_for('web_ui.show_delete_form', message=message))
 
+
+# ---------------------------------------------------- #
 
 @web_ui.route('/id')
 @web_ui.route("/id/<todoid>")
@@ -233,26 +297,15 @@ def import_csv_gui():
     return redirect(url_for('web_ui.viewCSV', message="success_import"))
 
 
-class createForm(FlaskForm):
-    taskName = StringField('Task Name', validators=[DataRequired()])
-    taskDescription = TextAreaField('Description')
-    taskDatetime = DateTimeLocalField('Date', format='%Y-%m-%dT%H:%M')
-    taskStatus = SelectField('Status', choices=[('False', 'False'), ('True', 'True')])
+# ---------------------- Error Handlers ---------------------- #
 
-class deleteForm(FlaskForm):
-    deleteTaskId = StringField('Task ID', validators=[DataRequired()])
-
-class updateForm(FlaskForm):
-    taskId = StringField('New Task ID', validators=[DataRequired()])
-    newTaskName = StringField('New Task Name', validators=[DataRequired()])
-    newDescription = TextAreaField('New Description')
-    newDatetime = DateTimeLocalField('New Date', format='%Y-%m-%dT%H:%M')
-    newStatus = SelectField('New Status', choices=[('False', 'False'), ('True', 'True')])
 @web_ui.errorhandler(500)
 def handle_internal_error(error):
     flash("Internal server error", "error")
     logging.exception(error)
     return redirect(url_for("web_ui.index"))
+
+
 @web_ui.errorhandler(404)
 def handle_internal_error(error):
     flash("Page not found", "error")

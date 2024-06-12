@@ -1,9 +1,13 @@
-<h1><a href="{{ url_for('web_ui.index') }}">Home</a></h1>
+<div class="headerdiv">
+    <h1 style="background: #43a2bd"><a href="{{ url_for('web_ui.index') }}">🏠 Home</a></h1>
+    <h1 style="background: #43a2bd"><a href="{{ url_for('web_ui.login') }}">👤 Login</a></h1>
+    <!-- TODO: Put a message to say to the currently logged user hello :), div the h1s, to space between. So the message is displayed in the top right corner  -->
+</div>
 <nav>
     <ul>
-        <li><a href="{{ url_for('web_ui.show_create_form') }}">Create ✅</a></li>
-        <li><a href="{{ url_for('web_ui.show_update_form') }}">Update 🔄</a></li>
-        <li><a href="{{ url_for('web_ui.show_delete_form') }}">Delete ❌</a></li>
+        <li><a href="{{ url_for('web_ui.show_create_form') }}">✅ Create</a></li>
+        <li><a href="{{ url_for('web_ui.show_update_form') }}">🔄 Update </a></li>
+        <li><a href="{{ url_for('web_ui.show_delete_form') }}">❌ Delete</a></li>
         <li><a href="{{ url_for('web_ui.viewCSV') }}">CSV</a></li>
     </ul>
 </nav>
