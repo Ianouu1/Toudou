@@ -1,19 +1,18 @@
 import datetime
 import io
-import os
+import logging
 
 from datetime import datetime
 import click
 import uuid
 
-import flask_wtf
 from wtforms.fields.choices import SelectField
 from wtforms.fields.datetime import DateTimeLocalField
 from wtforms.fields.simple import TextAreaField
 
 from toudou import models
 from toudou import services
-from flask import Flask, render_template, request, redirect, url_for, send_file, Blueprint
+from flask import Flask, render_template, request, redirect, url_for, send_file, Blueprint, abort, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms.validators import DataRequired
@@ -249,3 +248,13 @@ class updateForm(FlaskForm):
     newDescription = TextAreaField('New Description')
     newDatetime = DateTimeLocalField('New Date', format='%Y-%m-%dT%H:%M')
     newStatus = SelectField('New Status', choices=[('False', 'False'), ('True', 'True')])
+@web_ui.errorhandler(500)
+def handle_internal_error(error):
+    flash("Internal server error", "error")
+    logging.exception(error)
+    return redirect(url_for("web_ui.index"))
+@web_ui.errorhandler(404)
+def handle_internal_error(error):
+    flash("Page not found", "error")
+    logging.exception(error)
+    return redirect(url_for("web_ui.index"))
