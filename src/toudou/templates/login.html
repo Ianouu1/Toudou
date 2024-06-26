@@ -8,7 +8,7 @@
 <body>
     {% include 'toudou-navbar.html' %}
     <div class="table-container-login">
-        <h2 class="login-title">Login</h2>
+        <h2 class="login-title">Login <br>(j'avais pas compris la question, ca marche pas)</h2>
         <form id="createForm" action="{{ url_for('web_ui.login') }}" method="POST">
             {{ loginForm.csrf_token }}
             {{ loginForm.username.label }} {{ loginForm.username() }}
