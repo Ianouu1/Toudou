@@ -128,30 +128,11 @@ def index():
     return f"Hello, {auth.current_user()}!"
 
 
-    # ---------------------- Login ---------------------- #
-class loginForm(FlaskForm):
-    username = StringField('User ID', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-
-
-@web_ui.route('/login')
-def show_login_form():
-    form_login = loginForm()
-    return render_template('login.html', action='login', loginForm=form_login)
-
-
-@web_ui.route('/login', methods=['POST'])
-def login():
-    username = request.form['username']
-    password = request.form['password']
-    user = verify_password(username, password)
-    return redirect(url_for('web_ui.index', user=user))
-
-
 users = {
     "a": generate_password_hash("a"),
     "z": generate_password_hash("z"),
     "admin": generate_password_hash("admin"),
+    "user": generate_password_hash("user"),
     "flo": generate_password_hash("flo")
 }
 
