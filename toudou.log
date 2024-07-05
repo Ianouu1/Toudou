@@ -2886,3 +2886,17 @@ FROM toudou
 FROM toudou
 2024-07-05 23:43:49,601 [INFO] [generated in 0.00034s] ()
 2024-07-05 23:43:49,602 [INFO] COMMIT
+2024-07-05 23:48:19,265 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:19] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:48:19,436 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:48:19,485 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:19] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:48:23,771 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:23] "[33mGET /api/apidoc/swagger/ HTTP/1.1[0m" 404 -
+2024-07-05 23:48:23,885 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:48:26,644 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:26] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:48:26,816 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:26] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:48:30,973 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:30] "[31m[1mGET /api/todos HTTP/1.1[0m" 401 -
+2024-07-05 23:48:36,435 [INFO] BEGIN (implicit)
+2024-07-05 23:48:36,437 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 23:48:36,437 [INFO] [generated in 0.00071s] ()
+2024-07-05 23:48:36,439 [INFO] COMMIT
+2024-07-05 23:48:36,441 [INFO] 127.0.0.1 - - [05/Jul/2024 23:48:36] "GET /api/todos HTTP/1.1" 200 -

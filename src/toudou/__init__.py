@@ -1,12 +1,14 @@
 import os
 
 from flask import Flask
+from toudou.models import init_db
 import logging
 
 from flask_httpauth import HTTPTokenAuth
 
 
 def create_app():
+    init_db()
     app = Flask(__name__)
     from toudou.views import web_ui, api
     app.register_blueprint(web_ui)

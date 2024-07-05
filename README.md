@@ -29,3 +29,4 @@ However, we cannot update a task through the API because I didn't have enough ti
 Also, the POST method to create a task isn't working. 
 
 I also used Hypercorn since Uvicorn wasn't working for me
+I didn't make it to Dockerise.
