@@ -24,3 +24,8 @@ You can access the API after running the project by using :
 $ pdm run start
 ```
 Then you can go to http://localhost:5000/apidoc/swagger/
+
+However, we cannot update a task through the API because I didn't have enough time to finish.
+Also, the POST method to create a task isn't working. 
+
+I also used Hypercorn since Uvicorn wasn't working for me

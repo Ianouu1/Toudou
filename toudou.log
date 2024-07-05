@@ -2757,3 +2757,132 @@ FROM toudou
 2024-07-05 23:24:59,006 [INFO]  * Restarting with stat
 2024-07-05 23:25:00,162 [WARNING]  * Debugger is active!
 2024-07-05 23:25:00,167 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:28:05,490 [INFO] BEGIN (implicit)
+2024-07-05 23:28:05,492 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 23:28:05,493 [INFO] [generated in 0.00058s] ()
+2024-07-05 23:28:05,494 [INFO] COMMIT
+2024-07-05 23:28:05,503 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:05] "GET / HTTP/1.1" 200 -
+2024-07-05 23:28:05,606 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:05] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 23:28:05,622 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:28:07,138 [INFO] BEGIN (implicit)
+2024-07-05 23:28:07,138 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 23:28:07,139 [INFO] [cached since 1.647s ago] ()
+2024-07-05 23:28:07,139 [INFO] COMMIT
+2024-07-05 23:28:07,147 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:07] "GET /create HTTP/1.1" 200 -
+2024-07-05 23:28:07,180 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 23:28:09,629 [INFO] BEGIN (implicit)
+2024-07-05 23:28:09,631 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou 
+WHERE toudou.id = ?
+2024-07-05 23:28:09,632 [INFO] [generated in 0.00084s] ('d4e25c72b16c479a8dbdc0821a44cc8e',)
+2024-07-05 23:28:09,633 [INFO] COMMIT
+2024-07-05 23:28:09,637 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:09] "GET /id/d4e25c72-b16c-479a-8dbd-c0821a44cc8e HTTP/1.1" 200 -
+2024-07-05 23:28:09,709 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 23:28:10,323 [INFO] BEGIN (implicit)
+2024-07-05 23:28:10,324 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 23:28:10,325 [INFO] [cached since 4.833s ago] ()
+2024-07-05 23:28:10,326 [INFO] COMMIT
+2024-07-05 23:28:10,334 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:10] "GET /update HTTP/1.1" 200 -
+2024-07-05 23:28:10,400 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 23:28:21,844 [INFO] BEGIN (implicit)
+2024-07-05 23:28:21,846 [INFO] UPDATE toudou SET task=?, description=?, enddate=?, status=? WHERE toudou.id = ?
+2024-07-05 23:28:21,847 [INFO] [generated in 0.00056s] ('AAAAAAAAZZZZZZZZZZZZZZZZZ', 'aaaaaaa', None, 0, 'd4e25c72b16c479a8dbdc0821a44cc8e')
+2024-07-05 23:28:21,849 [INFO] COMMIT
+2024-07-05 23:28:21,853 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:21] "[32mPOST /update HTTP/1.1[0m" 302 -
+2024-07-05 23:28:22,043 [INFO] BEGIN (implicit)
+2024-07-05 23:28:22,044 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 23:28:22,044 [INFO] [cached since 16.55s ago] ()
+2024-07-05 23:28:22,045 [INFO] COMMIT
+2024-07-05 23:28:22,048 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:22] "GET /update?message=success HTTP/1.1" 200 -
+2024-07-05 23:28:22,093 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:22] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 23:28:22,100 [INFO] 127.0.0.1 - - [05/Jul/2024 23:28:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:29:08,385 [INFO] 127.0.0.1 - - [05/Jul/2024 23:29:08] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:29:08,558 [INFO] 127.0.0.1 - - [05/Jul/2024 23:29:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:29:08,618 [INFO] 127.0.0.1 - - [05/Jul/2024 23:29:08] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:29:15,101 [INFO] 127.0.0.1 - - [05/Jul/2024 23:29:15] "[35m[1mPOST /api/todos HTTP/1.1[0m" 500 -
+2024-07-05 23:32:39,508 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:32:39,585 [INFO]  * Restarting with stat
+2024-07-05 23:32:40,780 [WARNING]  * Debugger is active!
+2024-07-05 23:32:40,785 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:32:42,730 [INFO] 127.0.0.1 - - [05/Jul/2024 23:32:42] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:32:42,905 [INFO] 127.0.0.1 - - [05/Jul/2024 23:32:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:32:42,963 [INFO] 127.0.0.1 - - [05/Jul/2024 23:32:42] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:32:51,826 [INFO] 127.0.0.1 - - [05/Jul/2024 23:32:51] "[35m[1mPOST /api/todos HTTP/1.1[0m" 500 -
+2024-07-05 23:33:06,633 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:33:06,689 [INFO]  * Restarting with stat
+2024-07-05 23:33:07,969 [WARNING]  * Debugger is active!
+2024-07-05 23:33:07,975 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:33:08,884 [INFO] 127.0.0.1 - - [05/Jul/2024 23:33:08] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:33:09,077 [INFO] 127.0.0.1 - - [05/Jul/2024 23:33:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:33:09,102 [INFO] 127.0.0.1 - - [05/Jul/2024 23:33:09] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:35:59,641 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:35:59,704 [INFO]  * Restarting with stat
+2024-07-05 23:36:00,857 [WARNING]  * Debugger is active!
+2024-07-05 23:36:00,862 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:36:01,879 [INFO] 127.0.0.1 - - [05/Jul/2024 23:36:01] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:36:02,051 [INFO] 127.0.0.1 - - [05/Jul/2024 23:36:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:36:02,110 [INFO] 127.0.0.1 - - [05/Jul/2024 23:36:02] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:36:09,713 [INFO] 127.0.0.1 - - [05/Jul/2024 23:36:09] "[35m[1mPOST /api/todos HTTP/1.1[0m" 500 -
+2024-07-05 23:36:27,859 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:36:27,912 [INFO]  * Restarting with stat
+2024-07-05 23:36:29,134 [WARNING]  * Debugger is active!
+2024-07-05 23:36:29,139 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:36:30,197 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:36:30,251 [INFO]  * Restarting with stat
+2024-07-05 23:36:30,531 [WARNING]  * Debugger is active!
+2024-07-05 23:36:30,539 [INFO]  * Debugger PIN: 775-343-613
+2024-07-05 23:36:31,576 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:36:31,608 [INFO]  * Restarting with stat
+2024-07-05 23:36:32,865 [WARNING]  * Debugger is active!
+2024-07-05 23:36:32,870 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:36:39,086 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:36:39,136 [INFO]  * Restarting with stat
+2024-07-05 23:36:40,286 [WARNING]  * Debugger is active!
+2024-07-05 23:36:40,292 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:37:16,314 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:37:16,369 [INFO]  * Restarting with stat
+2024-07-05 23:37:16,657 [WARNING]  * Debugger is active!
+2024-07-05 23:37:16,664 [INFO]  * Debugger PIN: 775-343-613
+2024-07-05 23:37:36,038 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:37:36,081 [INFO]  * Restarting with stat
+2024-07-05 23:37:37,305 [WARNING]  * Debugger is active!
+2024-07-05 23:37:37,310 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:37:38,349 [INFO] 127.0.0.1 - - [05/Jul/2024 23:37:38] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:37:38,592 [INFO] 127.0.0.1 - - [05/Jul/2024 23:37:38] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:37:38,598 [INFO] 127.0.0.1 - - [05/Jul/2024 23:37:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 23:37:44,472 [INFO] 127.0.0.1 - - [05/Jul/2024 23:37:44] "[35m[1mPOST /api/todos HTTP/1.1[0m" 500 -
+2024-07-05 23:37:54,794 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:37:54,850 [INFO]  * Restarting with stat
+2024-07-05 23:37:56,025 [WARNING]  * Debugger is active!
+2024-07-05 23:37:56,030 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:38:45,058 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:38:45,114 [INFO]  * Restarting with stat
+2024-07-05 23:38:46,280 [WARNING]  * Debugger is active!
+2024-07-05 23:38:46,285 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:38:47,585 [INFO] 127.0.0.1 - - [05/Jul/2024 23:38:47] "GET /apidoc/swagger/ HTTP/1.1" 200 -
+2024-07-05 23:38:47,832 [INFO] 127.0.0.1 - - [05/Jul/2024 23:38:47] "GET /apidoc/openapi.json HTTP/1.1" 200 -
+2024-07-05 23:38:50,657 [INFO] 127.0.0.1 - - [05/Jul/2024 23:38:50] "[31m[1mPOST /api/todos HTTP/1.1[0m" 401 -
+2024-07-05 23:38:51,718 [INFO] 127.0.0.1 - - [05/Jul/2024 23:38:51] "[31m[1mPOST /api/todos HTTP/1.1[0m" 401 -
+2024-07-05 23:38:55,005 [INFO] 127.0.0.1 - - [05/Jul/2024 23:38:55] "[35m[1mPOST /api/todos HTTP/1.1[0m" 500 -
+2024-07-05 23:39:02,859 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 23:39:02,945 [INFO]  * Restarting with stat
+2024-07-05 23:39:04,422 [WARNING]  * Debugger is active!
+2024-07-05 23:39:04,427 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:40:01,138 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\templates\\wsgi.py', reloading
+2024-07-05 23:40:01,189 [INFO]  * Restarting with stat
+2024-07-05 23:40:02,314 [WARNING]  * Debugger is active!
+2024-07-05 23:40:02,323 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:40:59,825 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\templates\\wsgi.py', reloading
+2024-07-05 23:40:59,890 [INFO]  * Restarting with stat
+2024-07-05 23:41:01,005 [WARNING]  * Debugger is active!
+2024-07-05 23:41:01,011 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 23:43:41,870 [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
+2024-07-05 23:43:49,599 [INFO] BEGIN (implicit)
+2024-07-05 23:43:49,600 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 23:43:49,601 [INFO] [generated in 0.00034s] ()
+2024-07-05 23:43:49,602 [INFO] COMMIT
