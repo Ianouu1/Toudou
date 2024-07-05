@@ -6,7 +6,7 @@ from datetime import datetime
 import click
 import uuid
 
-from flask_httpauth import HTTPBasicAuth
+from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 from wtforms.fields.choices import SelectField
 from wtforms.fields.datetime import DateTimeLocalField
@@ -14,10 +14,13 @@ from wtforms.fields.simple import TextAreaField, PasswordField
 
 from toudou import models
 from toudou import services
-from flask import Flask, render_template, request, redirect, url_for, send_file, Blueprint, abort, flash
+from flask import Flask, render_template, request, redirect, url_for, send_file, Blueprint, abort, flash, jsonify
 from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms.validators import DataRequired
+from spectree import SpecTree, SecurityScheme
+from pydantic.v1 import BaseModel, Field, constr
+from typing import Optional
 
 
 @click.group()
@@ -117,11 +120,95 @@ def export_csv():
 
 
 web_ui = Blueprint("web_ui", __name__, url_prefix="/")
-auth = HTTPBasicAuth()
+api = Blueprint("api", __name__, url_prefix="/api")
+
+spec = SpecTree(
+    "flask",
+    security_schemes=[
+        SecurityScheme(
+            name="bearer_token",
+            data={"type": "http", "scheme": "bearer"}
+        )
+    ],
+    security=[{"bearer_token": []}]
+)
+spec.register(web_ui)
+
+authLogin = HTTPBasicAuth()
+authToken = HTTPTokenAuth(scheme='Bearer')
+
+
+# ---------------------- API ---------------------- #
+@api.get("/todos")
+@authToken.login_required()
+@spec.validate(tags=["api"])
+def api_get_todos():
+    try:
+        tasks = models.getAllTasks()
+        return jsonify(tasks), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@api.get("/todos/<id>")
+@authToken.login_required()
+@spec.validate(tags=["api"])
+def api_get_todo(id):
+    try:
+        task = models.getOneTask(uuid.UUID(id))
+        if task:
+            return jsonify(task), 200
+        else:
+            return jsonify({"error": "Task not found"}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@api.delete("/todos/<id>")
+@authToken.login_required()
+@spec.validate(tags=["api"])
+def api_delete_todo(id):
+    try:
+        success = models.deleteTask(uuid.UUID(id))
+        if success:
+            return jsonify({"message": "Task deleted successfully"}), 200
+        else:
+            return jsonify({"error": "Task not found"}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+class TaskCreateRequest(BaseModel):
+    taskName: str = Field("Salut", title="Task Name", description="Name of the task")
+    taskDescription: Optional[str] = Field(None, title="Description", description="Description of the task")
+    taskDatetime: Optional[datetime] = Field(None, title="Date", description="Date and time of the task in ISO format")
+    taskStatus: bool = Field(False, title="Status", description="Status of the task (True or False)")
+
+
+@api.post("/todos")
+@authToken.login_required()
+@spec.validate(tags=["api"], json=TaskCreateRequest)
+def api_create_todo(json: TaskCreateRequest):
+    try:
+        task = models.createTask(
+            id=None,
+            task=json.taskName,
+            description=json.taskDescription,
+            date=json.taskDatetime,
+            status=json.taskStatus
+        )
+        if task:
+            return jsonify({"message": "Task created successfully"}), 201, abort(201)
+        else:
+            return jsonify({"error": "Failed to create task"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 # ---------------------- Login ---------------------- #
+
 @web_ui.route('/')
-@auth.login_required
+@authLogin.login_required
 def index():
     todos = models.getAllTasks()
     return render_template("index.html", todos=todos)
@@ -140,13 +227,27 @@ roles = {
     "admin": ["admin", "a", "flo"]
 }
 
-@auth.verify_password
+tokens = {
+    "token1": "john",
+    "token2": "susan",
+    "a": "florian"
+}
+
+
+@authToken.verify_token
+def verify_token(token):
+    if token in tokens:
+        return tokens[token]
+
+
+@authLogin.verify_password
 def verify_password(username, password):
     if username in users and \
             check_password_hash(users.get(username), password):
         return username
 
-@auth.get_user_roles
+
+@authLogin.get_user_roles
 def get_user_roles(user):
     if user in roles["admin"]:
         return ["admin"]
@@ -155,12 +256,14 @@ def get_user_roles(user):
     else:
         return []
 
-@web_ui.route("/admin")
-@auth.login_required(role="admin")
-def admins_only():
-    return f"Hello {auth.current_user()}, you are an admin!"
 
-# ---------------------- Create ---------------------- #
+@web_ui.route("/admin")
+@authLogin.login_required(role="admin")
+def admins_only():
+    return f"Hello {authLogin.current_user()}, you are an admin!"
+
+
+# ---------------------- GUI Create ---------------------- #
 class createForm(FlaskForm):
     taskName = StringField('Task Name', validators=[DataRequired()])
     taskDescription = TextAreaField('Description')
@@ -169,7 +272,7 @@ class createForm(FlaskForm):
 
 
 @web_ui.route('/create')
-@auth.login_required(role="admin")
+@authLogin.login_required(role="admin")
 def show_create_form():
     todos = models.getAllTasks()
     form_create = createForm()
@@ -194,7 +297,7 @@ def create_task():
     return redirect(url_for('web_ui.show_create_form', message=message))
 
 
-# ---------------------- Update ---------------------- #
+# ---------------------- GUI Update ---------------------- #
 class updateForm(FlaskForm):
     taskId = StringField('New Task ID', validators=[DataRequired()])
     newTaskName = StringField('New Task Name', validators=[DataRequired()])
@@ -204,7 +307,7 @@ class updateForm(FlaskForm):
 
 
 @web_ui.route('/update')
-@auth.login_required(role="admin")
+@authLogin.login_required(role="admin")
 def show_update_form():
     todos = models.getAllTasks()
     update_form = updateForm()
@@ -230,13 +333,13 @@ def update_task():
     return redirect(url_for('web_ui.show_update_form', message=message))
 
 
-# ---------------------- Delete ---------------------- #
+# ---------------------- GUI Delete ---------------------- #
 class deleteForm(FlaskForm):
     deleteTaskId = StringField('Task ID', validators=[DataRequired()])
 
 
 @web_ui.route('/delete')
-@auth.login_required(role="admin")
+@authLogin.login_required(role="admin")
 def show_delete_form():
     todos = models.getAllTasks()
     delete_form = deleteForm()
@@ -259,14 +362,14 @@ def delete_task():
 
 @web_ui.route('/id')
 @web_ui.route("/id/<todoid>")
-@auth.login_required(role="admin")
+@authLogin.login_required(role="admin")
 def viewTodo(todoid=None):
     todo = models.getOneTask(uuid.UUID(todoid))
     return render_template('toudou-view.html', todo=todo)
 
 
 @web_ui.route('/csv')
-@auth.login_required(role="admin")
+@authLogin.login_required(role="admin")
 def viewCSV():
     message = request.args.get('message')
     return render_template('toudou-csv.html', message=message)
@@ -313,6 +416,7 @@ def handle_internal_error(error):
     flash("Page not found", "error")
     logging.exception(error)
     return redirect(url_for("web_ui.index"))
+
 
 @web_ui.errorhandler(403)
 def handle_internal_error(error):
