@@ -119,23 +119,26 @@ def export_csv():
 web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 auth = HTTPBasicAuth()
 
-
+# ---------------------- Login ---------------------- #
 @web_ui.route('/')
 @auth.login_required
 def index():
     todos = models.getAllTasks()
     return render_template("index.html", todos=todos)
-    return f"Hello, {auth.current_user()}!"
 
 
 users = {
-    "a": generate_password_hash("a"),
-    "z": generate_password_hash("z"),
-    "admin": generate_password_hash("admin"),
     "user": generate_password_hash("user"),
+    "u": generate_password_hash("u"),
+    "a": generate_password_hash("a"),
+    "admin": generate_password_hash("admin"),
     "flo": generate_password_hash("flo")
 }
 
+roles = {
+    "user": ["user", "u"],
+    "admin": ["admin", "a", "flo"]
+}
 
 @auth.verify_password
 def verify_password(username, password):
@@ -143,6 +146,19 @@ def verify_password(username, password):
             check_password_hash(users.get(username), password):
         return username
 
+@auth.get_user_roles
+def get_user_roles(user):
+    if user in roles["admin"]:
+        return ["admin"]
+    elif user in roles["user"]:
+        return ["user"]
+    else:
+        return []
+
+@web_ui.route("/admin")
+@auth.login_required(role="admin")
+def admins_only():
+    return f"Hello {auth.current_user()}, you are an admin!"
 
 # ---------------------- Create ---------------------- #
 class createForm(FlaskForm):
@@ -153,6 +169,7 @@ class createForm(FlaskForm):
 
 
 @web_ui.route('/create')
+@auth.login_required(role="admin")
 def show_create_form():
     todos = models.getAllTasks()
     form_create = createForm()
@@ -187,6 +204,7 @@ class updateForm(FlaskForm):
 
 
 @web_ui.route('/update')
+@auth.login_required(role="admin")
 def show_update_form():
     todos = models.getAllTasks()
     update_form = updateForm()
@@ -218,6 +236,7 @@ class deleteForm(FlaskForm):
 
 
 @web_ui.route('/delete')
+@auth.login_required(role="admin")
 def show_delete_form():
     todos = models.getAllTasks()
     delete_form = deleteForm()
@@ -240,12 +259,14 @@ def delete_task():
 
 @web_ui.route('/id')
 @web_ui.route("/id/<todoid>")
+@auth.login_required(role="admin")
 def viewTodo(todoid=None):
     todo = models.getOneTask(uuid.UUID(todoid))
     return render_template('toudou-view.html', todo=todo)
 
 
 @web_ui.route('/csv')
+@auth.login_required(role="admin")
 def viewCSV():
     message = request.args.get('message')
     return render_template('toudou-csv.html', message=message)
@@ -290,5 +311,11 @@ def handle_internal_error(error):
 @web_ui.errorhandler(404)
 def handle_internal_error(error):
     flash("Page not found", "error")
+    logging.exception(error)
+    return redirect(url_for("web_ui.index"))
+
+@web_ui.errorhandler(403)
+def handle_internal_error(error):
+    flash("Forbidden", "error")
     logging.exception(error)
     return redirect(url_for("web_ui.index"))

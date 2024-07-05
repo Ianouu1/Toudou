@@ -1,1725 +1,450 @@
-2024-06-12 09:34:51,110 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:34:51,175 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:34:51,190 [INFO] BEGIN (implicit)
-2024-06-12 09:34:51,190 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:34:51,190 [INFO] [cached since 16.55s ago] ()
-2024-06-12 09:34:51,190 [INFO] COMMIT
-2024-06-12 09:34:51,190 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "GET / HTTP/1.1" 200 -
-2024-06-12 09:34:51,232 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:34:51,633 [INFO] BEGIN (implicit)
-2024-06-12 09:34:51,633 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:34:51,633 [INFO] [cached since 17s ago] ()
-2024-06-12 09:34:51,633 [INFO] COMMIT
-2024-06-12 09:34:51,664 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:34:51,711 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:34:52,420 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:34:52,436 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:34:52,451 [INFO] BEGIN (implicit)
-2024-06-12 09:34:52,451 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:34:52,451 [INFO] [cached since 17.81s ago] ()
-2024-06-12 09:34:52,451 [INFO] COMMIT
-2024-06-12 09:34:52,451 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "GET / HTTP/1.1" 200 -
-2024-06-12 09:34:52,498 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:34:52,520 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 09:34:53,454 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:34:53,469 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:34:53,469 [INFO] BEGIN (implicit)
-2024-06-12 09:34:53,469 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:34:53,485 [INFO] [cached since 18.84s ago] ()
-2024-06-12 09:34:53,485 [INFO] COMMIT
-2024-06-12 09:34:53,485 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "GET / HTTP/1.1" 200 -
-2024-06-12 09:34:53,523 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:34:53,802 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:34:53,817 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:34:53,824 [INFO] BEGIN (implicit)
-2024-06-12 09:34:53,824 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:34:53,824 [INFO] [cached since 19.19s ago] ()
-2024-06-12 09:34:53,824 [INFO] COMMIT
-2024-06-12 09:34:53,824 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "GET / HTTP/1.1" 200 -
-2024-06-12 09:34:53,855 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:34:54,056 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:34:54,071 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:54] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:34:54,071 [INFO] BEGIN (implicit)
-2024-06-12 09:34:54,071 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:34:54,071 [INFO] [cached since 19.44s ago] ()
-2024-06-12 09:34:54,087 [INFO] COMMIT
-2024-06-12 09:34:54,087 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:54] "GET / HTTP/1.1" 200 -
-2024-06-12 09:34:54,118 [INFO] 127.0.0.1 - - [12/Jun/2024 09:34:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:35:16,521 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:35:16,537 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:35:16,537 [INFO] BEGIN (implicit)
-2024-06-12 09:35:16,537 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:35:16,537 [INFO] [cached since 41.91s ago] ()
-2024-06-12 09:35:16,553 [INFO] COMMIT
-2024-06-12 09:35:16,553 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "GET / HTTP/1.1" 200 -
-2024-06-12 09:35:16,606 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:35:16,631 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 09:35:22,106 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:35:22,106 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:22] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:35:22,122 [INFO] BEGIN (implicit)
-2024-06-12 09:35:22,122 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:35:22,122 [INFO] [cached since 47.49s ago] ()
-2024-06-12 09:35:22,122 [INFO] COMMIT
-2024-06-12 09:35:22,138 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:22] "GET / HTTP/1.1" 200 -
-2024-06-12 09:35:22,169 [INFO] 127.0.0.1 - - [12/Jun/2024 09:35:22] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:36:17,736 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:36:17,752 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:17] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:36:17,759 [INFO] BEGIN (implicit)
-2024-06-12 09:36:17,759 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:17,759 [INFO] [cached since 103.1s ago] ()
-2024-06-12 09:36:17,759 [INFO] COMMIT
-2024-06-12 09:36:17,759 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:17] "GET / HTTP/1.1" 200 -
-2024-06-12 09:36:17,805 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:17] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:36:18,222 [INFO] BEGIN (implicit)
-2024-06-12 09:36:18,222 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:18,222 [INFO] [cached since 103.6s ago] ()
-2024-06-12 09:36:18,222 [INFO] COMMIT
-2024-06-12 09:36:18,222 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:36:18,260 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:18,692 [INFO] BEGIN (implicit)
-2024-06-12 09:36:18,692 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:18,692 [INFO] [cached since 104.1s ago] ()
-2024-06-12 09:36:18,692 [INFO] COMMIT
-2024-06-12 09:36:18,708 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "GET /delete HTTP/1.1" 200 -
-2024-06-12 09:36:18,761 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:19,078 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "GET /csv HTTP/1.1" 200 -
-2024-06-12 09:36:19,125 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:19,726 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-Traceback (most recent call last):
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "\\taiwan\users\22206844\BUT2\archi_logicielle\Toudou\src\toudou\views.py", line 129, in show_create_form
-    todos = models.getAllTasks()
-    ^^^^^^^^^^
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "Z:\BUT2\archi_logicielle\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-06-12 09:36:19,742 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "[32mGET /create HTTP/1.1[0m" 302 -
-2024-06-12 09:36:19,742 [INFO] BEGIN (implicit)
-2024-06-12 09:36:19,742 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:19,742 [INFO] [cached since 105.1s ago] ()
-2024-06-12 09:36:19,742 [INFO] COMMIT
-2024-06-12 09:36:19,757 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "GET / HTTP/1.1" 200 -
-2024-06-12 09:36:19,795 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:32,882 [INFO] BEGIN (implicit)
-2024-06-12 09:36:32,887 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:32,889 [INFO] [cached since 118.2s ago] ()
-2024-06-12 09:36:32,901 [INFO] COMMIT
-2024-06-12 09:36:32,921 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:32] "GET / HTTP/1.1" 200 -
-2024-06-12 09:36:32,997 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:32] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:36:33,428 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:36:33,529 [INFO]  * Restarting with stat
-2024-06-12 09:36:35,481 [WARNING]  * Debugger is active!
-2024-06-12 09:36:35,496 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:36:35,665 [INFO] BEGIN (implicit)
-2024-06-12 09:36:35,665 [INFO] BEGIN (implicit)
-2024-06-12 09:36:35,681 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:35,681 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:35,681 [INFO] [generated in 0.00248s] ()
-2024-06-12 09:36:35,681 [INFO] [cached since 0.00328s ago] ()
-2024-06-12 09:36:35,681 [INFO] COMMIT
-2024-06-12 09:36:35,681 [INFO] COMMIT
-2024-06-12 09:36:35,712 [INFO] BEGIN (implicit)
-2024-06-12 09:36:35,712 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:35,728 [INFO] [cached since 0.04504s ago] ()
-2024-06-12 09:36:35,734 [INFO] COMMIT
-2024-06-12 09:36:35,797 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:36:35,797 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:35,813 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:35,882 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:36:35,897 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 09:36:37,132 [INFO] BEGIN (implicit)
-2024-06-12 09:36:37,132 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:37,138 [INFO] [cached since 1.457s ago] ()
-2024-06-12 09:36:37,138 [INFO] COMMIT
-2024-06-12 09:36:37,138 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:37,170 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:37,771 [INFO] BEGIN (implicit)
-2024-06-12 09:36:37,771 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:37,771 [INFO] [cached since 2.096s ago] ()
-2024-06-12 09:36:37,771 [INFO] COMMIT
-2024-06-12 09:36:37,771 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:36:37,818 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:38,342 [INFO] BEGIN (implicit)
-2024-06-12 09:36:38,342 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:38,342 [INFO] [cached since 2.667s ago] ()
-2024-06-12 09:36:38,342 [INFO] COMMIT
-2024-06-12 09:36:38,357 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "GET /delete HTTP/1.1" 200 -
-2024-06-12 09:36:38,404 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:38,943 [INFO] BEGIN (implicit)
-2024-06-12 09:36:38,943 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:38,943 [INFO] [cached since 3.267s ago] ()
-2024-06-12 09:36:38,943 [INFO] COMMIT
-2024-06-12 09:36:38,943 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:38,990 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:41,411 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:36:41,495 [INFO]  * Restarting with stat
-2024-06-12 09:36:42,914 [WARNING]  * Debugger is active!
-2024-06-12 09:36:42,930 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:36:43,153 [INFO] BEGIN (implicit)
-2024-06-12 09:36:43,153 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:43,153 [INFO] [generated in 0.00250s] ()
-2024-06-12 09:36:43,153 [INFO] COMMIT
-2024-06-12 09:36:43,184 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:43] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:43,246 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:43] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:36:44,457 [INFO] BEGIN (implicit)
-2024-06-12 09:36:44,457 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:44,457 [INFO] [cached since 1.302s ago] ()
-2024-06-12 09:36:44,457 [INFO] COMMIT
-2024-06-12 09:36:44,472 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:44,503 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:36:44,519 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 09:36:44,905 [INFO] BEGIN (implicit)
-2024-06-12 09:36:44,905 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:44,905 [INFO] [cached since 1.757s ago] ()
-2024-06-12 09:36:44,905 [INFO] COMMIT
-2024-06-12 09:36:44,920 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:36:44,958 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:45,491 [INFO] BEGIN (implicit)
-2024-06-12 09:36:45,491 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:45,491 [INFO] [cached since 2.341s ago] ()
-2024-06-12 09:36:45,491 [INFO] COMMIT
-2024-06-12 09:36:45,506 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:45] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:45,537 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:46,054 [INFO] BEGIN (implicit)
-2024-06-12 09:36:46,054 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:46,054 [INFO] [cached since 2.902s ago] ()
-2024-06-12 09:36:46,061 [INFO] COMMIT
-2024-06-12 09:36:46,061 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "GET / HTTP/1.1" 200 -
-2024-06-12 09:36:46,108 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:36:46,540 [INFO] BEGIN (implicit)
-2024-06-12 09:36:46,540 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:36:46,540 [INFO] [cached since 3.387s ago] ()
-2024-06-12 09:36:46,540 [INFO] COMMIT
-2024-06-12 09:36:46,555 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:36:46,593 [INFO] 127.0.0.1 - - [12/Jun/2024 09:36:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:39:38,838 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:39:38,922 [INFO]  * Restarting with stat
-2024-06-12 09:39:40,943 [WARNING]  * Debugger is active!
-2024-06-12 09:39:40,959 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:39:53,933 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:39:54,055 [INFO]  * Restarting with stat
-2024-06-12 09:39:56,132 [WARNING]  * Debugger is active!
-2024-06-12 09:39:56,132 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:40:02,597 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:40:02,666 [INFO]  * Restarting with stat
-2024-06-12 09:40:07,962 [INFO]  * Restarting with stat
-2024-06-12 09:40:21,381 [INFO]  * Restarting with stat
-2024-06-12 09:40:23,244 [WARNING]  * Debugger is active!
-2024-06-12 09:40:23,291 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:40:51,852 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 09:40:51,941 [INFO]  * Restarting with stat
-2024-06-12 09:40:53,740 [WARNING]  * Debugger is active!
-2024-06-12 09:40:53,762 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:40:55,825 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 09:40:55,978 [INFO]  * Restarting with stat
-2024-06-12 09:40:57,313 [WARNING]  * Debugger is active!
-2024-06-12 09:40:57,329 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:41:14,680 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 09:41:14,801 [INFO]  * Restarting with stat
-2024-06-12 09:41:17,785 [WARNING]  * Debugger is active!
-2024-06-12 09:41:17,807 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:41:43,975 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 09:41:44,042 [INFO]  * Restarting with stat
-2024-06-12 09:41:46,032 [WARNING]  * Debugger is active!
-2024-06-12 09:41:46,032 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:42:05,242 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 09:42:05,325 [INFO]  * Restarting with stat
-2024-06-12 09:42:07,177 [WARNING]  * Debugger is active!
-2024-06-12 09:42:07,193 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:43:33,729 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:43:33,813 [INFO]  * Restarting with stat
-2024-06-12 09:43:35,670 [WARNING]  * Debugger is active!
-2024-06-12 09:43:35,686 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:43:41,867 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:43:41,935 [INFO]  * Restarting with stat
-2024-06-12 09:43:43,338 [WARNING]  * Debugger is active!
-2024-06-12 09:43:43,353 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:45:55,463 [INFO] BEGIN (implicit)
-2024-06-12 09:45:55,469 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:45:55,469 [INFO] [generated in 0.00161s] ()
-2024-06-12 09:45:55,485 [INFO] COMMIT
-2024-06-12 09:45:55,541 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:45:55,632 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:45:55,647 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 09:45:55,848 [INFO] BEGIN (implicit)
-2024-06-12 09:45:55,848 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:45:55,864 [INFO] [cached since 0.3901s ago] ()
-2024-06-12 09:45:55,864 [INFO] COMMIT
-2024-06-12 09:45:55,870 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:45:55,933 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:45:56,202 [INFO] BEGIN (implicit)
-2024-06-12 09:45:56,218 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:45:56,218 [INFO] [cached since 0.7493s ago] ()
-2024-06-12 09:45:56,218 [INFO] COMMIT
-2024-06-12 09:45:56,218 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "GET /delete HTTP/1.1" 200 -
-2024-06-12 09:45:56,271 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:45:56,550 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "GET /csv HTTP/1.1" 200 -
-2024-06-12 09:45:56,619 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:45:56,920 [INFO] BEGIN (implicit)
-2024-06-12 09:45:56,920 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:45:56,920 [INFO] [cached since 1.459s ago] ()
-2024-06-12 09:45:56,920 [INFO] COMMIT
-2024-06-12 09:45:56,935 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "GET / HTTP/1.1" 200 -
-2024-06-12 09:45:56,973 [INFO] 127.0.0.1 - - [12/Jun/2024 09:45:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:47:26,014 [INFO] BEGIN (implicit)
-2024-06-12 09:47:26,020 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:47:26,020 [INFO] [cached since 90.55s ago] ()
-2024-06-12 09:47:26,020 [INFO] COMMIT
-2024-06-12 09:47:26,020 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:47:26,098 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:47:26,484 [INFO] BEGIN (implicit)
-2024-06-12 09:47:26,484 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:47:26,484 [INFO] [cached since 91.02s ago] ()
-2024-06-12 09:47:26,499 [INFO] COMMIT
-2024-06-12 09:47:26,499 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:47:26,553 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:47:26,985 [INFO] BEGIN (implicit)
-2024-06-12 09:47:26,985 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:47:26,985 [INFO] [cached since 91.52s ago] ()
-2024-06-12 09:47:26,985 [INFO] COMMIT
-2024-06-12 09:47:26,985 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:26] "GET /delete HTTP/1.1" 200 -
-2024-06-12 09:47:27,039 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:47:27,486 [INFO] BEGIN (implicit)
-2024-06-12 09:47:27,486 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:47:27,486 [INFO] [cached since 92.03s ago] ()
-2024-06-12 09:47:27,502 [INFO] COMMIT
-2024-06-12 09:47:27,502 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:47:27,555 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:47:27,903 [INFO] BEGIN (implicit)
-2024-06-12 09:47:27,919 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:47:27,925 [INFO] [cached since 92.45s ago] ()
-2024-06-12 09:47:27,925 [INFO] COMMIT
-2024-06-12 09:47:27,925 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "GET /update HTTP/1.1" 200 -
-2024-06-12 09:47:27,972 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:47:28,442 [INFO] BEGIN (implicit)
-2024-06-12 09:47:28,442 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:47:28,442 [INFO] [cached since 92.98s ago] ()
-2024-06-12 09:47:28,442 [INFO] COMMIT
-2024-06-12 09:47:28,458 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:28] "GET /delete HTTP/1.1" 200 -
-2024-06-12 09:47:28,505 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:47:32,918 [INFO] BEGIN (implicit)
-2024-06-12 09:47:32,918 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:47:32,918 [INFO] [cached since 97.46s ago] ()
-2024-06-12 09:47:32,933 [INFO] COMMIT
-2024-06-12 09:47:32,933 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:32] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:47:32,971 [INFO] 127.0.0.1 - - [12/Jun/2024 09:47:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 09:48:10,105 [INFO] BEGIN (implicit)
-2024-06-12 09:48:10,105 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 09:48:10,111 [INFO] [cached since 134.6s ago] ()
-2024-06-12 09:48:10,111 [INFO] COMMIT
-2024-06-12 09:48:10,126 [INFO] 127.0.0.1 - - [12/Jun/2024 09:48:10] "GET /create HTTP/1.1" 200 -
-2024-06-12 09:48:10,173 [INFO] 127.0.0.1 - - [12/Jun/2024 09:48:10] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 09:56:58,038 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:56:58,144 [INFO]  * Restarting with stat
-2024-06-12 09:57:00,221 [WARNING]  * Debugger is active!
-2024-06-12 09:57:00,243 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:57:06,335 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:57:06,404 [INFO]  * Restarting with stat
-2024-06-12 09:57:07,441 [WARNING]  * Debugger is active!
-2024-06-12 09:57:07,472 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 09:57:10,202 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:57:10,240 [INFO]  * Restarting with stat
-2024-06-12 09:57:12,486 [WARNING]  * Debugger is active!
-2024-06-12 09:57:12,500 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 09:57:17,363 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 09:57:17,447 [INFO]  * Restarting with stat
-2024-06-12 09:57:29,445 [INFO]  * Restarting with stat
-2024-06-12 09:58:35,448 [INFO]  * Restarting with stat
-2024-06-12 09:58:40,688 [INFO]  * Restarting with stat
-2024-06-12 09:58:41,967 [INFO]  * Restarting with stat
-2024-06-12 09:58:43,833 [WARNING]  * Debugger is active!
-2024-06-12 09:58:43,848 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:00:56,825 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 10:00:56,894 [INFO]  * Restarting with stat
-2024-06-12 10:00:59,171 [WARNING]  * Debugger is active!
-2024-06-12 10:00:59,183 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:01:20,771 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 10:01:20,890 [INFO]  * Restarting with stat
-2024-06-12 10:01:22,969 [WARNING]  * Debugger is active!
-2024-06-12 10:01:22,969 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:02:06,390 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 10:02:06,479 [INFO]  * Restarting with stat
-2024-06-12 10:02:08,705 [WARNING]  * Debugger is active!
-2024-06-12 10:02:08,720 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:04:42,264 [INFO] BEGIN (implicit)
-2024-06-12 10:04:42,267 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:04:42,270 [INFO] [generated in 0.00261s] ()
-2024-06-12 10:04:42,270 [INFO] COMMIT
-2024-06-12 10:04:42,333 [INFO] 127.0.0.1 - - [12/Jun/2024 10:04:42] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:04:42,417 [INFO] 127.0.0.1 - - [12/Jun/2024 10:04:42] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:04:42,433 [INFO] 127.0.0.1 - - [12/Jun/2024 10:04:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:04:49,090 [INFO] BEGIN (implicit)
-2024-06-12 10:04:49,090 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:04:49,090 [INFO] [cached since 6.835s ago] ()
-2024-06-12 10:04:49,106 [INFO] COMMIT
-2024-06-12 10:04:49,164 [INFO] 127.0.0.1 - - [12/Jun/2024 10:04:49] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:04:49,180 [INFO] 127.0.0.1 - - [12/Jun/2024 10:04:49] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:04:55,466 [INFO] 127.0.0.1 - - [12/Jun/2024 10:04:55] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:05:25,373 [INFO] BEGIN (implicit)
-2024-06-12 10:05:25,373 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:05:25,373 [INFO] [cached since 43.12s ago] ()
-2024-06-12 10:05:25,389 [INFO] COMMIT
-2024-06-12 10:05:25,389 [INFO] 127.0.0.1 - - [12/Jun/2024 10:05:25] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:05:25,458 [INFO] 127.0.0.1 - - [12/Jun/2024 10:05:25] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:05:25,474 [INFO] 127.0.0.1 - - [12/Jun/2024 10:05:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:05:50,369 [INFO] BEGIN (implicit)
-2024-06-12 10:05:50,379 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:05:50,379 [INFO] [cached since 68.12s ago] ()
-2024-06-12 10:05:50,387 [INFO] COMMIT
-2024-06-12 10:05:50,399 [INFO] 127.0.0.1 - - [12/Jun/2024 10:05:50] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:05:50,458 [INFO] 127.0.0.1 - - [12/Jun/2024 10:05:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:06:16,333 [INFO] BEGIN (implicit)
-2024-06-12 10:06:16,336 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:06:16,338 [INFO] [cached since 94.07s ago] ()
-2024-06-12 10:06:16,342 [INFO] COMMIT
-2024-06-12 10:06:16,347 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:16] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:06:16,410 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:16] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:06:16,516 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:06:19,718 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:06:42,920 [INFO] BEGIN (implicit)
-2024-06-12 10:06:42,941 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:06:42,957 [INFO] [cached since 120.7s ago] ()
-2024-06-12 10:06:42,957 [INFO] COMMIT
-2024-06-12 10:06:42,980 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:42] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:06:43,080 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:06:50,332 [INFO] BEGIN (implicit)
-2024-06-12 10:06:50,332 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:06:50,332 [INFO] [cached since 128.1s ago] ()
-2024-06-12 10:06:50,348 [INFO] COMMIT
-2024-06-12 10:06:50,369 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:50] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:06:50,415 [INFO] 127.0.0.1 - - [12/Jun/2024 10:06:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:07:21,946 [INFO] BEGIN (implicit)
-2024-06-12 10:07:21,946 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:07:21,946 [INFO] [cached since 159.7s ago] ()
-2024-06-12 10:07:21,946 [INFO] COMMIT
-2024-06-12 10:07:21,961 [INFO] 127.0.0.1 - - [12/Jun/2024 10:07:21] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:07:22,015 [INFO] 127.0.0.1 - - [12/Jun/2024 10:07:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:08:22,816 [INFO] BEGIN (implicit)
-2024-06-12 10:08:22,816 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:08:22,816 [INFO] [cached since 220.6s ago] ()
-2024-06-12 10:08:22,832 [INFO] COMMIT
-2024-06-12 10:08:22,848 [INFO] 127.0.0.1 - - [12/Jun/2024 10:08:22] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:08:22,901 [INFO] 127.0.0.1 - - [12/Jun/2024 10:08:22] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:08:23,048 [INFO] 127.0.0.1 - - [12/Jun/2024 10:08:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:08:56,832 [INFO] BEGIN (implicit)
-2024-06-12 10:08:56,832 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:08:56,832 [INFO] [cached since 254.6s ago] ()
-2024-06-12 10:08:56,832 [INFO] COMMIT
-2024-06-12 10:08:56,832 [INFO] 127.0.0.1 - - [12/Jun/2024 10:08:56] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:08:56,886 [INFO] 127.0.0.1 - - [12/Jun/2024 10:08:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:09:12,087 [INFO] BEGIN (implicit)
-2024-06-12 10:09:12,087 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:09:12,103 [INFO] [cached since 269.8s ago] ()
-2024-06-12 10:09:12,103 [INFO] COMMIT
-2024-06-12 10:09:12,119 [INFO] 127.0.0.1 - - [12/Jun/2024 10:09:12] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:09:12,172 [INFO] 127.0.0.1 - - [12/Jun/2024 10:09:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:09:12,288 [INFO] BEGIN (implicit)
-2024-06-12 10:09:12,288 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:09:12,288 [INFO] [cached since 270s ago] ()
-2024-06-12 10:09:12,288 [INFO] COMMIT
-2024-06-12 10:09:12,303 [INFO] 127.0.0.1 - - [12/Jun/2024 10:09:12] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:09:12,319 [INFO] 127.0.0.1 - - [12/Jun/2024 10:09:12] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:09:12,319 [INFO] 127.0.0.1 - - [12/Jun/2024 10:09:12] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:09:12,357 [INFO] 127.0.0.1 - - [12/Jun/2024 10:09:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:11:28,359 [INFO] BEGIN (implicit)
-2024-06-12 10:11:28,359 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:11:28,359 [INFO] [cached since 406.1s ago] ()
-2024-06-12 10:11:28,375 [INFO] COMMIT
-2024-06-12 10:11:28,391 [INFO] 127.0.0.1 - - [12/Jun/2024 10:11:28] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:11:28,444 [INFO] 127.0.0.1 - - [12/Jun/2024 10:11:28] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:11:41,107 [INFO] BEGIN (implicit)
-2024-06-12 10:11:41,107 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:11:41,107 [INFO] [cached since 418.8s ago] ()
-2024-06-12 10:11:41,107 [INFO] COMMIT
-2024-06-12 10:11:41,145 [INFO] 127.0.0.1 - - [12/Jun/2024 10:11:41] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:11:41,223 [INFO] 127.0.0.1 - - [12/Jun/2024 10:11:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:12:03,066 [INFO] BEGIN (implicit)
-2024-06-12 10:12:03,066 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:12:03,066 [INFO] [cached since 440.8s ago] ()
-2024-06-12 10:12:03,066 [INFO] COMMIT
-2024-06-12 10:12:03,081 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:03] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:12:03,159 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:12:15,878 [INFO] BEGIN (implicit)
-2024-06-12 10:12:15,878 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:12:15,878 [INFO] [cached since 453.6s ago] ()
-2024-06-12 10:12:15,878 [INFO] COMMIT
-2024-06-12 10:12:15,894 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:15] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:12:15,946 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:12:28,960 [INFO] BEGIN (implicit)
-2024-06-12 10:12:29,007 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:12:29,023 [INFO] [cached since 466.8s ago] ()
-2024-06-12 10:12:29,038 [INFO] COMMIT
-2024-06-12 10:12:29,076 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:29] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:12:29,154 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:29] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:12:29,208 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:12:34,369 [INFO] BEGIN (implicit)
-2024-06-12 10:12:34,369 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:12:34,369 [INFO] [cached since 472.1s ago] ()
-2024-06-12 10:12:34,375 [INFO] COMMIT
-2024-06-12 10:12:34,391 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:34] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:12:34,438 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:12:40,621 [INFO] BEGIN (implicit)
-2024-06-12 10:12:40,621 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:12:40,621 [INFO] [cached since 478.4s ago] ()
-2024-06-12 10:12:40,621 [INFO] COMMIT
-2024-06-12 10:12:40,652 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:40] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:12:40,705 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:12:51,388 [INFO] BEGIN (implicit)
-2024-06-12 10:12:51,388 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:12:51,388 [INFO] [cached since 489.1s ago] ()
-2024-06-12 10:12:51,400 [INFO] COMMIT
-2024-06-12 10:12:51,415 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:51] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:12:51,485 [INFO] 127.0.0.1 - - [12/Jun/2024 10:12:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:04,381 [INFO] BEGIN (implicit)
-2024-06-12 10:13:04,396 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:04,396 [INFO] [cached since 502.1s ago] ()
-2024-06-12 10:13:04,396 [INFO] COMMIT
-2024-06-12 10:13:04,412 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:04] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:13:04,450 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:15,710 [INFO] BEGIN (implicit)
-2024-06-12 10:13:15,710 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:15,710 [INFO] [cached since 513.4s ago] ()
-2024-06-12 10:13:15,710 [INFO] COMMIT
-2024-06-12 10:13:15,726 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:15] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:13:15,773 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:26,772 [INFO] BEGIN (implicit)
-2024-06-12 10:13:26,772 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:26,772 [INFO] [cached since 524.5s ago] ()
-2024-06-12 10:13:26,772 [INFO] COMMIT
-2024-06-12 10:13:26,788 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:26] "GET / HTTP/1.1" 200 -
-2024-06-12 10:13:26,857 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:27,806 [INFO] BEGIN (implicit)
-2024-06-12 10:13:27,812 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:27,812 [INFO] [cached since 525.5s ago] ()
-2024-06-12 10:13:27,812 [INFO] COMMIT
-2024-06-12 10:13:27,812 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:27] "GET / HTTP/1.1" 200 -
-2024-06-12 10:13:27,864 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:28,514 [INFO] BEGIN (implicit)
-2024-06-12 10:13:28,514 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:28,514 [INFO] [cached since 526.3s ago] ()
-2024-06-12 10:13:28,514 [INFO] COMMIT
-2024-06-12 10:13:28,514 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:28] "GET / HTTP/1.1" 200 -
-2024-06-12 10:13:28,561 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:29,147 [INFO] BEGIN (implicit)
-2024-06-12 10:13:29,147 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:29,147 [INFO] [cached since 526.9s ago] ()
-2024-06-12 10:13:29,147 [INFO] COMMIT
-2024-06-12 10:13:29,163 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:29] "GET / HTTP/1.1" 200 -
-2024-06-12 10:13:29,194 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:30,851 [INFO] BEGIN (implicit)
-2024-06-12 10:13:30,851 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:30,851 [INFO] [cached since 528.6s ago] ()
-2024-06-12 10:13:30,851 [INFO] COMMIT
-2024-06-12 10:13:30,851 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:30] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:13:30,913 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:13:46,051 [INFO] BEGIN (implicit)
-2024-06-12 10:13:46,059 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:13:46,059 [INFO] [cached since 543.8s ago] ()
-2024-06-12 10:13:46,059 [INFO] COMMIT
-2024-06-12 10:13:46,075 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:46] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:13:46,117 [INFO] 127.0.0.1 - - [12/Jun/2024 10:13:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:14:26,915 [INFO] BEGIN (implicit)
-2024-06-12 10:14:26,915 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:14:26,915 [INFO] [cached since 584.7s ago] ()
-2024-06-12 10:14:26,915 [INFO] COMMIT
-2024-06-12 10:14:26,938 [INFO] 127.0.0.1 - - [12/Jun/2024 10:14:26] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:14:27,001 [INFO] 127.0.0.1 - - [12/Jun/2024 10:14:27] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:14:56,323 [INFO] BEGIN (implicit)
-2024-06-12 10:14:56,339 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:14:56,339 [INFO] [cached since 614.1s ago] ()
-2024-06-12 10:14:56,354 [INFO] COMMIT
-2024-06-12 10:14:56,354 [INFO] 127.0.0.1 - - [12/Jun/2024 10:14:56] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:14:56,439 [INFO] 127.0.0.1 - - [12/Jun/2024 10:14:56] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:14:56,455 [INFO] 127.0.0.1 - - [12/Jun/2024 10:14:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:15:02,553 [INFO] BEGIN (implicit)
-2024-06-12 10:15:02,569 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:15:02,569 [INFO] [cached since 620.3s ago] ()
-2024-06-12 10:15:02,569 [INFO] COMMIT
-2024-06-12 10:15:02,569 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:02] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:15:02,652 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:02] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:15:05,597 [INFO] BEGIN (implicit)
-2024-06-12 10:15:05,613 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:15:05,613 [INFO] [cached since 623.3s ago] ()
-2024-06-12 10:15:05,613 [INFO] COMMIT
-2024-06-12 10:15:05,613 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:05] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:15:05,697 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:05] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:15:17,644 [INFO] BEGIN (implicit)
-2024-06-12 10:15:17,644 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:15:17,644 [INFO] [cached since 635.4s ago] ()
-2024-06-12 10:15:17,644 [INFO] COMMIT
-2024-06-12 10:15:17,644 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:17] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:15:17,690 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:17] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:15:23,167 [INFO] BEGIN (implicit)
-2024-06-12 10:15:23,167 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:15:23,173 [INFO] [cached since 640.9s ago] ()
-2024-06-12 10:15:23,173 [INFO] COMMIT
-2024-06-12 10:15:23,173 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:23] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:15:23,220 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:23] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:15:48,760 [INFO] BEGIN (implicit)
-2024-06-12 10:15:48,760 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:15:48,760 [INFO] [cached since 666.5s ago] ()
-2024-06-12 10:15:48,775 [INFO] COMMIT
-2024-06-12 10:15:48,807 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:48] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:15:48,853 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:48] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:15:57,392 [INFO] BEGIN (implicit)
-2024-06-12 10:15:57,392 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:15:57,392 [INFO] [cached since 675.1s ago] ()
-2024-06-12 10:15:57,392 [INFO] COMMIT
-2024-06-12 10:15:57,508 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:57] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:15:57,554 [INFO] 127.0.0.1 - - [12/Jun/2024 10:15:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:16:07,357 [INFO] BEGIN (implicit)
-2024-06-12 10:16:07,357 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:16:07,357 [INFO] [cached since 685.1s ago] ()
-2024-06-12 10:16:07,357 [INFO] COMMIT
-2024-06-12 10:16:07,373 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:07] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:16:07,410 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:16:14,975 [INFO] BEGIN (implicit)
-2024-06-12 10:16:14,975 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:16:14,975 [INFO] [cached since 692.7s ago] ()
-2024-06-12 10:16:14,975 [INFO] COMMIT
-2024-06-12 10:16:14,975 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:14] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:16:15,028 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:15] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:16:18,632 [INFO] BEGIN (implicit)
-2024-06-12 10:16:18,635 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:16:18,635 [INFO] [cached since 696.4s ago] ()
-2024-06-12 10:16:18,635 [INFO] COMMIT
-2024-06-12 10:16:18,635 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:18] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:16:18,699 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:18] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:16:42,379 [INFO] BEGIN (implicit)
-2024-06-12 10:16:42,397 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:16:42,413 [INFO] [cached since 720.1s ago] ()
-2024-06-12 10:16:42,413 [INFO] COMMIT
-2024-06-12 10:16:42,677 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:42] "[35m[1mGET /create HTTP/1.1[0m" 500 -
-2024-06-12 10:16:42,745 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:42] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2024-06-12 10:16:42,760 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:42] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2024-06-12 10:16:42,798 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:42] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2024-06-12 10:16:42,798 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:42] "[36mGET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-06-12 10:16:49,029 [INFO] BEGIN (implicit)
-2024-06-12 10:16:49,029 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:16:49,029 [INFO] [cached since 726.8s ago] ()
-2024-06-12 10:16:49,029 [INFO] COMMIT
-2024-06-12 10:16:49,060 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:49] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:16:49,114 [INFO] 127.0.0.1 - - [12/Jun/2024 10:16:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:17:57,522 [INFO] BEGIN (implicit)
-2024-06-12 10:17:57,522 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:17:57,522 [INFO] [cached since 795.3s ago] ()
-2024-06-12 10:17:57,522 [INFO] COMMIT
-2024-06-12 10:17:57,538 [INFO] 127.0.0.1 - - [12/Jun/2024 10:17:57] "GET / HTTP/1.1" 200 -
-2024-06-12 10:17:57,585 [INFO] 127.0.0.1 - - [12/Jun/2024 10:17:57] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:17:59,528 [INFO] BEGIN (implicit)
-2024-06-12 10:17:59,528 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:17:59,528 [INFO] [cached since 797.3s ago] ()
-2024-06-12 10:17:59,528 [INFO] COMMIT
-2024-06-12 10:17:59,543 [INFO] 127.0.0.1 - - [12/Jun/2024 10:17:59] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:17:59,574 [INFO] 127.0.0.1 - - [12/Jun/2024 10:17:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:17:59,828 [INFO] BEGIN (implicit)
-2024-06-12 10:17:59,844 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:17:59,844 [INFO] [cached since 797.6s ago] ()
-2024-06-12 10:17:59,844 [INFO] COMMIT
-2024-06-12 10:17:59,875 [INFO] 127.0.0.1 - - [12/Jun/2024 10:17:59] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:17:59,929 [INFO] 127.0.0.1 - - [12/Jun/2024 10:17:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:00,160 [INFO] BEGIN (implicit)
-2024-06-12 10:18:00,160 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:18:00,160 [INFO] [cached since 797.9s ago] ()
-2024-06-12 10:18:00,160 [INFO] COMMIT
-2024-06-12 10:18:00,176 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:00] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:18:00,207 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:00,408 [INFO] BEGIN (implicit)
-2024-06-12 10:18:00,408 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:18:00,408 [INFO] [cached since 798.2s ago] ()
-2024-06-12 10:18:00,408 [INFO] COMMIT
-2024-06-12 10:18:00,423 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:00] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:18:00,461 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:00,630 [INFO] BEGIN (implicit)
-2024-06-12 10:18:00,646 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:18:00,646 [INFO] [cached since 798.4s ago] ()
-2024-06-12 10:18:00,646 [INFO] COMMIT
-2024-06-12 10:18:00,646 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:00] "GET /delete HTTP/1.1" 200 -
-2024-06-12 10:18:00,709 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:01,232 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:01] "GET /csv HTTP/1.1" 200 -
-2024-06-12 10:18:01,279 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:02,969 [INFO] BEGIN (implicit)
-2024-06-12 10:18:02,984 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:18:02,984 [INFO] [cached since 800.7s ago] ()
-2024-06-12 10:18:02,984 [INFO] COMMIT
-2024-06-12 10:18:02,984 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:02] "GET / HTTP/1.1" 200 -
-2024-06-12 10:18:03,031 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:03,987 [INFO] BEGIN (implicit)
-2024-06-12 10:18:03,987 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:18:03,987 [INFO] [cached since 801.7s ago] ()
-2024-06-12 10:18:03,987 [INFO] COMMIT
-2024-06-12 10:18:04,003 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:04] "GET / HTTP/1.1" 200 -
-2024-06-12 10:18:04,034 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:04,742 [INFO] BEGIN (implicit)
-2024-06-12 10:18:04,742 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:18:04,758 [INFO] [cached since 802.5s ago] ()
-2024-06-12 10:18:04,758 [INFO] COMMIT
-2024-06-12 10:18:04,758 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:04] "GET / HTTP/1.1" 200 -
-2024-06-12 10:18:04,805 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:18:05,175 [INFO] BEGIN (implicit)
-2024-06-12 10:18:05,190 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:18:05,190 [INFO] [cached since 802.9s ago] ()
-2024-06-12 10:18:05,190 [INFO] COMMIT
-2024-06-12 10:18:05,190 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:05] "GET / HTTP/1.1" 200 -
-2024-06-12 10:18:05,237 [INFO] 127.0.0.1 - - [12/Jun/2024 10:18:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:21:32,968 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:21:33,084 [INFO]  * Restarting with stat
-2024-06-12 10:21:35,971 [WARNING]  * Debugger is active!
-2024-06-12 10:21:35,987 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:21:40,547 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:21:40,667 [INFO]  * Restarting with stat
-2024-06-12 10:21:42,512 [WARNING]  * Debugger is active!
-2024-06-12 10:21:42,527 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:22:04,187 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:22:04,266 [INFO]  * Restarting with stat
-2024-06-12 10:22:06,509 [WARNING]  * Debugger is active!
-2024-06-12 10:22:06,525 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:22:20,369 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:22:20,438 [INFO]  * Restarting with stat
-2024-06-12 10:22:23,112 [WARNING]  * Debugger is active!
-2024-06-12 10:22:23,112 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:23:46,198 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:27:45,895 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-07-05 00:49:45,501 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 00:49:45,554 [INFO]  * Restarting with stat
+2024-07-05 00:49:46,672 [WARNING]  * Debugger is active!
+2024-07-05 00:49:46,677 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 00:56:44,981 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 00:56:45,033 [INFO]  * Restarting with stat
+2024-07-05 00:56:46,109 [WARNING]  * Debugger is active!
+2024-07-05 00:56:46,114 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 00:57:07,505 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 00:57:07,553 [INFO]  * Restarting with stat
+2024-07-05 00:57:08,619 [WARNING]  * Debugger is active!
+2024-07-05 00:57:08,624 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 02:06:42,634 [INFO] BEGIN (implicit)
+2024-07-05 02:06:42,641 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:06:42,641 [INFO] [generated in 0.00088s] ()
+2024-07-05 02:06:42,642 [INFO] COMMIT
+2024-07-05 02:06:42,654 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:42] "GET / HTTP/1.1" 200 -
+2024-07-05 02:06:42,759 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:42] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 02:06:42,764 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 02:06:43,359 [INFO] BEGIN (implicit)
+2024-07-05 02:06:43,359 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:06:43,359 [INFO] [cached since 0.7192s ago] ()
+2024-07-05 02:06:43,360 [INFO] COMMIT
+2024-07-05 02:06:43,368 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:43] "GET /create HTTP/1.1" 200 -
+2024-07-05 02:06:43,407 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:06:44,403 [INFO] BEGIN (implicit)
+2024-07-05 02:06:44,404 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:06:44,405 [INFO] [cached since 1.765s ago] ()
+2024-07-05 02:06:44,406 [INFO] COMMIT
+2024-07-05 02:06:44,415 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:44] "GET /update HTTP/1.1" 200 -
+2024-07-05 02:06:44,454 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:06:45,096 [INFO] BEGIN (implicit)
+2024-07-05 02:06:45,096 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:06:45,097 [INFO] [cached since 2.456s ago] ()
+2024-07-05 02:06:45,097 [INFO] COMMIT
+2024-07-05 02:06:45,100 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:45] "GET /delete HTTP/1.1" 200 -
+2024-07-05 02:06:45,144 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:06:45,818 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:45] "GET /csv HTTP/1.1" 200 -
+2024-07-05 02:06:45,854 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:06:46,647 [INFO] BEGIN (implicit)
+2024-07-05 02:06:46,647 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:06:46,648 [INFO] [cached since 4.007s ago] ()
+2024-07-05 02:06:46,649 [INFO] COMMIT
+2024-07-05 02:06:46,651 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:46] "GET /delete HTTP/1.1" 200 -
+2024-07-05 02:06:46,686 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:06:48,084 [INFO] BEGIN (implicit)
+2024-07-05 02:06:48,085 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:06:48,085 [INFO] [cached since 5.445s ago] ()
+2024-07-05 02:06:48,086 [INFO] COMMIT
+2024-07-05 02:06:48,089 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:48] "GET /create HTTP/1.1" 200 -
+2024-07-05 02:06:48,130 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:48] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 02:06:48,136 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 02:06:59,526 [INFO] BEGIN (implicit)
+2024-07-05 02:06:59,527 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:06:59,527 [INFO] [cached since 16.89s ago] ()
+2024-07-05 02:06:59,528 [INFO] COMMIT
+2024-07-05 02:06:59,529 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:59] "GET /update HTTP/1.1" 200 -
+2024-07-05 02:06:59,579 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:59] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 02:06:59,589 [INFO] 127.0.0.1 - - [05/Jul/2024 02:06:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 02:07:00,527 [INFO] BEGIN (implicit)
+2024-07-05 02:07:00,528 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:07:00,528 [INFO] [cached since 17.89s ago] ()
+2024-07-05 02:07:00,528 [INFO] COMMIT
+2024-07-05 02:07:00,530 [INFO] 127.0.0.1 - - [05/Jul/2024 02:07:00] "GET /delete HTTP/1.1" 200 -
+2024-07-05 02:07:00,576 [INFO] 127.0.0.1 - - [05/Jul/2024 02:07:00] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 02:07:00,593 [INFO] 127.0.0.1 - - [05/Jul/2024 02:07:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 02:07:01,177 [INFO] BEGIN (implicit)
+2024-07-05 02:07:01,178 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:07:01,178 [INFO] [cached since 18.54s ago] ()
+2024-07-05 02:07:01,179 [INFO] COMMIT
+2024-07-05 02:07:01,181 [INFO] 127.0.0.1 - - [05/Jul/2024 02:07:01] "GET /update HTTP/1.1" 200 -
+2024-07-05 02:07:01,218 [INFO] 127.0.0.1 - - [05/Jul/2024 02:07:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:16:16,528 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:16] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 02:16:18,999 [INFO] BEGIN (implicit)
+2024-07-05 02:16:19,000 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:16:19,000 [INFO] [cached since 576.4s ago] ()
+2024-07-05 02:16:19,001 [INFO] COMMIT
+2024-07-05 02:16:19,003 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:19] "GET / HTTP/1.1" 200 -
+2024-07-05 02:16:19,030 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:19] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 02:16:19,064 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 02:16:29,524 [INFO] BEGIN (implicit)
+2024-07-05 02:16:29,525 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:16:29,525 [INFO] [cached since 586.9s ago] ()
+2024-07-05 02:16:29,526 [INFO] COMMIT
+2024-07-05 02:16:29,529 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:29] "GET /create HTTP/1.1" 200 -
+2024-07-05 02:16:29,617 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:16:30,032 [INFO] BEGIN (implicit)
+2024-07-05 02:16:30,033 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:16:30,033 [INFO] [cached since 587.4s ago] ()
+2024-07-05 02:16:30,034 [INFO] COMMIT
+2024-07-05 02:16:30,036 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:30] "GET /update HTTP/1.1" 200 -
+2024-07-05 02:16:30,067 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:16:30,599 [INFO] BEGIN (implicit)
+2024-07-05 02:16:30,600 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:16:30,600 [INFO] [cached since 588s ago] ()
+2024-07-05 02:16:30,601 [INFO] COMMIT
+2024-07-05 02:16:30,602 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:30] "GET /delete HTTP/1.1" 200 -
+2024-07-05 02:16:30,686 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:16:31,184 [INFO] BEGIN (implicit)
+2024-07-05 02:16:31,184 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:16:31,184 [INFO] [cached since 588.5s ago] ()
+2024-07-05 02:16:31,185 [INFO] COMMIT
+2024-07-05 02:16:31,187 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:31] "GET /create HTTP/1.1" 200 -
+2024-07-05 02:16:31,227 [INFO] 127.0.0.1 - - [05/Jul/2024 02:16:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 02:16:59,270 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 02:16:59,331 [INFO]  * Restarting with stat
+2024-07-05 02:17:00,427 [WARNING]  * Debugger is active!
+2024-07-05 02:17:00,432 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 02:17:04,045 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:04] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 02:17:24,277 [INFO] BEGIN (implicit)
+2024-07-05 02:17:24,279 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 02:17:24,280 [INFO] [generated in 0.00054s] ()
+2024-07-05 02:17:24,281 [INFO] COMMIT
+2024-07-05 02:17:24,290 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:24] "GET / HTTP/1.1" 200 -
+2024-07-05 02:17:24,391 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:24] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 02:17:24,400 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 02:17:27,208 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:27] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2024-07-05 02:17:27,247 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:27] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-07-05 02:17:27,248 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:27] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-07-05 02:17:27,280 [INFO] 127.0.0.1 - - [05/Jul/2024 02:17:27] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-07-05 02:31:36,781 [INFO] 127.0.0.1 - - [05/Jul/2024 02:31:36] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2024-07-05 02:31:36,808 [INFO] 127.0.0.1 - - [05/Jul/2024 02:31:36] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-07-05 02:31:36,809 [INFO] 127.0.0.1 - - [05/Jul/2024 02:31:36] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-07-05 02:31:36,821 [INFO] 127.0.0.1 - - [05/Jul/2024 02:31:36] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-07-05 15:15:31,463 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-06-12 10:27:45,895 [INFO] [33mPress CTRL+C to quit[0m
-2024-06-12 10:27:45,911 [INFO]  * Restarting with stat
-2024-06-12 10:27:48,001 [WARNING]  * Debugger is active!
-2024-06-12 10:27:48,016 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:27:58,570 [INFO] BEGIN (implicit)
-2024-06-12 10:27:58,570 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:27:58,570 [INFO] [generated in 0.00099s] ()
-2024-06-12 10:27:58,570 [INFO] COMMIT
-2024-06-12 10:27:58,655 [INFO] 127.0.0.1 - - [12/Jun/2024 10:27:58] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:27:58,753 [INFO] 127.0.0.1 - - [12/Jun/2024 10:27:58] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:27:59,789 [INFO] BEGIN (implicit)
-2024-06-12 10:27:59,795 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:27:59,795 [INFO] [cached since 1.219s ago] ()
-2024-06-12 10:27:59,795 [INFO] COMMIT
-2024-06-12 10:27:59,811 [INFO] 127.0.0.1 - - [12/Jun/2024 10:27:59] "GET / HTTP/1.1" 200 -
-2024-06-12 10:27:59,858 [INFO] 127.0.0.1 - - [12/Jun/2024 10:27:59] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:28:00,945 [INFO] BEGIN (implicit)
-2024-06-12 10:28:00,945 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:00,945 [INFO] [cached since 2.375s ago] ()
-2024-06-12 10:28:00,945 [INFO] COMMIT
-2024-06-12 10:28:00,945 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:00] "GET / HTTP/1.1" 200 -
-2024-06-12 10:28:00,992 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:21,483 [INFO] BEGIN (implicit)
-2024-06-12 10:28:21,483 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:21,483 [INFO] [cached since 22.92s ago] ()
-2024-06-12 10:28:21,499 [INFO] COMMIT
-2024-06-12 10:28:21,515 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:21] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:28:21,561 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:22,649 [INFO] BEGIN (implicit)
-2024-06-12 10:28:22,649 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:22,649 [INFO] [cached since 24.08s ago] ()
-2024-06-12 10:28:22,664 [INFO] COMMIT
-2024-06-12 10:28:22,664 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:22] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:28:22,702 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:23,589 [INFO] BEGIN (implicit)
-2024-06-12 10:28:23,589 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:23,589 [INFO] [cached since 25.01s ago] ()
-2024-06-12 10:28:23,589 [INFO] COMMIT
-2024-06-12 10:28:23,589 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:23] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:28:23,636 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:24,137 [INFO] BEGIN (implicit)
-2024-06-12 10:28:24,137 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:24,137 [INFO] [cached since 25.57s ago] ()
-2024-06-12 10:28:24,137 [INFO] COMMIT
-2024-06-12 10:28:24,153 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:24] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:28:24,191 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:25,247 [INFO] BEGIN (implicit)
-2024-06-12 10:28:25,247 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:25,247 [INFO] [cached since 26.68s ago] ()
-2024-06-12 10:28:25,247 [INFO] COMMIT
-2024-06-12 10:28:25,263 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:25] "GET /delete HTTP/1.1" 200 -
-2024-06-12 10:28:25,325 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:25,811 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:25] "GET /csv HTTP/1.1" 200 -
-2024-06-12 10:28:25,873 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:26,929 [INFO] BEGIN (implicit)
-2024-06-12 10:28:26,929 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:26,929 [INFO] [cached since 28.36s ago] ()
-2024-06-12 10:28:26,929 [INFO] COMMIT
-2024-06-12 10:28:26,945 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:26] "GET / HTTP/1.1" 200 -
-2024-06-12 10:28:26,989 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:27,531 [INFO] BEGIN (implicit)
-2024-06-12 10:28:27,531 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:27,531 [INFO] [cached since 28.95s ago] ()
-2024-06-12 10:28:27,531 [INFO] COMMIT
-2024-06-12 10:28:27,531 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:27] "GET / HTTP/1.1" 200 -
-2024-06-12 10:28:27,562 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:45,948 [INFO] BEGIN (implicit)
-2024-06-12 10:28:45,955 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:45,955 [INFO] [cached since 47.38s ago] ()
-2024-06-12 10:28:45,955 [INFO] COMMIT
-2024-06-12 10:28:45,955 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:45] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:28:46,001 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:46] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:28:46,255 [INFO] BEGIN (implicit)
-2024-06-12 10:28:46,255 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:46,255 [INFO] [cached since 47.69s ago] ()
-2024-06-12 10:28:46,255 [INFO] COMMIT
-2024-06-12 10:28:46,271 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:46] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:28:46,318 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:46,650 [INFO] BEGIN (implicit)
-2024-06-12 10:28:46,650 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:46,650 [INFO] [cached since 48.08s ago] ()
-2024-06-12 10:28:46,657 [INFO] COMMIT
-2024-06-12 10:28:46,657 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:46] "GET /delete HTTP/1.1" 200 -
-2024-06-12 10:28:46,703 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:47,907 [INFO] BEGIN (implicit)
-2024-06-12 10:28:47,907 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:47,907 [INFO] [cached since 49.33s ago] ()
-2024-06-12 10:28:47,907 [INFO] COMMIT
-2024-06-12 10:28:47,907 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:47] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:28:47,960 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:57,630 [INFO] BEGIN (implicit)
-2024-06-12 10:28:57,630 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:57,646 [INFO] [cached since 59.07s ago] ()
-2024-06-12 10:28:57,646 [INFO] COMMIT
-2024-06-12 10:28:57,646 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:57] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:28:57,683 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:58,185 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:58] "GET /csv HTTP/1.1" 200 -
-2024-06-12 10:28:58,232 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:58,617 [INFO] BEGIN (implicit)
-2024-06-12 10:28:58,617 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:58,617 [INFO] [cached since 60.04s ago] ()
-2024-06-12 10:28:58,617 [INFO] COMMIT
-2024-06-12 10:28:58,617 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:58] "GET /delete HTTP/1.1" 200 -
-2024-06-12 10:28:58,664 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:59,118 [INFO] BEGIN (implicit)
-2024-06-12 10:28:59,118 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:59,118 [INFO] [cached since 60.55s ago] ()
-2024-06-12 10:28:59,118 [INFO] COMMIT
-2024-06-12 10:28:59,149 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:59] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:28:59,219 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:28:59,889 [INFO] BEGIN (implicit)
-2024-06-12 10:28:59,889 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:28:59,889 [INFO] [cached since 61.31s ago] ()
-2024-06-12 10:28:59,889 [INFO] COMMIT
-2024-06-12 10:28:59,889 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:59] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:28:59,936 [INFO] 127.0.0.1 - - [12/Jun/2024 10:28:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:31:35,732 [INFO] BEGIN (implicit)
-2024-06-12 10:31:35,732 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:31:35,732 [INFO] [cached since 217.2s ago] ()
-2024-06-12 10:31:35,732 [INFO] COMMIT
-2024-06-12 10:31:35,732 [INFO] 127.0.0.1 - - [12/Jun/2024 10:31:35] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:31:35,832 [INFO] 127.0.0.1 - - [12/Jun/2024 10:31:35] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:31:35,863 [INFO] 127.0.0.1 - - [12/Jun/2024 10:31:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:32:01,330 [INFO] BEGIN (implicit)
-2024-06-12 10:32:01,330 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:32:01,330 [INFO] [cached since 242.8s ago] ()
-2024-06-12 10:32:01,330 [INFO] COMMIT
-2024-06-12 10:32:01,330 [INFO] 127.0.0.1 - - [12/Jun/2024 10:32:01] "GET / HTTP/1.1" 200 -
-2024-06-12 10:32:01,430 [INFO] 127.0.0.1 - - [12/Jun/2024 10:32:01] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:32:47,012 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:32:47,113 [INFO]  * Restarting with stat
-2024-06-12 10:32:49,434 [WARNING]  * Debugger is active!
-2024-06-12 10:32:49,449 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:32:56,029 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:32:56,107 [INFO]  * Restarting with stat
-2024-06-12 10:32:58,013 [WARNING]  * Debugger is active!
-2024-06-12 10:32:58,013 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:33:09,916 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:33:09,996 [INFO]  * Restarting with stat
-2024-06-12 10:33:12,466 [WARNING]  * Debugger is active!
-2024-06-12 10:33:12,481 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:33:15,489 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:33:15,582 [INFO]  * Restarting with stat
-2024-06-12 10:33:17,340 [WARNING]  * Debugger is active!
-2024-06-12 10:33:17,356 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:33:25,754 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:33:25,855 [INFO]  * Restarting with stat
-2024-06-12 10:33:27,784 [WARNING]  * Debugger is active!
-2024-06-12 10:33:27,800 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:35:37,984 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:35:38,053 [INFO]  * Restarting with stat
-2024-06-12 10:35:40,258 [WARNING]  * Debugger is active!
-2024-06-12 10:35:40,258 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:38:34,535 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:38:34,660 [INFO]  * Restarting with stat
-2024-06-12 10:38:37,160 [WARNING]  * Debugger is active!
-2024-06-12 10:38:37,176 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:38:45,247 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:38:45,315 [INFO]  * Restarting with stat
-2024-06-12 10:38:47,159 [WARNING]  * Debugger is active!
-2024-06-12 10:38:47,174 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:39:04,800 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:39:04,869 [INFO]  * Restarting with stat
-2024-06-12 10:39:07,389 [WARNING]  * Debugger is active!
-2024-06-12 10:39:07,404 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:39:13,547 [INFO] BEGIN (implicit)
-2024-06-12 10:39:13,547 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:39:13,547 [INFO] [generated in 0.00182s] ()
-2024-06-12 10:39:13,547 [INFO] COMMIT
-2024-06-12 10:39:13,748 [INFO] 127.0.0.1 - - [12/Jun/2024 10:39:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-06-12 10:39:13,886 [INFO] 127.0.0.1 - - [12/Jun/2024 10:39:13] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2024-06-12 10:39:13,886 [INFO] 127.0.0.1 - - [12/Jun/2024 10:39:13] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2024-06-12 10:39:13,917 [INFO] 127.0.0.1 - - [12/Jun/2024 10:39:13] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2024-06-12 10:39:13,932 [INFO] 127.0.0.1 - - [12/Jun/2024 10:39:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-06-12 10:39:25,892 [INFO] BEGIN (implicit)
-2024-06-12 10:39:25,892 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:39:25,892 [INFO] [cached since 12.36s ago] ()
-2024-06-12 10:39:25,908 [INFO] COMMIT
-2024-06-12 10:39:25,914 [INFO] 127.0.0.1 - - [12/Jun/2024 10:39:25] "GET / HTTP/1.1" 200 -
-2024-06-12 10:39:25,977 [INFO] 127.0.0.1 - - [12/Jun/2024 10:39:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:40:36,641 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:40:36,725 [INFO]  * Restarting with stat
-2024-06-12 10:40:39,015 [WARNING]  * Debugger is active!
-2024-06-12 10:40:39,030 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:40:46,983 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:40:47,052 [INFO]  * Restarting with stat
-2024-06-12 10:40:48,870 [WARNING]  * Debugger is active!
-2024-06-12 10:40:48,885 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:40:51,631 [INFO] 127.0.0.1 - - [12/Jun/2024 10:40:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-06-12 10:40:51,715 [INFO] 127.0.0.1 - - [12/Jun/2024 10:40:51] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2024-06-12 10:40:51,715 [INFO] 127.0.0.1 - - [12/Jun/2024 10:40:51] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2024-06-12 10:40:51,747 [INFO] 127.0.0.1 - - [12/Jun/2024 10:40:51] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-06-12 10:42:29,380 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:42:29,474 [INFO]  * Restarting with stat
-2024-06-12 10:42:31,832 [WARNING]  * Debugger is active!
-2024-06-12 10:42:31,855 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:42:59,192 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:42:59,333 [INFO]  * Restarting with stat
-2024-06-12 10:43:01,839 [WARNING]  * Debugger is active!
-2024-06-12 10:43:01,855 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:43:39,392 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:43:39,471 [INFO]  * Restarting with stat
-2024-06-12 10:43:41,630 [WARNING]  * Debugger is active!
-2024-06-12 10:43:41,645 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:43:47,644 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:43:47,747 [INFO]  * Restarting with stat
-2024-06-12 10:43:49,704 [WARNING]  * Debugger is active!
-2024-06-12 10:43:49,726 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:43:51,578 [INFO] BEGIN (implicit)
-2024-06-12 10:43:51,578 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:43:51,578 [INFO] [generated in 0.00108s] ()
-2024-06-12 10:43:51,593 [INFO] COMMIT
-2024-06-12 10:43:51,685 [INFO] 127.0.0.1 - - [12/Jun/2024 10:43:51] "GET / HTTP/1.1" 200 -
-2024-06-12 10:43:51,762 [INFO] 127.0.0.1 - - [12/Jun/2024 10:43:51] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:43:52,966 [INFO] BEGIN (implicit)
-2024-06-12 10:43:52,966 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:43:52,981 [INFO] [cached since 1.395s ago] ()
-2024-06-12 10:43:52,981 [INFO] COMMIT
-2024-06-12 10:43:52,981 [INFO] 127.0.0.1 - - [12/Jun/2024 10:43:52] "GET / HTTP/1.1" 200 -
-2024-06-12 10:43:53,012 [INFO] 127.0.0.1 - - [12/Jun/2024 10:43:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:05,828 [INFO] BEGIN (implicit)
-2024-06-12 10:44:05,828 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:05,828 [INFO] [cached since 14.24s ago] ()
-2024-06-12 10:44:05,828 [INFO] COMMIT
-2024-06-12 10:44:05,844 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:05] "GET / HTTP/1.1" 200 -
-2024-06-12 10:44:05,897 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:06,614 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:06] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:44:06,667 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:08,218 [INFO] BEGIN (implicit)
-2024-06-12 10:44:08,218 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:08,218 [INFO] [cached since 16.64s ago] ()
-2024-06-12 10:44:08,218 [INFO] COMMIT
-2024-06-12 10:44:08,234 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:08] "GET / HTTP/1.1" 200 -
-2024-06-12 10:44:08,272 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:10,409 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:10] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:44:10,456 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:41,310 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:41] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:44:41,347 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:41] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:44:47,342 [INFO] BEGIN (implicit)
-2024-06-12 10:44:47,342 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:47,342 [INFO] [cached since 55.76s ago] ()
-2024-06-12 10:44:47,342 [INFO] COMMIT
-2024-06-12 10:44:47,380 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:47] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:44:47,427 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:47,997 [INFO] BEGIN (implicit)
-2024-06-12 10:44:47,997 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:47,997 [INFO] [cached since 56.41s ago] ()
-2024-06-12 10:44:47,997 [INFO] COMMIT
-2024-06-12 10:44:47,997 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:47] "GET / HTTP/1.1" 200 -
-2024-06-12 10:44:48,044 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:49,000 [INFO] BEGIN (implicit)
-2024-06-12 10:44:49,000 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:49,000 [INFO] [cached since 57.42s ago] ()
-2024-06-12 10:44:49,016 [INFO] COMMIT
-2024-06-12 10:44:49,016 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:49] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:44:49,063 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:49] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:44:50,188 [INFO] BEGIN (implicit)
-2024-06-12 10:44:50,188 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:50,188 [INFO] [cached since 58.61s ago] ()
-2024-06-12 10:44:50,203 [INFO] COMMIT
-2024-06-12 10:44:50,203 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:50] "GET / HTTP/1.1" 200 -
-2024-06-12 10:44:50,250 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:50,852 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:50] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:44:50,905 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:51,523 [INFO] BEGIN (implicit)
-2024-06-12 10:44:51,523 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:51,523 [INFO] [cached since 59.95s ago] ()
-2024-06-12 10:44:51,538 [INFO] COMMIT
-2024-06-12 10:44:51,538 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:51] "GET / HTTP/1.1" 200 -
-2024-06-12 10:44:51,576 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:51,908 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:51] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:44:51,971 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:52,224 [INFO] BEGIN (implicit)
-2024-06-12 10:44:52,240 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:52,240 [INFO] [cached since 60.65s ago] ()
-2024-06-12 10:44:52,240 [INFO] COMMIT
-2024-06-12 10:44:52,240 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:52] "GET /create HTTP/1.1" 200 -
-2024-06-12 10:44:52,293 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:52,610 [INFO] BEGIN (implicit)
-2024-06-12 10:44:52,610 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:52,610 [INFO] [cached since 61.03s ago] ()
-2024-06-12 10:44:52,610 [INFO] COMMIT
-2024-06-12 10:44:52,626 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:52] "GET /update HTTP/1.1" 200 -
-2024-06-12 10:44:52,695 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:52] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:44:52,980 [INFO] BEGIN (implicit)
-2024-06-12 10:44:52,980 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:44:52,980 [INFO] [cached since 61.39s ago] ()
-2024-06-12 10:44:52,980 [INFO] COMMIT
-2024-06-12 10:44:52,995 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:52] "GET /delete HTTP/1.1" 200 -
-2024-06-12 10:44:53,058 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:44:53,281 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:53] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:44:53,328 [INFO] 127.0.0.1 - - [12/Jun/2024 10:44:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:45:20,950 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:20] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:45:20,990 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:20] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:45:24,581 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:24] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:45:24,612 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:24] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:45:29,236 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:29] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:45:29,289 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:29] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:45:31,993 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:31] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:45:32,049 [INFO] 127.0.0.1 - - [12/Jun/2024 10:45:32] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 10:46:00,949 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:00] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:46:00,996 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:46:01,065 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 10:46:01,281 [INFO] BEGIN (implicit)
-2024-06-12 10:46:01,281 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 10:46:01,281 [INFO] [cached since 129.7s ago] ()
-2024-06-12 10:46:01,297 [INFO] COMMIT
-2024-06-12 10:46:01,297 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:01] "GET / HTTP/1.1" 200 -
-2024-06-12 10:46:01,350 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:46:01,698 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:01] "GET /login HTTP/1.1" 200 -
-2024-06-12 10:46:01,751 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:46:06,564 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:06] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 10:46:06,564 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:06] "GET /login?message=sddfsdfsdfze HTTP/1.1" 200 -
-2024-06-12 10:46:06,643 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:46:11,795 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:11] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 10:46:11,810 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:11] "GET /login?message=AAAAbbb HTTP/1.1" 200 -
-2024-06-12 10:46:11,879 [INFO] 127.0.0.1 - - [12/Jun/2024 10:46:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 10:50:33,999 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\services.py', reloading
-2024-06-12 10:50:34,082 [INFO]  * Restarting with stat
-2024-06-12 10:50:36,480 [WARNING]  * Debugger is active!
-2024-06-12 10:50:36,480 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:51:01,068 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\services.py', reloading
-2024-06-12 10:51:01,153 [INFO]  * Restarting with stat
-2024-06-12 10:51:04,152 [WARNING]  * Debugger is active!
-2024-06-12 10:51:04,152 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:53:13,235 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 10:53:13,362 [INFO]  * Restarting with stat
-2024-06-12 10:53:15,804 [WARNING]  * Debugger is active!
-2024-06-12 10:53:15,819 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:55:01,589 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 10:55:01,705 [INFO]  * Restarting with stat
-2024-06-12 10:55:04,012 [WARNING]  * Debugger is active!
-2024-06-12 10:55:04,027 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:55:21,980 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:55:22,049 [INFO]  * Restarting with stat
-2024-06-12 10:55:24,590 [WARNING]  * Debugger is active!
-2024-06-12 10:55:24,590 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:56:09,665 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 10:56:09,734 [INFO]  * Restarting with stat
-2024-06-12 10:56:11,820 [WARNING]  * Debugger is active!
-2024-06-12 10:56:11,835 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:56:21,759 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:56:21,871 [INFO]  * Restarting with stat
-2024-06-12 10:56:23,431 [WARNING]  * Debugger is active!
-2024-06-12 10:56:23,431 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:56:25,135 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\__init__.py', reloading
-2024-06-12 10:56:25,200 [INFO]  * Restarting with stat
-2024-06-12 10:56:26,400 [WARNING]  * Debugger is active!
-2024-06-12 10:56:26,416 [INFO]  * Debugger PIN: 342-508-004
-2024-06-12 10:56:31,849 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:56:31,935 [INFO]  * Restarting with stat
-2024-06-12 10:56:33,675 [WARNING]  * Debugger is active!
-2024-06-12 10:56:33,685 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:56:34,703 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:56:34,781 [INFO]  * Restarting with stat
-2024-06-12 10:56:36,674 [WARNING]  * Debugger is active!
-2024-06-12 10:56:36,690 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:56:55,406 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 10:56:55,469 [INFO]  * Restarting with stat
-2024-06-12 10:56:57,903 [WARNING]  * Debugger is active!
-2024-06-12 10:56:57,903 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 10:57:33,457 [INFO] 127.0.0.1 - - [12/Jun/2024 10:57:33] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 10:57:33,479 [INFO] 127.0.0.1 - - [12/Jun/2024 10:57:33] "GET /login?message=aaaa HTTP/1.1" 200 -
-2024-06-12 10:57:33,573 [INFO] 127.0.0.1 - - [12/Jun/2024 10:57:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:03:13,791 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:03:13,860 [INFO]  * Restarting with stat
-2024-06-12 11:03:16,080 [WARNING]  * Debugger is active!
-2024-06-12 11:03:16,080 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:06:02,499 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:06:02,561 [INFO]  * Restarting with stat
-2024-06-12 11:06:04,903 [WARNING]  * Debugger is active!
-2024-06-12 11:06:04,918 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:06:13,815 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:06:13,900 [INFO]  * Restarting with stat
-2024-06-12 11:06:16,036 [WARNING]  * Debugger is active!
-2024-06-12 11:06:16,051 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:06:20,518 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:06:20,606 [INFO]  * Restarting with stat
-2024-06-12 11:06:22,840 [WARNING]  * Debugger is active!
-2024-06-12 11:06:22,856 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:06:59,586 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:06:59,658 [INFO]  * Restarting with stat
-2024-06-12 11:07:01,990 [WARNING]  * Debugger is active!
-2024-06-12 11:07:02,005 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:07:03,046 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:03] "GET /login?message=aaaa HTTP/1.1" 200 -
-2024-06-12 11:07:03,108 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:03] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:07:04,813 [INFO] BEGIN (implicit)
-2024-06-12 11:07:04,813 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:07:04,813 [INFO] [generated in 0.00101s] ()
-2024-06-12 11:07:04,813 [INFO] COMMIT
-2024-06-12 11:07:04,835 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:04] "GET / HTTP/1.1" 200 -
-2024-06-12 11:07:04,882 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:04] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:07:05,716 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:05] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:07:05,754 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:07:08,208 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:08] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:07:08,223 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:08] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:07:08,245 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:07:12,819 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:12] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:07:12,819 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:12] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:07:12,873 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:12] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:07:15,195 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:15] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:07:15,195 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:15] "GET /login?message=a HTTP/1.1" 200 -
-2024-06-12 11:07:15,242 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:07:24,505 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:07:24,643 [INFO]  * Restarting with stat
-2024-06-12 11:07:27,163 [WARNING]  * Debugger is active!
-2024-06-12 11:07:27,178 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:07:33,919 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:33] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:07:33,951 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:33] "GET /login?user=z HTTP/1.1" 200 -
-2024-06-12 11:07:34,035 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:07:37,677 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:37] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:07:37,693 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:37] "GET /login?user=admin HTTP/1.1" 200 -
-2024-06-12 11:07:37,746 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:07:41,041 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:41] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:07:41,041 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:41] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:07:41,103 [INFO] 127.0.0.1 - - [12/Jun/2024 11:07:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:08:47,006 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:08:47,084 [INFO]  * Restarting with stat
-2024-06-12 11:08:49,442 [WARNING]  * Debugger is active!
-2024-06-12 11:08:49,467 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:08:52,148 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:08:52,238 [INFO]  * Restarting with stat
-2024-06-12 11:08:54,223 [WARNING]  * Debugger is active!
-2024-06-12 11:08:54,223 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:08:54,894 [INFO] 127.0.0.1 - - [12/Jun/2024 11:08:54] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:08:54,978 [INFO] 127.0.0.1 - - [12/Jun/2024 11:08:54] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:08:55,749 [INFO] 127.0.0.1 - - [12/Jun/2024 11:08:55] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:08:58,788 [INFO] BEGIN (implicit)
-2024-06-12 11:08:58,788 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:08:58,788 [INFO] [generated in 0.00101s] ()
-2024-06-12 11:08:58,788 [INFO] COMMIT
-2024-06-12 11:08:58,804 [INFO] 127.0.0.1 - - [12/Jun/2024 11:08:58] "GET / HTTP/1.1" 200 -
-2024-06-12 11:08:58,857 [INFO] 127.0.0.1 - - [12/Jun/2024 11:08:58] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:08:58,857 [INFO] 127.0.0.1 - - [12/Jun/2024 11:08:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 11:09:03,850 [INFO] BEGIN (implicit)
-2024-06-12 11:09:03,866 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:03,872 [INFO] [cached since 5.082s ago] ()
-2024-06-12 11:09:03,872 [INFO] COMMIT
-2024-06-12 11:09:03,872 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:03] "GET / HTTP/1.1" 200 -
-2024-06-12 11:09:03,919 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:03] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:09:03,972 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-06-12 11:09:04,273 [INFO] BEGIN (implicit)
-2024-06-12 11:09:04,273 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:04,273 [INFO] [cached since 5.492s ago] ()
-2024-06-12 11:09:04,289 [INFO] COMMIT
-2024-06-12 11:09:04,320 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:04] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:09:04,389 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:05,038 [INFO] BEGIN (implicit)
-2024-06-12 11:09:05,038 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:05,038 [INFO] [cached since 6.256s ago] ()
-2024-06-12 11:09:05,038 [INFO] COMMIT
-2024-06-12 11:09:05,053 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:05] "GET /update HTTP/1.1" 200 -
-2024-06-12 11:09:05,107 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:05] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:09:05,439 [INFO] BEGIN (implicit)
-2024-06-12 11:09:05,439 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:05,454 [INFO] [cached since 6.662s ago] ()
-2024-06-12 11:09:05,454 [INFO] COMMIT
-2024-06-12 11:09:05,470 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:05] "GET /delete HTTP/1.1" 200 -
-2024-06-12 11:09:05,508 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:05,855 [INFO] BEGIN (implicit)
-2024-06-12 11:09:05,855 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:05,855 [INFO] [cached since 7.071s ago] ()
-2024-06-12 11:09:05,855 [INFO] COMMIT
-2024-06-12 11:09:05,855 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:05] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:09:05,924 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:16,255 [INFO] BEGIN (implicit)
-2024-06-12 11:09:16,255 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:16,255 [INFO] [cached since 17.48s ago] ()
-2024-06-12 11:09:16,270 [INFO] COMMIT
-2024-06-12 11:09:16,270 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:16] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:09:16,301 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:17,057 [INFO] BEGIN (implicit)
-2024-06-12 11:09:17,057 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:17,057 [INFO] [cached since 18.28s ago] ()
-2024-06-12 11:09:17,057 [INFO] COMMIT
-2024-06-12 11:09:17,073 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:17] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:09:17,110 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:17,975 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:17] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:09:18,028 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:18,429 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:18] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:09:22,028 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:22] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:09:24,809 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:24] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:09:27,280 [INFO] BEGIN (implicit)
-2024-06-12 11:09:27,280 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:27,280 [INFO] [cached since 28.49s ago] ()
-2024-06-12 11:09:27,280 [INFO] COMMIT
-2024-06-12 11:09:27,280 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:27] "GET / HTTP/1.1" 200 -
-2024-06-12 11:09:27,342 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:41,451 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:41] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:09:41,513 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:09:48,672 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:48] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:09:55,437 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:55] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:09:57,210 [INFO] BEGIN (implicit)
-2024-06-12 11:09:57,226 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:09:57,226 [INFO] [cached since 58.44s ago] ()
-2024-06-12 11:09:57,226 [INFO] COMMIT
-2024-06-12 11:09:57,226 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:57] "GET / HTTP/1.1" 200 -
-2024-06-12 11:09:57,295 [INFO] 127.0.0.1 - - [12/Jun/2024 11:09:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:12,729 [INFO] BEGIN (implicit)
-2024-06-12 11:10:12,729 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:12,729 [INFO] [cached since 73.94s ago] ()
-2024-06-12 11:10:12,735 [INFO] COMMIT
-2024-06-12 11:10:12,735 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:12] "GET / HTTP/1.1" 200 -
-2024-06-12 11:10:12,782 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:13,014 [INFO] BEGIN (implicit)
-2024-06-12 11:10:13,014 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:13,030 [INFO] [cached since 74.24s ago] ()
-2024-06-12 11:10:13,030 [INFO] COMMIT
-2024-06-12 11:10:13,030 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:13] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:10:13,083 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:14,271 [INFO] BEGIN (implicit)
-2024-06-12 11:10:14,271 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:14,287 [INFO] [cached since 75.49s ago] ()
-2024-06-12 11:10:14,287 [INFO] COMMIT
-2024-06-12 11:10:14,287 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:14] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:10:14,318 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:15,073 [INFO] BEGIN (implicit)
-2024-06-12 11:10:15,073 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:15,073 [INFO] [cached since 76.29s ago] ()
-2024-06-12 11:10:15,073 [INFO] COMMIT
-2024-06-12 11:10:15,089 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:15] "GET /update HTTP/1.1" 200 -
-2024-06-12 11:10:15,136 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:15,659 [INFO] BEGIN (implicit)
-2024-06-12 11:10:15,659 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:15,659 [INFO] [cached since 76.87s ago] ()
-2024-06-12 11:10:15,659 [INFO] COMMIT
-2024-06-12 11:10:15,675 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:15] "GET /delete HTTP/1.1" 200 -
-2024-06-12 11:10:15,722 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:16,145 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:16] "GET /csv HTTP/1.1" 200 -
-2024-06-12 11:10:16,207 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:16,493 [INFO] BEGIN (implicit)
-2024-06-12 11:10:16,493 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:16,493 [INFO] [cached since 77.71s ago] ()
-2024-06-12 11:10:16,493 [INFO] COMMIT
-2024-06-12 11:10:16,508 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:16] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:10:16,562 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:17,310 [INFO] BEGIN (implicit)
-2024-06-12 11:10:17,310 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:17,310 [INFO] [cached since 78.53s ago] ()
-2024-06-12 11:10:17,325 [INFO] COMMIT
-2024-06-12 11:10:17,325 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:17] "GET / HTTP/1.1" 200 -
-2024-06-12 11:10:17,379 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:20,086 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:20] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:10:22,076 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:22] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:10:22,123 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:22] "GET /static/styles.css HTTP/1.1" 200 -
-2024-06-12 11:10:24,298 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:24] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:10:24,298 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:24] "GET /login?user=a HTTP/1.1" 200 -
-2024-06-12 11:10:24,345 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:25,548 [INFO] BEGIN (implicit)
-2024-06-12 11:10:25,548 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:25,548 [INFO] [cached since 86.76s ago] ()
-2024-06-12 11:10:25,548 [INFO] COMMIT
-2024-06-12 11:10:25,564 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:25] "GET /create HTTP/1.1" 200 -
-2024-06-12 11:10:25,601 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:26,250 [INFO] BEGIN (implicit)
-2024-06-12 11:10:26,250 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-06-12 11:10:26,250 [INFO] [cached since 87.46s ago] ()
-2024-06-12 11:10:26,250 [INFO] COMMIT
-2024-06-12 11:10:26,250 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:26] "GET /update HTTP/1.1" 200 -
-2024-06-12 11:10:26,288 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:10:26,667 [INFO] 127.0.0.1 - - [12/Jun/2024 11:10:26] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:11:35,949 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:11:36,050 [INFO]  * Restarting with stat
-2024-06-12 11:11:39,166 [WARNING]  * Debugger is active!
-2024-06-12 11:11:39,174 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:12:03,846 [INFO]  * Detected change in '\\\\taiwan\\users\\22206844\\BUT2\\archi_logicielle\\Toudou\\src\\toudou\\views.py', reloading
-2024-06-12 11:12:03,975 [INFO]  * Restarting with stat
-2024-06-12 11:12:06,493 [WARNING]  * Debugger is active!
-2024-06-12 11:12:06,493 [INFO]  * Debugger PIN: 883-784-931
-2024-06-12 11:12:07,079 [INFO] 127.0.0.1 - - [12/Jun/2024 11:12:07] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-06-12 11:12:07,148 [INFO] 127.0.0.1 - - [12/Jun/2024 11:12:07] "GET /login HTTP/1.1" 200 -
-2024-06-12 11:12:07,232 [INFO] 127.0.0.1 - - [12/Jun/2024 11:12:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-06-12 11:12:10,557 [INFO] 127.0.0.1 - - [12/Jun/2024 11:12:10] "[32mPOST /login HTTP/1.1[0m" 302 -
-2024-06-12 11:12:10,557 [INFO] 127.0.0.1 - - [12/Jun/2024 11:12:10] "[31m[1mGET /?user=a HTTP/1.1[0m" 401 -
-2024-06-12 11:12:13,350 [INFO] 127.0.0.1 - - [12/Jun/2024 11:12:13] "GET /login HTTP/1.1" 200 -
-2024-07-04 23:34:36,359 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2024-07-04 23:34:36,359 [INFO] [33mPress CTRL+C to quit[0m
-2024-07-04 23:34:36,367 [INFO]  * Restarting with stat
-2024-07-04 23:34:37,338 [WARNING]  * Debugger is active!
-2024-07-04 23:34:37,343 [INFO]  * Debugger PIN: 859-171-871
-2024-07-04 23:34:39,557 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:39] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-07-04 23:34:42,570 [INFO] BEGIN (implicit)
-2024-07-04 23:34:42,572 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:34:42,572 [INFO] [generated in 0.00042s] ()
-2024-07-04 23:34:42,574 [INFO] COMMIT
-2024-07-04 23:34:42,595 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:42] "GET / HTTP/1.1" 200 -
-2024-07-04 23:34:42,759 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:42] "GET /static/styles.css HTTP/1.1" 200 -
-2024-07-04 23:34:42,767 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-07-04 23:34:44,368 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:44] "GET /login HTTP/1.1" 200 -
-2024-07-04 23:34:44,432 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:34:46,916 [INFO] BEGIN (implicit)
-2024-07-04 23:34:46,917 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:34:46,917 [INFO] [cached since 4.346s ago] ()
-2024-07-04 23:34:46,918 [INFO] COMMIT
-2024-07-04 23:34:46,954 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:46] "GET /create HTTP/1.1" 200 -
-2024-07-04 23:34:46,998 [INFO] 127.0.0.1 - - [04/Jul/2024 23:34:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:38:41,014 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
-2024-07-04 23:38:41,079 [INFO]  * Restarting with stat
-2024-07-04 23:38:42,246 [WARNING]  * Debugger is active!
-2024-07-04 23:38:42,251 [INFO]  * Debugger PIN: 859-171-871
-2024-07-04 23:39:07,045 [INFO] BEGIN (implicit)
-2024-07-04 23:39:07,046 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:39:07,047 [INFO] [generated in 0.00050s] ()
-2024-07-04 23:39:07,048 [INFO] COMMIT
-2024-07-04 23:39:07,061 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:07] "GET /create HTTP/1.1" 200 -
-2024-07-04 23:39:07,162 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:39:09,784 [INFO] BEGIN (implicit)
-2024-07-04 23:39:09,785 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:39:09,785 [INFO] [cached since 2.738s ago] ()
-2024-07-04 23:39:09,786 [INFO] COMMIT
-2024-07-04 23:39:09,788 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:09] "GET /create HTTP/1.1" 200 -
-2024-07-04 23:39:09,819 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:09] "GET /static/styles.css HTTP/1.1" 200 -
-2024-07-04 23:39:09,825 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-07-04 23:39:30,334 [INFO] BEGIN (implicit)
-2024-07-04 23:39:30,335 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:39:30,335 [INFO] [cached since 23.29s ago] ()
-2024-07-04 23:39:30,337 [INFO] COMMIT
-2024-07-04 23:39:30,340 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:30] "GET / HTTP/1.1" 200 -
-2024-07-04 23:39:30,381 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:39:30,581 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:30] "GET /login HTTP/1.1" 200 -
-2024-07-04 23:39:30,623 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:39:31,629 [INFO] BEGIN (implicit)
-2024-07-04 23:39:31,630 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:39:31,630 [INFO] [cached since 24.58s ago] ()
-2024-07-04 23:39:31,631 [INFO] COMMIT
-2024-07-04 23:39:31,633 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:31] "GET / HTTP/1.1" 200 -
-2024-07-04 23:39:31,686 [INFO] 127.0.0.1 - - [04/Jul/2024 23:39:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:41:48,655 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
-2024-07-04 23:41:48,708 [INFO]  * Restarting with stat
-2024-07-04 23:41:49,786 [WARNING]  * Debugger is active!
-2024-07-04 23:41:49,791 [INFO]  * Debugger PIN: 859-171-871
-2024-07-04 23:42:03,108 [INFO] BEGIN (implicit)
-2024-07-04 23:42:03,110 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:42:03,110 [INFO] [generated in 0.00041s] ()
-2024-07-04 23:42:03,111 [INFO] COMMIT
-2024-07-04 23:42:03,120 [INFO] 127.0.0.1 - - [04/Jul/2024 23:42:03] "GET / HTTP/1.1" 200 -
-2024-07-04 23:42:03,296 [INFO] 127.0.0.1 - - [04/Jul/2024 23:42:03] "GET /static/styles.css HTTP/1.1" 200 -
-2024-07-04 23:42:03,322 [INFO] 127.0.0.1 - - [04/Jul/2024 23:42:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-07-04 23:42:08,079 [INFO] BEGIN (implicit)
-2024-07-04 23:42:08,079 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:42:08,079 [INFO] [cached since 4.97s ago] ()
-2024-07-04 23:42:08,080 [INFO] COMMIT
-2024-07-04 23:42:08,081 [INFO] 127.0.0.1 - - [04/Jul/2024 23:42:08] "GET / HTTP/1.1" 200 -
-2024-07-04 23:42:08,113 [INFO] 127.0.0.1 - - [04/Jul/2024 23:42:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:42:10,782 [INFO] 127.0.0.1 - - [04/Jul/2024 23:42:10] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-07-04 23:42:27,667 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
-2024-07-04 23:42:27,718 [INFO]  * Restarting with stat
-2024-07-04 23:42:28,786 [WARNING]  * Debugger is active!
-2024-07-04 23:42:28,791 [INFO]  * Debugger PIN: 859-171-871
-2024-07-04 23:43:59,871 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
-2024-07-04 23:43:59,922 [INFO]  * Restarting with stat
-2024-07-04 23:44:01,005 [WARNING]  * Debugger is active!
-2024-07-04 23:44:01,010 [INFO]  * Debugger PIN: 859-171-871
-2024-07-04 23:44:02,145 [INFO] BEGIN (implicit)
-2024-07-04 23:44:02,147 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:44:02,148 [INFO] [generated in 0.00072s] ()
-2024-07-04 23:44:02,150 [INFO] COMMIT
-2024-07-04 23:44:02,261 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-07-04 23:44:02,463 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:02] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2024-07-04 23:44:02,469 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:02] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2024-07-04 23:44:02,486 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:02] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2024-07-04 23:44:58,148 [INFO] BEGIN (implicit)
-2024-07-04 23:44:58,148 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:44:58,149 [INFO] [cached since 56s ago] ()
-2024-07-04 23:44:58,150 [INFO] COMMIT
-2024-07-04 23:44:58,160 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:58] "GET / HTTP/1.1" 200 -
-2024-07-04 23:44:58,217 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:58] "GET /static/styles.css HTTP/1.1" 200 -
-2024-07-04 23:44:58,236 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-07-04 23:44:59,485 [INFO] BEGIN (implicit)
-2024-07-04 23:44:59,486 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:44:59,486 [INFO] [cached since 57.34s ago] ()
-2024-07-04 23:44:59,487 [INFO] COMMIT
-2024-07-04 23:44:59,489 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:59] "GET / HTTP/1.1" 200 -
-2024-07-04 23:44:59,541 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:44:59,890 [INFO] BEGIN (implicit)
-2024-07-04 23:44:59,890 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:44:59,891 [INFO] [cached since 57.74s ago] ()
-2024-07-04 23:44:59,892 [INFO] COMMIT
-2024-07-04 23:44:59,899 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:59] "GET /create HTTP/1.1" 200 -
-2024-07-04 23:44:59,934 [INFO] 127.0.0.1 - - [04/Jul/2024 23:44:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:00,210 [INFO] BEGIN (implicit)
-2024-07-04 23:45:00,211 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:00,211 [INFO] [cached since 58.06s ago] ()
-2024-07-04 23:45:00,212 [INFO] COMMIT
-2024-07-04 23:45:00,225 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:00] "GET /update HTTP/1.1" 200 -
-2024-07-04 23:45:00,262 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:00,536 [INFO] BEGIN (implicit)
-2024-07-04 23:45:00,536 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:00,537 [INFO] [cached since 58.39s ago] ()
-2024-07-04 23:45:00,538 [INFO] COMMIT
-2024-07-04 23:45:00,546 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:00] "GET /delete HTTP/1.1" 200 -
-2024-07-04 23:45:00,583 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:05,782 [INFO] BEGIN (implicit)
-2024-07-04 23:45:05,783 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:05,783 [INFO] [cached since 63.64s ago] ()
-2024-07-04 23:45:05,784 [INFO] COMMIT
-2024-07-04 23:45:05,787 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:05] "GET /delete HTTP/1.1" 200 -
-2024-07-04 23:45:05,815 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:05] "GET /static/styles.css HTTP/1.1" 200 -
-2024-07-04 23:45:05,880 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-07-04 23:45:08,011 [INFO] BEGIN (implicit)
-2024-07-04 23:45:08,012 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:08,012 [INFO] [cached since 65.86s ago] ()
-2024-07-04 23:45:08,013 [INFO] COMMIT
-2024-07-04 23:45:08,015 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:08] "GET /create HTTP/1.1" 200 -
-2024-07-04 23:45:08,038 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:08,348 [INFO] BEGIN (implicit)
-2024-07-04 23:45:08,349 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:08,349 [INFO] [cached since 66.2s ago] ()
-2024-07-04 23:45:08,350 [INFO] COMMIT
-2024-07-04 23:45:08,351 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:08] "GET /delete HTTP/1.1" 200 -
-2024-07-04 23:45:08,376 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:08,705 [INFO] BEGIN (implicit)
-2024-07-04 23:45:08,705 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:08,706 [INFO] [cached since 66.56s ago] ()
-2024-07-04 23:45:08,707 [INFO] COMMIT
-2024-07-04 23:45:08,710 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:08] "GET /update HTTP/1.1" 200 -
-2024-07-04 23:45:08,771 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:09,036 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:09] "GET /csv HTTP/1.1" 200 -
-2024-07-04 23:45:09,096 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:09,580 [INFO] BEGIN (implicit)
-2024-07-04 23:45:09,581 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:09,581 [INFO] [cached since 67.43s ago] ()
-2024-07-04 23:45:09,583 [INFO] COMMIT
-2024-07-04 23:45:09,586 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:09] "GET /update HTTP/1.1" 200 -
-2024-07-04 23:45:09,636 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:10,215 [INFO] BEGIN (implicit)
-2024-07-04 23:45:10,215 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:10,216 [INFO] [cached since 68.07s ago] ()
-2024-07-04 23:45:10,217 [INFO] COMMIT
-2024-07-04 23:45:10,220 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:10] "GET /update HTTP/1.1" 200 -
-2024-07-04 23:45:10,270 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:10,569 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:10] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-07-04 23:45:12,178 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:12] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-07-04 23:45:13,089 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:13] "[31m[1mGET / HTTP/1.1[0m" 401 -
-2024-07-04 23:45:16,865 [INFO] BEGIN (implicit)
-2024-07-04 23:45:16,865 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:16,866 [INFO] [cached since 74.72s ago] ()
-2024-07-04 23:45:16,866 [INFO] COMMIT
-2024-07-04 23:45:16,868 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:16] "GET /delete HTTP/1.1" 200 -
-2024-07-04 23:45:16,895 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:16] "GET /static/styles.css HTTP/1.1" 200 -
-2024-07-04 23:45:16,930 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-07-04 23:45:18,168 [INFO] BEGIN (implicit)
-2024-07-04 23:45:18,168 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
-FROM toudou
-2024-07-04 23:45:18,169 [INFO] [cached since 76.02s ago] ()
-2024-07-04 23:45:18,170 [INFO] COMMIT
-2024-07-04 23:45:18,172 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:18] "GET /create HTTP/1.1" 200 -
-2024-07-04 23:45:18,202 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
-2024-07-04 23:45:18,754 [INFO] 127.0.0.1 - - [04/Jul/2024 23:45:18] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:15:31,464 [INFO] [33mPress CTRL+C to quit[0m
+2024-07-05 15:15:31,471 [INFO]  * Restarting with stat
+2024-07-05 15:15:32,585 [WARNING]  * Debugger is active!
+2024-07-05 15:15:32,591 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:15:32,614 [INFO] 127.0.0.1 - - [05/Jul/2024 15:15:32] "[31m[1mGET /update HTTP/1.1[0m" 401 -
+2024-07-05 15:15:37,582 [INFO] 127.0.0.1 - - [05/Jul/2024 15:15:37] "[35m[1mGET /update HTTP/1.1[0m" 500 -
+2024-07-05 15:15:37,765 [INFO] 127.0.0.1 - - [05/Jul/2024 15:15:37] "GET /update?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-07-05 15:15:37,769 [INFO] 127.0.0.1 - - [05/Jul/2024 15:15:37] "GET /update?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-07-05 15:15:37,788 [INFO] 127.0.0.1 - - [05/Jul/2024 15:15:37] "GET /update?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-07-05 15:25:42,307 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:42] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:25:44,978 [INFO] BEGIN (implicit)
+2024-07-05 15:25:44,980 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:25:44,981 [INFO] [generated in 0.00058s] ()
+2024-07-05 15:25:44,984 [INFO] COMMIT
+2024-07-05 15:25:45,025 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:45] "GET / HTTP/1.1" 200 -
+2024-07-05 15:25:45,081 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:45] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:25:45,137 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:25:53,465 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:53] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2024-07-05 15:25:53,533 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:53] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-07-05 15:25:53,534 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:53] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-07-05 15:25:53,569 [INFO] 127.0.0.1 - - [05/Jul/2024 15:25:53] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-07-05 15:26:04,301 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:04] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2024-07-05 15:26:04,328 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:04] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-07-05 15:26:04,329 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:04] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-07-05 15:26:04,342 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:04] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-07-05 15:26:05,678 [INFO] BEGIN (implicit)
+2024-07-05 15:26:05,679 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:26:05,680 [INFO] [cached since 20.7s ago] ()
+2024-07-05 15:26:05,681 [INFO] COMMIT
+2024-07-05 15:26:05,683 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:05] "GET / HTTP/1.1" 200 -
+2024-07-05 15:26:05,714 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:05] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:26:05,725 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:26:08,313 [INFO] BEGIN (implicit)
+2024-07-05 15:26:08,314 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:26:08,315 [INFO] [cached since 23.33s ago] ()
+2024-07-05 15:26:08,316 [INFO] COMMIT
+2024-07-05 15:26:08,318 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:08] "GET / HTTP/1.1" 200 -
+2024-07-05 15:26:08,350 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:26:14,536 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:14] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:26:17,530 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:17] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:26:20,127 [INFO] BEGIN (implicit)
+2024-07-05 15:26:20,128 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:26:20,128 [INFO] [cached since 35.15s ago] ()
+2024-07-05 15:26:20,129 [INFO] COMMIT
+2024-07-05 15:26:20,131 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:20] "GET / HTTP/1.1" 200 -
+2024-07-05 15:26:20,254 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:20] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:26:20,285 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:26:21,668 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:21] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2024-07-05 15:26:21,846 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:21] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-07-05 15:26:21,846 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:21] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-07-05 15:26:21,881 [INFO] 127.0.0.1 - - [05/Jul/2024 15:26:21] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-07-05 15:30:25,371 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:30:25,438 [INFO]  * Restarting with stat
+2024-07-05 15:30:26,514 [WARNING]  * Debugger is active!
+2024-07-05 15:30:26,520 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:31:40,231 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:31:40,289 [INFO]  * Restarting with stat
+2024-07-05 15:31:41,395 [WARNING]  * Debugger is active!
+2024-07-05 15:31:41,400 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:31:47,719 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:31:47,826 [INFO]  * Restarting with stat
+2024-07-05 15:31:49,196 [WARNING]  * Debugger is active!
+2024-07-05 15:31:49,201 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:32:39,737 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:39] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:32:42,692 [INFO] BEGIN (implicit)
+2024-07-05 15:32:42,695 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:32:42,695 [INFO] [generated in 0.00059s] ()
+2024-07-05 15:32:42,697 [INFO] COMMIT
+2024-07-05 15:32:42,711 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:42] "GET / HTTP/1.1" 200 -
+2024-07-05 15:32:42,915 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:42] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:32:42,918 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:32:45,375 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:45] "[35m[1mGET /csv HTTP/1.1[0m" 500 -
+2024-07-05 15:32:45,411 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:45] "GET /csv?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-07-05 15:32:45,412 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:45] "GET /csv?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-07-05 15:32:45,435 [INFO] 127.0.0.1 - - [05/Jul/2024 15:32:45] "GET /csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-07-05 15:33:17,093 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:33:17,150 [INFO]  * Restarting with stat
+2024-07-05 15:33:18,232 [WARNING]  * Debugger is active!
+2024-07-05 15:33:18,237 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:33:19,431 [INFO] 127.0.0.1 - - [05/Jul/2024 15:33:19] "[35m[1mGET /csv HTTP/1.1[0m" 500 -
+2024-07-05 15:33:19,575 [INFO] 127.0.0.1 - - [05/Jul/2024 15:33:19] "[36mGET /csv?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-07-05 15:33:19,578 [INFO] 127.0.0.1 - - [05/Jul/2024 15:33:19] "[36mGET /csv?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-07-05 15:33:19,590 [INFO] 127.0.0.1 - - [05/Jul/2024 15:33:19] "[36mGET /csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-07-05 15:35:03,768 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:35:03,851 [INFO]  * Restarting with stat
+2024-07-05 15:35:05,201 [WARNING]  * Debugger is active!
+2024-07-05 15:35:05,206 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:35:22,947 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:22] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:35:25,084 [INFO] BEGIN (implicit)
+2024-07-05 15:35:25,086 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:35:25,086 [INFO] [generated in 0.00055s] ()
+2024-07-05 15:35:25,088 [INFO] COMMIT
+2024-07-05 15:35:25,096 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:25] "GET / HTTP/1.1" 200 -
+2024-07-05 15:35:25,196 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:25] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:35:25,203 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:35:26,950 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:26] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2024-07-05 15:35:32,106 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:32] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2024-07-05 15:35:33,202 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:33] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2024-07-05 15:35:45,681 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:45] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:35:49,044 [INFO] BEGIN (implicit)
+2024-07-05 15:35:49,044 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:35:49,045 [INFO] [cached since 23.96s ago] ()
+2024-07-05 15:35:49,046 [INFO] COMMIT
+2024-07-05 15:35:49,047 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:49] "GET / HTTP/1.1" 200 -
+2024-07-05 15:35:49,079 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:49] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:35:49,109 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:35:50,880 [INFO] BEGIN (implicit)
+2024-07-05 15:35:50,881 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:35:50,881 [INFO] [cached since 25.8s ago] ()
+2024-07-05 15:35:50,882 [INFO] COMMIT
+2024-07-05 15:35:50,903 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:50] "GET /create HTTP/1.1" 200 -
+2024-07-05 15:35:50,943 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:35:51,663 [INFO] BEGIN (implicit)
+2024-07-05 15:35:51,664 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:35:51,664 [INFO] [cached since 26.58s ago] ()
+2024-07-05 15:35:51,665 [INFO] COMMIT
+2024-07-05 15:35:51,675 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:51] "GET /update HTTP/1.1" 200 -
+2024-07-05 15:35:51,718 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:35:52,151 [INFO] BEGIN (implicit)
+2024-07-05 15:35:52,152 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:35:52,152 [INFO] [cached since 27.07s ago] ()
+2024-07-05 15:35:52,153 [INFO] COMMIT
+2024-07-05 15:35:52,162 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:52] "GET /delete HTTP/1.1" 200 -
+2024-07-05 15:35:52,202 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:35:52,717 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:52] "GET /csv HTTP/1.1" 200 -
+2024-07-05 15:35:52,783 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:35:53,792 [INFO] BEGIN (implicit)
+2024-07-05 15:35:53,792 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:35:53,793 [INFO] [cached since 28.71s ago] ()
+2024-07-05 15:35:53,794 [INFO] COMMIT
+2024-07-05 15:35:53,796 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:53] "GET / HTTP/1.1" 200 -
+2024-07-05 15:35:53,886 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:35:58,467 [INFO] 127.0.0.1 - - [05/Jul/2024 15:35:58] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:36:00,755 [INFO] BEGIN (implicit)
+2024-07-05 15:36:00,755 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:36:00,756 [INFO] [cached since 35.67s ago] ()
+2024-07-05 15:36:00,757 [INFO] COMMIT
+2024-07-05 15:36:00,759 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:00] "GET / HTTP/1.1" 200 -
+2024-07-05 15:36:00,802 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:00] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:36:00,837 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:36:01,883 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:01] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2024-07-05 15:36:03,913 [INFO] BEGIN (implicit)
+2024-07-05 15:36:03,914 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:36:03,914 [INFO] [cached since 38.83s ago] ()
+2024-07-05 15:36:03,915 [INFO] COMMIT
+2024-07-05 15:36:03,918 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:03] "GET / HTTP/1.1" 200 -
+2024-07-05 15:36:04,246 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:36:10,685 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:10] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:36:14,167 [INFO] BEGIN (implicit)
+2024-07-05 15:36:14,168 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:36:14,168 [INFO] [cached since 49.08s ago] ()
+2024-07-05 15:36:14,169 [INFO] COMMIT
+2024-07-05 15:36:14,171 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:14] "GET / HTTP/1.1" 200 -
+2024-07-05 15:36:14,230 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:14] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:36:14,284 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:36:15,693 [INFO] 127.0.0.1 - - [05/Jul/2024 15:36:15] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2024-07-05 15:36:44,115 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:36:44,166 [INFO]  * Restarting with stat
+2024-07-05 15:36:45,264 [WARNING]  * Debugger is active!
+2024-07-05 15:36:45,269 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:36:57,622 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:36:57,670 [INFO]  * Restarting with stat
+2024-07-05 15:36:58,741 [WARNING]  * Debugger is active!
+2024-07-05 15:36:58,748 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:37:17,973 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:17] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:37:19,529 [INFO] BEGIN (implicit)
+2024-07-05 15:37:19,531 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:37:19,532 [INFO] [generated in 0.00067s] ()
+2024-07-05 15:37:19,534 [INFO] COMMIT
+2024-07-05 15:37:19,548 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:19] "GET / HTTP/1.1" 200 -
+2024-07-05 15:37:19,753 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:19] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:37:19,757 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:37:21,183 [INFO] BEGIN (implicit)
+2024-07-05 15:37:21,184 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:37:21,185 [INFO] [cached since 1.653s ago] ()
+2024-07-05 15:37:21,186 [INFO] COMMIT
+2024-07-05 15:37:21,197 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:21] "GET /delete HTTP/1.1" 200 -
+2024-07-05 15:37:21,334 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:37:21,875 [INFO] BEGIN (implicit)
+2024-07-05 15:37:21,876 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:37:21,876 [INFO] [cached since 2.344s ago] ()
+2024-07-05 15:37:21,876 [INFO] COMMIT
+2024-07-05 15:37:21,881 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:21] "GET /update HTTP/1.1" 200 -
+2024-07-05 15:37:21,904 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:37:22,244 [INFO] BEGIN (implicit)
+2024-07-05 15:37:22,245 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:37:22,245 [INFO] [cached since 2.714s ago] ()
+2024-07-05 15:37:22,246 [INFO] COMMIT
+2024-07-05 15:37:22,250 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:22] "GET /create HTTP/1.1" 200 -
+2024-07-05 15:37:22,279 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:37:22,880 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:22] "GET /csv HTTP/1.1" 200 -
+2024-07-05 15:37:22,926 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:37:24,623 [INFO] BEGIN (implicit)
+2024-07-05 15:37:24,624 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:37:24,624 [INFO] [cached since 5.093s ago] ()
+2024-07-05 15:37:24,625 [INFO] COMMIT
+2024-07-05 15:37:24,626 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:24] "GET / HTTP/1.1" 200 -
+2024-07-05 15:37:24,676 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-05 15:37:33,068 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:33] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-07-05 15:37:35,545 [INFO] BEGIN (implicit)
+2024-07-05 15:37:35,545 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 15:37:35,546 [INFO] [cached since 16.01s ago] ()
+2024-07-05 15:37:35,546 [INFO] COMMIT
+2024-07-05 15:37:35,548 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:35] "GET / HTTP/1.1" 200 -
+2024-07-05 15:37:35,579 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:35] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 15:37:35,601 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:37:37,368 [INFO] 127.0.0.1 - - [05/Jul/2024 15:37:37] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2024-07-05 15:50:40,750 [INFO] 127.0.0.1 - - [05/Jul/2024 15:50:40] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2024-07-05 15:50:40,794 [INFO] 127.0.0.1 - - [05/Jul/2024 15:50:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:50:56,827 [INFO] 127.0.0.1 - - [05/Jul/2024 15:50:56] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2024-07-05 15:51:09,166 [INFO] 127.0.0.1 - - [05/Jul/2024 15:51:09] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2024-07-05 15:51:09,228 [INFO] 127.0.0.1 - - [05/Jul/2024 15:51:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:57:33,487 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:57:33,539 [INFO]  * Restarting with stat
+2024-07-05 15:57:34,626 [WARNING]  * Debugger is active!
+2024-07-05 15:57:34,631 [INFO]  * Debugger PIN: 775-343-613
+2024-07-05 15:57:40,890 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:57:40,958 [INFO]  * Restarting with stat
+2024-07-05 15:57:42,037 [WARNING]  * Debugger is active!
+2024-07-05 15:57:42,042 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:57:44,580 [INFO] 127.0.0.1 - - [05/Jul/2024 15:57:44] "[31m[1mGET /admin HTTP/1.1[0m" 403 -
+2024-07-05 15:57:53,846 [INFO] 127.0.0.1 - - [05/Jul/2024 15:57:53] "[31m[1mGET /admin HTTP/1.1[0m" 403 -
+2024-07-05 15:57:58,790 [INFO] 127.0.0.1 - - [05/Jul/2024 15:57:58] "[31m[1mGET /admin HTTP/1.1[0m" 401 -
+2024-07-05 15:58:03,183 [INFO] 127.0.0.1 - - [05/Jul/2024 15:58:03] "GET /admin HTTP/1.1" 200 -
+2024-07-05 15:58:03,233 [INFO] 127.0.0.1 - - [05/Jul/2024 15:58:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 15:59:13,147 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:59:13,193 [INFO]  * Restarting with stat
+2024-07-05 15:59:14,257 [WARNING]  * Debugger is active!
+2024-07-05 15:59:14,262 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 15:59:28,710 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 15:59:28,784 [INFO]  * Restarting with stat
+2024-07-05 15:59:29,980 [WARNING]  * Debugger is active!
+2024-07-05 15:59:29,985 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 16:00:22,956 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 16:00:23,042 [INFO]  * Restarting with stat
+2024-07-05 16:00:24,356 [WARNING]  * Debugger is active!
+2024-07-05 16:00:24,361 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 16:00:27,509 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 16:00:27,588 [INFO]  * Restarting with stat
+2024-07-05 16:00:28,820 [WARNING]  * Debugger is active!
+2024-07-05 16:00:28,825 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 16:00:29,003 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:29] "[31m[1mGET /admin HTTP/1.1[0m" 403 -
+2024-07-05 16:00:29,047 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-05 16:00:30,855 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:30] "[31m[1mGET /admin HTTP/1.1[0m" 403 -
+2024-07-05 16:00:31,981 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:31] "[31m[1mGET /admin HTTP/1.1[0m" 403 -
+2024-07-05 16:00:38,295 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 16:00:38,346 [INFO]  * Restarting with stat
+2024-07-05 16:00:39,476 [WARNING]  * Debugger is active!
+2024-07-05 16:00:39,481 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 16:00:39,635 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:39] "[31m[1mGET /admin HTTP/1.1[0m" 403 -
+2024-07-05 16:00:40,669 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:40] "[31m[1mGET /admin HTTP/1.1[0m" 403 -
+2024-07-05 16:00:44,686 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 16:00:44,767 [INFO]  * Restarting with stat
+2024-07-05 16:00:45,980 [WARNING]  * Debugger is active!
+2024-07-05 16:00:45,986 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 16:00:58,373 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 16:00:58,419 [INFO]  * Restarting with stat
+2024-07-05 16:00:59,482 [WARNING]  * Debugger is active!
+2024-07-05 16:00:59,487 [INFO]  * Debugger PIN: 859-171-871
+2024-07-05 16:00:59,629 [ERROR] 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
+Traceback (most recent call last):
+  File "C:\Users\Florian\Desktop\toudou\Toudou\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Florian\Desktop\toudou\Toudou\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Florian\Desktop\toudou\Toudou\.venv\Lib\site-packages\flask_httpauth.py", line 174, in decorated
+    return self.ensure_sync(f)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Florian\Desktop\toudou\Toudou\src\toudou\views.py", line 164, in admins_only
+    abort(403)
+  File "C:\Users\Florian\Desktop\toudou\Toudou\.venv\Lib\site-packages\flask\helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\Florian\Desktop\toudou\Toudou\.venv\Lib\site-packages\werkzeug\exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.Forbidden: 403 Forbidden: You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.
+2024-07-05 16:00:59,650 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:59] "[32mGET /admin HTTP/1.1[0m" 302 -
+2024-07-05 16:00:59,787 [INFO] BEGIN (implicit)
+2024-07-05 16:00:59,788 [INFO] SELECT toudou.id, toudou.task, toudou.description, toudou.enddate, toudou.status 
+FROM toudou
+2024-07-05 16:00:59,789 [INFO] [generated in 0.00050s] ()
+2024-07-05 16:00:59,790 [INFO] COMMIT
+2024-07-05 16:00:59,798 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:59] "GET / HTTP/1.1" 200 -
+2024-07-05 16:00:59,915 [INFO] 127.0.0.1 - - [05/Jul/2024 16:00:59] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-05 16:01:29,461 [INFO]  * Detected change in 'C:\\Users\\Florian\\Desktop\\toudou\\Toudou\\src\\toudou\\views.py', reloading
+2024-07-05 16:01:29,510 [INFO]  * Restarting with stat
+2024-07-05 16:01:30,599 [WARNING]  * Debugger is active!
+2024-07-05 16:01:30,604 [INFO]  * Debugger PIN: 859-171-871
